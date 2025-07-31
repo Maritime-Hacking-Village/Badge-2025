@@ -1,0 +1,366 @@
+(footprint "TFT_1.9IN_170X320_30P"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 12.2 -2.670922 270)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "9421e972-03b1-4c71-8eda-4381dbbe9d6c")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "170x320"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "3ee13dfa-cc30-4632-8267-48639dd51ed2")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "da257f70-918a-4cc5-bb24-1c306661f198")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Description" "TFT LCD DISPLAY 170x320 1.9\""
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "76c6bb7d-5a5a-4462-a0b9-c85bd22e2403")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Availability" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cae452c1-2f4c-4a14-826f-eedb87c69027")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Check_prices" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d926aed8-c29f-41b3-adca-0bed7b5981f3")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Description_1" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b1323480-0828-424e-8146-b5855fc85467")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "MANUFACTURER" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a1aa892f-9649-4b00-a98b-f10d6069b3c9")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "MAXIMUM_PACKAGE_HEIGHT" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4f5b021d-8c90-4dbc-b9b9-f21c235f0909")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "MF" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "11ee827d-7011-4b3e-9a34-56d36de64874")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "MP" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "302e54f4-66bf-40ce-8b5a-5881ab0efbae")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "MPN" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c92d19cd-7788-4488-a6b1-bfe0cb62b4dd")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer_Name" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "476478d4-7632-478f-839d-ec3cfe06d4d2")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Mouser Part Number" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8b22b4a9-7016-4cf1-a603-4f845f4fc111")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cf3468af-79f1-47eb-9e42-28aee7cfe6ad")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "PARTREV" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cc3a2e18-69c6-4e24-afb4-6e46f2db323d")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Price" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0cb02136-cbe4-4f95-b615-28fe871c6733")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "STANDARD" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ecf66a95-3fc6-493b-af6c-a5932484f484")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "SnapEDA_Link" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f83b1aff-c411-4e16-941a-de32448899f9")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(fp_line
+		(start -13 -23)
+		(end -13 27)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3dccaa7f-62cd-4b9f-bfa9-87609f6d9ada")
+	)
+	(fp_line
+		(start -13 27)
+		(end 13 27)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ca260c4c-c198-4ca1-9d5b-5fa7eba4714c")
+	)
+	(fp_line
+		(start -11.5 -21.5)
+		(end -11.5 21.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "43493106-cbce-408d-93d9-0d83a4b90686")
+	)
+	(fp_line
+		(start -11.5 21.5)
+		(end 11.5 21.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4c6af2f9-a4a4-441f-8b28-c3a33b1bc4e8")
+	)
+	(fp_line
+		(start 11.5 -21.5)
+		(end -11.5 -21.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f4297983-e7b9-477b-a5a9-90b6f8c78809")
+	)
+	(fp_line
+		(start 11.5 21.5)
+		(end 11.5 -21.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7674d9e1-4edd-4a11-9cc4-7830f98709d1")
+	)
+	(fp_line
+		(start 13 -23)
+		(end -13 -23)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "cd020f7c-7fe1-4a2d-a139-b737a4a10226")
+	)
+	(fp_line
+		(start 13 27)
+		(end 13 -23)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "009280e0-dd91-4a1b-b662-d9357d2fa36b")
+	)
+	(fp_line
+		(start 10 28)
+		(end -10 28)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b42c706a-0a98-44c8-b452-691a9b0630a6")
+	)
+	(fp_text user "1.9\" TFT (170x320)"
+		(at -0.31 -17.4 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "9a2ebb10-2ea7-4c9a-aeb1-4d1950ae0369")
+		(effects
+			(font
+				(size 1.1176 1.1176)
+				(thickness 0.1524)
+			)
+			(justify mirror)
+		)
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3D/tft_display.step"
+		(offset
+			(xyz -13.32 28.75 1.5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 90)
+		)
+	)
+)

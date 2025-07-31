@@ -1,0 +1,337 @@
+(footprint "MFSM0302"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "2-SMD")
+	(tags "Resettable Fuse")
+	(property "Reference" "REF**"
+		(at 6.663858 2.683666 270)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "f3caa828-dc6d-4bb6-9cf9-0c2ded12faf5")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Value" "MF-SM030-2"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "731eac54-bf9e-42ab-a0ac-be005e04e894")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.bourns.com/sitefinity/status?ReturnUrl=https%3a%2f%2fwww.bourns.com%2fdocs%2fProduct-Datasheets%2fmfsm.pdf"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9bc879dc-cd4a-4c9a-9122-24edee6eac04")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Description" "PTC RESET FUSE 60V 300MA 2SMD"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c305f203-614c-4c63-8204-6f10ec43446b")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Height" "3.18"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "93d8f121-deec-49cb-aaa2-94e254fb8cc9")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer" "Bourns"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7b7009c1-8376-4c41-8fa8-b59242a1bc28")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer Part Number" "MF-SM030-2"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "66fc08a6-be11-401f-a94e-08437a5b3324")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start 3.678 2.72)
+		(end 3.678 1.8)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "256124f9-2d20-41a0-af16-5465ded1307f")
+	)
+	(fp_line
+		(start 3.678 -2.72)
+		(end 3.678 -1.8)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "519043dc-5475-49ce-936c-fdec8ca57018")
+	)
+	(fp_line
+		(start -3.678 2.72)
+		(end 3.678 2.72)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a9a40795-4316-492d-b5fe-e1d5a72f204f")
+	)
+	(fp_line
+		(start -3.678 1.8)
+		(end -3.678 2.72)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "72cd2e7e-47fb-469b-84f0-7dfcf5be08f5")
+	)
+	(fp_line
+		(start -3.678 -1.8)
+		(end -3.678 -2.72)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1c99ff1d-139f-4087-b39c-7f8f92ddabeb")
+	)
+	(fp_line
+		(start -3.678 -2.72)
+		(end 3.678 -2.72)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d002a89b-5371-48c6-8e93-e5c211d4eeec")
+	)
+	(fp_line
+		(start -5.2 0)
+		(end -5.2 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "46a52128-1a4e-4a3a-9e89-bd0a5ce91f52")
+	)
+	(fp_line
+		(start -5.3 -0.000001)
+		(end -5.3 -0.000001)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ef0fbdad-b9ac-47be-8bce-7ded741e73e7")
+	)
+	(fp_arc
+		(start -5.2 0)
+		(mid -5.25 0.050001)
+		(end -5.3 -0.000001)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "78b2a277-e6ee-44e2-8532-d547042e4c09")
+	)
+	(fp_arc
+		(start -5.3 -0.000001)
+		(mid -5.25 -0.049999)
+		(end -5.2 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c1af37f7-405d-4108-93da-36f8f15e6dce")
+	)
+	(fp_line
+		(start 5.85 3.72)
+		(end -5.85 3.72)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e3774dfb-5fad-45c9-91cf-4612025adc47")
+	)
+	(fp_line
+		(start 5.85 -3.72)
+		(end 5.85 3.72)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "7db00d38-c1f5-4b3c-b46d-7564aadf1e30")
+	)
+	(fp_line
+		(start -5.85 3.72)
+		(end -5.85 -3.72)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d93617c5-e884-406e-8896-b2b362a2fcc8")
+	)
+	(fp_line
+		(start -5.85 -3.72)
+		(end 5.85 -3.72)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d957f6c7-3184-42a4-8dba-b40de8edccc4")
+	)
+	(fp_line
+		(start 3.678 2.72)
+		(end -3.678 2.72)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "076f235a-1b0f-4f97-96c1-5a70e44c3ed1")
+	)
+	(fp_line
+		(start 3.678 -2.72)
+		(end 3.678 2.72)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7e7d052b-d65f-4b3e-8daa-56a880515986")
+	)
+	(fp_line
+		(start -3.678 2.72)
+		(end -3.678 -2.72)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "dbc1c71b-d5d1-43e9-87fc-f7a79d4ba4d5")
+	)
+	(fp_line
+		(start -3.678 -2.72)
+		(end 3.678 -2.72)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "10f849c8-a803-46a2-9b6c-6d388c0c4c67")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -0.05 -0.25 0)
+		(layer "F.Fab")
+		(uuid "f57e5f46-3aac-4b6c-b7eb-d2c3e33deed9")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -3.7 0)
+		(size 2.3 3.1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "7428109a-83b1-4f3c-b777-685e981a4287")
+	)
+	(pad "2" smd rect
+		(at 3.7 0)
+		(size 2.3 3.1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "b614d663-89dc-4ee7-8184-e92355fe6c73")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3D/mf-sm030.stp"
+		(offset
+			(xyz 0 0 2.549999914)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 -90)
+		)
+	)
+)

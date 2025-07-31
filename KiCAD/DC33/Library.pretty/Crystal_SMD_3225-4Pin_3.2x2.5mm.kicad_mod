@@ -1,0 +1,241 @@
+(footprint "Crystal_SMD_3225-4Pin_3.2x2.5mm"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "SMD Crystal SERIES SMD3225/4 http://www.txccrystal.com/images/pdf/7m-accuracy.pdf, 3.2x2.5mm^2 package")
+	(tags "SMD SMT crystal")
+	(property "Reference" "REF**"
+		(at -0.05 -2.475 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "e7710139-c1e4-4631-8eba-8f8342f09ed5")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Value" "20MHz 18pF"
+		(at 0 2.45 0)
+		(layer "F.Fab")
+		(uuid "6fe0b7c5-8bc4-4c48-9cc4-1e114241304a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://eu.mouser.com/datasheet/2/122/ecx_32-6206.pdf"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "385d1271-85e0-4b2d-83aa-2ba225bf9922")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Description" "CRYSTAL 20.0000MHZ 18PF SMD"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "675ffb1a-c7af-47f8-a0e1-aefc4c5e2ad1")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer" "ECS Inc."
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a9c5eec1-0cfa-485d-a31f-6a5b68b946c6")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer Part Number" "ECS-200-18-33-JGN-TR "
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7af6814b-984c-48cb-81a1-f35001666e96")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -2 -1.649999)
+		(end -2.000001 1.65)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "655d9bf8-1038-4aef-bc9e-92b16100bd41")
+	)
+	(fp_line
+		(start -2.000001 1.65)
+		(end 2 1.649999)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5b2bde68-9ab2-4101-af2e-b9053f20e28e")
+	)
+	(fp_line
+		(start 2.100001 1.700001)
+		(end 2.099998 -1.700001)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c9cb7a58-4f9d-4304-93ac-f99b39c9d9a5")
+	)
+	(fp_line
+		(start 2.099998 -1.700001)
+		(end -2.100001 -1.700001)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "3fbade01-4769-4927-961d-d476d1757f64")
+	)
+	(fp_line
+		(start -2.099998 1.700001)
+		(end 2.100001 1.700001)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e72a12d5-0433-429e-84f7-677fc75a4675")
+	)
+	(fp_line
+		(start -2.100001 -1.700001)
+		(end -2.099998 1.700001)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "96494170-07a8-4d3c-95b5-8bf70e5b0ad8")
+	)
+	(fp_line
+		(start 1.599999 1.25)
+		(end 1.599999 -1.249999)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "cb858c72-2989-449c-a91a-f79f22f52e15")
+	)
+	(fp_line
+		(start 1.599999 -1.249999)
+		(end -1.599999 -1.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "63341a15-31f3-49a6-8c3c-366bd0847fba")
+	)
+	(fp_line
+		(start -1.599999 1.249999)
+		(end 1.599999 1.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "abefff5f-ca08-4ab4-9429-f8aa29f7963d")
+	)
+	(fp_line
+		(start -1.599999 -1.25)
+		(end -1.599999 1.249999)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6932256d-1222-401a-afd1-ff80a03a22f6")
+	)
+	(fp_line
+		(start -1.600001 0.249997)
+		(end -0.599997 1.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4354615c-b6c9-4368-aeaa-bb430e48ddfa")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "97833239-bc4a-4de4-b042-96e3d7d6ee47")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.105)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.099999 0.85 180)
+		(size 1.4 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "483aedc7-029f-42ad-9d9b-2c0180384997")
+	)
+	(pad "2" smd rect
+		(at 1.099998 0.85 180)
+		(size 1.4 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "6ebbfc20-2d54-45e8-b402-fe7edb579b5b")
+	)
+	(pad "3" smd rect
+		(at 1.099999 -0.85 180)
+		(size 1.4 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "6523c05c-f0e8-40b2-bf5c-5e621378bd96")
+	)
+	(pad "4" smd rect
+		(at -1.099998 -0.85 180)
+		(size 1.4 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "07a11e31-7656-4249-a42f-8babafba53b7")
+	)
+	(embedded_fonts no)
+	(model "${KICAD9_3DMODEL_DIR}/Crystal.3dshapes/Crystal_SMD_3225-4Pin_3.2x2.5mm.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

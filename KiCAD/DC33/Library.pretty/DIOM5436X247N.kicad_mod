@@ -1,0 +1,256 @@
+(footprint "DIOM5436X247N"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "SMB CASE 403A-03 ISSUE J")
+	(tags "Zener Diode")
+	(property "Reference" "REF**"
+		(at 2.011898 2.689204 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "badb1430-4c58-4c0c-95c3-2ae948fd64ef")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Value" "1SMB5918BT3G"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "68d96136-cd6b-4d41-a107-ba79181ccf3f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.onsemi.com/pub/Collateral/1SMB5913BT3-D.PDF"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "54cc3522-3f7b-4264-9843-7773b012f4ea")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Description" "DIODE ZENER 5.1V 3W SMB"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8f911c22-2246-4ab8-b332-40bf89646b4b")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Height" "2.47"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "aa113a90-e747-4039-8703-882f3bef3885")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer" "onsemi"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3d1e1f85-1517-4cf5-a1d5-30b4033bf024")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer Part Number" "1SMB5918BT3G"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ccc58f80-06ac-4fa5-a70f-fd802c59ca15")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start 2.702 -1.812)
+		(end -3.275 -1.812)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c04853b0-6a72-4113-ac56-b6634c67a985")
+	)
+	(fp_line
+		(start -2.702 1.812)
+		(end 2.702 1.812)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5a67b61c-4c34-4881-9a6f-a8783fe00c22")
+	)
+	(fp_line
+		(start 3.575 2.225)
+		(end -3.575 2.225001)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "84d827d6-264c-4bea-ad12-ef3870de6e58")
+	)
+	(fp_line
+		(start 3.575 -2.225001)
+		(end 3.575 2.225)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "2bddbfc7-4ada-46a8-ab4b-1a169723879e")
+	)
+	(fp_line
+		(start 2.702 1.812)
+		(end -2.702 1.812)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "652ad3e9-3a48-4e0f-94ed-2d42485b9f5d")
+	)
+	(fp_line
+		(start 2.702 -1.812)
+		(end 2.702 1.812)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "8fb41f1a-72cb-46ae-a6fa-c394fdfd5b9a")
+	)
+	(fp_line
+		(start -2.702 1.812)
+		(end -2.702 -1.812)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "28389912-9106-4892-81c1-ebe39d23e022")
+	)
+	(fp_line
+		(start -2.702 -0.738)
+		(end -1.628001 -1.812)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "f5eee033-b65e-43d9-82e5-7be57f449519")
+	)
+	(fp_line
+		(start -2.702 -1.812)
+		(end 2.702 -1.812)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "a3c5af7d-0f45-466f-8be9-d9803e89c57d")
+	)
+	(fp_line
+		(start -3.575 2.225001)
+		(end -3.575 -2.225)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "744ea4dc-9403-4814-9a70-b10bf66518dc")
+	)
+	(fp_line
+		(start -3.575 -2.225)
+		(end 3.575 -2.225001)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "60c4f1a2-1d28-46a7-8d6e-121686a9dca3")
+	)
+	(pad "1" smd rect
+		(at -2.2 0 90)
+		(size 2.15 2.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "6cdbce37-1bd5-4d63-80c2-84da0c658a0a")
+	)
+	(pad "2" smd rect
+		(at 2.2 0 90)
+		(size 2.15 2.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "9d611ed8-4512-4c35-a684-636a1e30092c")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3D/1SMB5918BT3G.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

@@ -1,0 +1,266 @@
+(footprint "XAL7030272MEB"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "XAL7030-272MEB-3")
+	(tags "Inductor")
+	(property "Reference" "REF**"
+		(at 4.506625 -0.000569 270)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "52fc9707-5c23-4f3f-80ad-e200532028e8")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Value" "XAL7030-222MEB"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "159613f1-0480-4b0f-9578-40ebcf7e57f3")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.coilcraft.com/pdfs/xal7030.pdf"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6d838d5a-4df6-482a-87ab-92a8448485af")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Description" "Fixed Inductors 2.2uH Shld 20% 12.9A 15.07mOhms AECQ2"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "24fcf85b-3004-4892-8adc-d2b2c40922fa")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Height" "3.1"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c3de9669-fd52-4ca1-94c4-f676f29cb5e8")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer" "COILCRAFT"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e7923782-ce5f-4b35-b6c9-9f6c85bbd2ff")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer Part Number" "XAL7030-222MEB"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a54d8066-02ab-479e-ad36-ead950060d86")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start 3.749999 3.749999)
+		(end -3.749999 3.749999)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "29ede00a-4967-407b-934b-0e169df5756c")
+	)
+	(fp_line
+		(start 3.749999 -3.749999)
+		(end 3.749999 3.749999)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "af02bcb7-229a-4888-9644-1d6d5ff7c0a3")
+	)
+	(fp_line
+		(start -3.749999 3.749999)
+		(end -3.749999 -3.749999)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9a50ede9-cbd5-4600-bc06-3ce2e734b29d")
+	)
+	(fp_line
+		(start -3.749999 -3.749999)
+		(end 3.749999 -3.749999)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5682d57f-a43b-4e7d-b4af-55fc874c23f8")
+	)
+	(fp_line
+		(start 4.750001 4.749999)
+		(end -4.749999 4.750001)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "3bfc4355-c3cc-41d6-82af-e80eec6e1679")
+	)
+	(fp_line
+		(start 4.749999 -4.750001)
+		(end 4.750001 4.749999)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "5f1dabb5-db6b-4dc1-9402-a7d078c5b327")
+	)
+	(fp_line
+		(start 3.749999 3.749999)
+		(end -3.749999 3.749999)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "4349a286-b8c0-49a8-ab26-ef9cd0f6624e")
+	)
+	(fp_line
+		(start 3.749999 -3.749999)
+		(end 3.749999 3.749999)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "747b8be1-f9ea-414f-b624-d0290bcf0afe")
+	)
+	(fp_line
+		(start -3.749999 3.749999)
+		(end -3.749999 -3.749999)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "2f89bffe-5bee-4c14-ab8d-adb34b2d5559")
+	)
+	(fp_line
+		(start -3.749999 -3.749999)
+		(end 3.749999 -3.749999)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "c72e8e7f-b605-42fc-9f2a-9cda6341b590")
+	)
+	(fp_line
+		(start -4.749999 4.750001)
+		(end -4.750001 -4.749999)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "a0e04cdf-2bdb-4136-b44c-c314981fbdeb")
+	)
+	(fp_line
+		(start -4.750001 -4.749999)
+		(end 4.749999 -4.750001)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "dbbb02b6-cc41-4e2e-880f-4435e36bbda9")
+	)
+	(pad "1" smd rect
+		(at -2.36 0.000001)
+		(size 1.78 6.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "e850cb97-0c6d-4ec2-b7a6-168aeea697b8")
+	)
+	(pad "2" smd rect
+		(at 2.36 -0.000001)
+		(size 1.78 6.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "295d9aca-ec55-459b-8758-5dfdfed15db4")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3D/XAL7030-222MEB.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

@@ -1,0 +1,279 @@
+(footprint "SOT95P237X112-3N-RENESAS"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "P3.064-ren1")
+	(tags "Integrated Circuit")
+	(property "Reference" "REF**"
+		(at 3 0.025 180)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "63f6da73-ee6f-43c4-b13a-2066b7c19dd2")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Value" "ISL21010CFH315Z-T7A"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "9dc379bf-b4b3-4147-ab69-652554fef30c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.renesas.com/en-us/www/doc/datasheet/isl21010.pdf"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1a565bfd-1a3c-4e0c-b076-b5adb4b92f8a")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Description" "IC VREF SERIES 0.2% SOT23-3"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "36c1c749-27dd-4bb8-985d-db653f776b09")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Height" "1.12"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b90a05e4-9a76-4341-8d32-64ba56b97c4a")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer" "Renesas Electronics"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f797a9a0-e44c-420d-8aa3-a1b070d5c3dc")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer Part Number" "ISL21010CFH315Z-T7A"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "015588f9-d03b-4ce2-9f95-721b6b1ec499")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start 0.15 1.46)
+		(end -0.15 1.46)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2b8860af-765a-493a-b3c3-d753e8e96a40")
+	)
+	(fp_line
+		(start 0.15 -1.46)
+		(end 0.15 1.46)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9cd3b728-514f-4a75-af5a-f8e9656930cd")
+	)
+	(fp_line
+		(start -0.15 1.46)
+		(end -0.15 -1.46)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "57957d3b-e831-4cd2-95ee-69cea65e5d30")
+	)
+	(fp_line
+		(start -0.15 -1.46)
+		(end 0.15 -1.46)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0b5719b2-f347-46c5-9b8c-23bbf864e610")
+	)
+	(fp_line
+		(start -1.7 -1.5)
+		(end -0.5 -1.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "26bd835a-9939-4a81-8e0d-dc8da8e6acb3")
+	)
+	(fp_line
+		(start 1.95 1.77)
+		(end -1.95 1.77)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "1e8e49b2-4e74-4efa-9d60-b300d497a0ed")
+	)
+	(fp_line
+		(start 1.95 -1.77)
+		(end 1.95 1.77)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "fbf32bd1-dc2e-46cc-83a6-8c12ebb72750")
+	)
+	(fp_line
+		(start -1.95 1.77)
+		(end -1.95 -1.77)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "675724f9-52b8-4071-b0ee-f24d7db056ba")
+	)
+	(fp_line
+		(start -1.95 -1.77)
+		(end 1.95 -1.77)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "6d486dd3-fb81-4de3-9a5a-54ced9bb15f8")
+	)
+	(fp_line
+		(start 0.65 1.46)
+		(end -0.65 1.46)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "11d4bcf7-ea62-4327-a6a4-ba82fc123f08")
+	)
+	(fp_line
+		(start 0.65 -1.46)
+		(end 0.65 1.46)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c3cdeaea-433d-4234-b319-901dd0803d4d")
+	)
+	(fp_line
+		(start -0.65 1.46)
+		(end -0.65 -1.46)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f7dfac61-b610-42d0-bfab-60d01d59f2c0")
+	)
+	(fp_line
+		(start -0.65 -0.51)
+		(end 0.3 -1.46)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "542a6987-2b68-4d7d-9359-8b166c817798")
+	)
+	(fp_line
+		(start -0.65 -1.46)
+		(end 0.65 -1.46)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "56fd0095-0ca0-49e3-83eb-ca3a5933665e")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "12279bd1-c6e3-4622-84f4-f285f8ab305b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.1 -0.95 270)
+		(size 0.6 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "eaa6e98e-6a8f-4ab4-925f-0768867560bc")
+	)
+	(pad "2" smd rect
+		(at -1.1 0.95 270)
+		(size 0.6 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "65d95680-7cc7-44ca-9d69-5e1586ca6e7a")
+	)
+	(pad "3" smd rect
+		(at 1.1 0 270)
+		(size 0.6 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "3efe8e94-5bf7-4f21-bfba-f3f298e52052")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3D/ISL21010CFH315Z-T7A.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

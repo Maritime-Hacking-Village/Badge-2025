@@ -1,0 +1,12 @@
+(kicad_sch 
+    (version 20250114) 
+    (generator "eeschema") 
+    (generator_version "9.0") 
+    (uuid "33907dcb-f433-4f33-90a4-7680743e19d5") 
+    (paper "A4") 
+    (title_block 
+        (title "Maritime Hacking Village") 
+        (date "2025") 
+        (rev "1") 
+        (company "DC33")) 
+    (lib_symbols))

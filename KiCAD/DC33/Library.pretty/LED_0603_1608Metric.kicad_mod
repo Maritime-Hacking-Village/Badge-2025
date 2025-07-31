@@ -1,0 +1,280 @@
+(footprint "LED_0603_1608Metric"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
+	(tags "LED")
+	(property "Reference" "REF**"
+		(at -2.647326 0.040918 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "dc94a3dc-224d-4a8c-ada2-7c7bf74d0520")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Value" "1.8V/2MA ORANGE"
+		(at 0 1.43 0)
+		(layer "F.Fab")
+		(uuid "dbfc29e4-dcf9-4c1f-8304-52d320ff8ed3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.kingbrightusa.com/images/catalog/SPEC/APT1608LSECK-J4-PRV.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "62526f0c-ee8b-4311-8444-ed45805acd07")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Description" "LED ORANGE CLEAR 2SMD"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "46f40681-ad8b-438f-9252-4a9a81b017b1")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Label" "Battery"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1af56072-32a4-43a8-aab0-e77a017d198c")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Package" "0603"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6c4c5f13-5509-4f83-bc4b-87de83ddf43e")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer" "Kingbright"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "21ca6970-b0db-4f87-8bc8-dbed98ddccb6")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer Part Number" "APT1608LSECK/J4-PRV"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "97667125-c05f-4c77-8860-2d103baabb4d")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Color" "ORANGE"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8aba2fd1-1a19-432a-b0c8-a5e9073ab5c3")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1.485003 0.735)
+		(end 0.799998 0.734998)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e2877d51-fd73-463d-ac1a-1885b24551a8")
+	)
+	(fp_line
+		(start -1.485 -0.735)
+		(end -1.485003 0.735)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a0a464b4-0691-49d9-ad6e-31d8d1b82599")
+	)
+	(fp_line
+		(start 0.800003 -0.735)
+		(end -1.485 -0.735)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a99cba61-97b7-4737-aeb0-1ba83c8e5c37")
+	)
+	(fp_line
+		(start -1.480002 -0.729998)
+		(end 1.48 -0.729997)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "5b8b328a-b9c0-429b-a3c5-5a08c7a1025d")
+	)
+	(fp_line
+		(start -1.48 0.729997)
+		(end -1.480002 -0.729998)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "203d9de0-3bb2-4dba-9bb9-f463c93d5d49")
+	)
+	(fp_line
+		(start 1.48 -0.729997)
+		(end 1.480002 0.729998)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "bd095eb1-673c-41bf-9661-d3defaa44b5e")
+	)
+	(fp_line
+		(start 1.480002 0.729998)
+		(end -1.48 0.729997)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a5797910-d186-4f15-85eb-0381a1c632d5")
+	)
+	(fp_line
+		(start -0.800003 0.400001)
+		(end 0.800001 0.399998)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b4d652ee-5454-4362-b786-f53bc9114f45")
+	)
+	(fp_line
+		(start -0.8 -0.1)
+		(end -0.800003 0.400001)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "72e6c228-d430-4e55-8a34-3231bce04176")
+	)
+	(fp_line
+		(start -0.499998 -0.399999)
+		(end -0.8 -0.1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4c223c6b-bc31-402e-9e00-2994b01e1c72")
+	)
+	(fp_line
+		(start 0.800001 0.399998)
+		(end 0.800003 -0.400001)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3a267270-8438-4a77-be07-748e016fb000")
+	)
+	(fp_line
+		(start 0.800003 -0.400001)
+		(end -0.499998 -0.399999)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "75b1bdde-78be-468e-afc2-d2055d3cb2e7")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "889ab81e-61b8-4619-ade9-c5a87a679002")
+		(effects
+			(font
+				(size 0.4 0.4)
+				(thickness 0.06)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -0.7875 0)
+		(size 0.875 0.95)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "aaf319de-080d-42e0-bc74-48515fe2eb04")
+	)
+	(pad "2" smd roundrect
+		(at 0.7875 0)
+		(size 0.875 0.95)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "2f7984ca-48be-4bcf-a57e-2e3fb348839c")
+	)
+	(embedded_fonts no)
+	(model "${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_0603_1608Metric.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

@@ -1,0 +1,298 @@
+(footprint "2828343"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "282834-3-1")
+	(tags "Connector")
+	(property "Reference" "REF**"
+		(at 6.022575 4.065476 180)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "67e1ee14-4ef3-48ee-bdea-c2ffa19026b1")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Value" "282834-3"
+		(at 1.89 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "837c216d-dc28-4fa3-a560-5df82ff7adf7")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1-1773458-1_EURO_STYLE_QRG&DocType=Data%20Sheet&DocLang=English&PartCntxt=282834-3&DocFormat=pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "64ff1038-d4c7-4d98-9958-3ec1c519f007")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Description" "TERM BLK 3P SIDE ENT 2.54MM PCB"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b93b9811-7c92-4b25-9236-667c905edc0b")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Height" "10"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "abb46173-1806-4e57-a5da-fcb861f3a864")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer" "TE Connectivity AMP Connectors"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "68e6b5b4-93ea-4be7-a7d0-03d9bd025477")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer Part Number" "282834-3"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "68bbe199-ada5-4fd9-b91a-4f2015252996")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -1.5 -3.25)
+		(end 6.58 -3.249999)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "27711b92-8992-480f-8962-16ef4e85109f")
+	)
+	(fp_line
+		(start -1.5 3.249999)
+		(end -1.5 -3.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f77f6343-892f-4272-8c0b-9909ef7bfa65")
+	)
+	(fp_line
+		(start 6.58 -3.249999)
+		(end 6.58 3.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "73c7720d-6402-48c2-a52e-56eb4b985858")
+	)
+	(fp_line
+		(start 6.58 3.25)
+		(end -1.5 3.249999)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "358c71c2-33a1-4dca-887b-2eed9d11a54f")
+	)
+	(fp_line
+		(start -3.8 -4.25)
+		(end 7.579999 -4.249999)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a62d0756-5c7c-4e0a-8569-803ad1e0f033")
+	)
+	(fp_line
+		(start -3.8 4.25)
+		(end -3.8 -4.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "befde471-12b9-416c-ac0d-66afd6c93281")
+	)
+	(fp_line
+		(start 7.579999 -4.249999)
+		(end 7.58 4.249999)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a9c7e3d4-cb70-45de-adb1-d6d140619ae4")
+	)
+	(fp_line
+		(start 7.58 4.249999)
+		(end -3.8 4.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "067389dd-1bd9-45b1-8c3b-0cad47bd36dc")
+	)
+	(fp_line
+		(start -1.5 -3.25)
+		(end -1.5 3.249999)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "da778b0e-9058-4f6d-bf62-74db5f34f723")
+	)
+	(fp_line
+		(start -1.5 3.249999)
+		(end 6.58 3.25)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ca40c3c2-68e5-48f2-a560-e530421121eb")
+	)
+	(fp_line
+		(start 6.58 -3.249999)
+		(end -1.5 -3.25)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "138f0f65-b8ed-49fc-91ff-206ebd8bcb9c")
+	)
+	(fp_line
+		(start 6.58 3.25)
+		(end 6.58 -3.249999)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d8d814fd-ec64-4bf4-91ec-f8a423454cb7")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 1.89 0 0)
+		(layer "F.Fab")
+		(uuid "9762fff3-5fe5-42b7-b853-b5e72fd694fd")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 1.8 1.8)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "b275e6a8-1fe2-48ff-bb06-6c6dba201184")
+	)
+	(pad "2" thru_hole circle
+		(at 2.54 0)
+		(size 1.8 1.8)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "dbf0938b-974a-4305-a0d8-cf7d3e2d5d1c")
+	)
+	(pad "3" thru_hole circle
+		(at 5.08 0)
+		(size 1.8 1.8)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "3fd6a729-f2e9-431f-b43f-e0f15a645556")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3D/282834-3.stp"
+		(offset
+			(xyz 2.49 3.25 2.89)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 -180)
+		)
+	)
+)

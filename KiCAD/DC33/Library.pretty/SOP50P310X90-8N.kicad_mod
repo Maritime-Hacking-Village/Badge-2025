@@ -1,0 +1,306 @@
+(footprint "SOP50P310X90-8N"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "DCU (R-PDSO-G8)")
+	(tags "Integrated Circuit")
+	(property "Reference" "REF**"
+		(at 0.013839 1.87002 180)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "c926c79c-34ef-47d8-8b5c-bb725b916d7b")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Value" "TS5A3359DCUR"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "d9c0ba9d-7dcd-4b38-96aa-88d0098333a6")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.ti.com/lit/ds/symlink/ts5a3359.pdf"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8a9cebf7-f82f-4713-8101-102568447d6e")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Description" "1-Ohm SP3T Analog Switch 5-V/3.3-V Single-Channel 3:1 Multiplexer/Demultiplexer"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2875f7bf-8fc9-40f4-aaa5-ecc160756d94")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Height" "0.9"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "08facb31-c9c8-437a-90b6-360411e59816")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer" "Texas Instruments"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f323ea87-589e-4ceb-ab2e-f9a1c86e7a93")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer Part Number" "TS5A3359DCUR"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5fe15ca6-7798-4c95-821f-ee0cf655cdce")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start 0.8 1)
+		(end -0.8 1)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c6dc23f4-276e-4cfe-a32a-93ae6b35f52c")
+	)
+	(fp_line
+		(start 0.8 -1)
+		(end 0.8 1)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "027ee9e7-b3c7-4b55-96d6-fd9302ead174")
+	)
+	(fp_line
+		(start -0.8 1)
+		(end -0.8 -1)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7e606f0d-c709-4c14-94ee-bf4dcd2e3cb3")
+	)
+	(fp_line
+		(start -0.8 -1)
+		(end 0.8 -1)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0d46aa55-5279-4fbe-aa0f-8ef43cab5749")
+	)
+	(fp_line
+		(start -1.999999 -1.25)
+		(end -1.150002 -1.249999)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c0a232e1-0a7f-48d5-b997-748a0fd1ddd7")
+	)
+	(fp_line
+		(start 2.250001 1.3)
+		(end -2.249998 1.3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "e991f906-11e6-4a24-9911-d2358065d6cf")
+	)
+	(fp_line
+		(start 2.249998 -1.3)
+		(end 2.250001 1.3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "652a8c9a-c529-416a-90fc-eb8a059e9e47")
+	)
+	(fp_line
+		(start 1.150001 1)
+		(end -1.150001 1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "720c996c-2ee2-45d1-bf42-ca25b37e05c5")
+	)
+	(fp_line
+		(start 1.150001 -1)
+		(end 1.150001 1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "c545f878-30b1-417b-b102-7e4312e9221f")
+	)
+	(fp_line
+		(start -1.149999 -0.499999)
+		(end -0.65 -1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "7d1a5cb9-64ae-419b-8c32-15975c20ba65")
+	)
+	(fp_line
+		(start -1.150001 1)
+		(end -1.150001 -1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "5b2820e2-339f-4d6b-90c7-9e414b6a46c5")
+	)
+	(fp_line
+		(start -1.150001 -1)
+		(end 1.150001 -1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "d289ead9-c21f-4675-98cb-dfa35a5df0a9")
+	)
+	(fp_line
+		(start -2.249998 1.3)
+		(end -2.250001 -1.3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "1a61ee41-a235-441f-b492-319f5f959400")
+	)
+	(fp_line
+		(start -2.250001 -1.3)
+		(end 2.249998 -1.3)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "d5bf920b-d650-451e-b9ef-a2aeeb715b20")
+	)
+	(pad "1" smd rect
+		(at -1.575 -0.749999 90)
+		(size 0.3 0.85)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "113a426e-08c3-403a-9919-a8cda3c9222b")
+	)
+	(pad "2" smd rect
+		(at -1.575 -0.25 90)
+		(size 0.3 0.85)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "bea91d5e-cc33-4cf9-85f9-89d1b90c81d5")
+	)
+	(pad "3" smd rect
+		(at -1.575 0.25 90)
+		(size 0.3 0.85)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "c2dca86d-e0ab-4950-a86a-2962d6b3d021")
+	)
+	(pad "4" smd rect
+		(at -1.575 0.749998 90)
+		(size 0.3 0.85)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "44d5b0f6-f9f1-4f58-a2ed-32d95259d89f")
+	)
+	(pad "5" smd rect
+		(at 1.575 0.749999 90)
+		(size 0.3 0.85)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "1de1c521-19d7-4fa1-bba6-33d1fd8887e3")
+	)
+	(pad "6" smd rect
+		(at 1.575 0.25 90)
+		(size 0.3 0.85)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "91197e12-f253-438c-bf0a-3fbc9fc6151b")
+	)
+	(pad "7" smd rect
+		(at 1.575 -0.25 90)
+		(size 0.3 0.85)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "c30bf632-899c-4487-99d6-2a17a4b565c9")
+	)
+	(pad "8" smd rect
+		(at 1.575 -0.749998 90)
+		(size 0.3 0.85)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "40581dfb-72bd-48dd-83fe-41f1fa2df7b5")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3D/TS5A3359DCUR.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

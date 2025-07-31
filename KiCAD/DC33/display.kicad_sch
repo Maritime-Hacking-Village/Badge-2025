@@ -1,0 +1,180 @@
+(kicad_sch 
+    (version 20231120) 
+    (generator "eeschema") 
+    (generator_version "8.0") 
+    (uuid "ee813f32-effe-404d-8d45-7c1ca9fc1a18") 
+    (paper "A4") 
+    (title_block 
+        (title "Maritime Hacking Village") 
+        (date "2025") 
+        (rev "1") 
+        (company "DC33")) 
+    (lib_symbols 
+        (symbol "SCH Library:ADAFRUIT_1.9_320_170" 
+            (exclude_from_sim no) 
+            (in_bom yes) 
+            (on_board yes) 
+            (property "Reference" "U" 
+                (at 0 0 0) 
+                (effects 
+                    (font 
+                        (size 1.27 1.27)))) 
+            (property "Value" "" 
+                (at 0 0 0) 
+                (effects 
+                    (font 
+                        (size 1.27 1.27)))) 
+            (property "Footprint" "" 
+                (at 0 0 0) 
+                (effects 
+                    (font 
+                        (size 1.27 1.27)) 
+                    (hide yes))) 
+            (property "Datasheet" "" 
+                (at 0 0 0) 
+                (effects 
+                    (font 
+                        (size 1.27 1.27)) 
+                    (hide yes))) 
+            (property "Description" "" 
+                (at 0 0 0) 
+                (effects 
+                    (font 
+                        (size 1.27 1.27)) 
+                    (hide yes))) 
+            (symbol "ADAFRUIT_1.9_320_170_0_1" 
+                (rectangle 
+                    (start -6.35 2.54) 
+                    (end 3.81 -3.81) 
+                    (stroke 
+                        (width 0) 
+                        (type default)) 
+                    (fill 
+                        (type none)))))) 
+    (hierarchical_label "MISO" 
+        (shape output) 
+        (at 46.99 97.79 180) 
+        (effects 
+            (font 
+                (size 1.27 1.27)) 
+            (justify right)) 
+        (uuid "1e0ebc30-9b50-4703-89c5-fb5f31d710ad")) 
+    (hierarchical_label "SCLK" 
+        (shape input) 
+        (at 46.99 102.87 180) 
+        (effects 
+            (font 
+                (size 1.27 1.27)) 
+            (justify right)) 
+        (uuid "1ef6248b-e069-48c0-9b50-ba68b9d5fa29")) 
+    (hierarchical_label "MOSI" 
+        (shape input) 
+        (at 46.99 92.71 180) 
+        (effects 
+            (font 
+                (size 1.27 1.27)) 
+            (justify right)) 
+        (uuid "22b2a136-174f-42e7-99ad-212ac7d201b8")) 
+    (hierarchical_label "SD_CS" 
+        (shape input) 
+        (at 46.99 130.81 180) 
+        (effects 
+            (font 
+                (size 1.27 1.27)) 
+            (justify right)) 
+        (uuid "74be377c-7a29-49c6-a5de-27b8066d2395")) 
+    (hierarchical_label "BACKLIGHT" 
+        (shape input) 
+        (at 46.99 135.89 180) 
+        (effects 
+            (font 
+                (size 1.27 1.27)) 
+            (justify right)) 
+        (uuid "7a43bdcf-c2d9-4e36-9501-2d0c4e96da2e")) 
+    (hierarchical_label "DISP_CS" 
+        (shape input) 
+        (at 46.99 124.46 180) 
+        (effects 
+            (font 
+                (size 1.27 1.27)) 
+            (justify right)) 
+        (uuid "9836cb3c-0ce4-48a3-8606-d33df498a342")) 
+    (hierarchical_label "RESET" 
+        (shape input) 
+        (at 46.99 140.97 180) 
+        (effects 
+            (font 
+                (size 1.27 1.27)) 
+            (justify right)) 
+        (uuid "b6fe2160-4b2b-4c24-ba15-fbd3e114bd66")) 
+    (hierarchical_label "DC" 
+        (shape input) 
+        (at 46.99 113.03 180) 
+        (effects 
+            (font 
+                (size 1.27 1.27)) 
+            (justify right)) 
+        (uuid "c052e2b7-dd24-4390-8f72-5837b67f6fdf")) 
+    (symbol 
+        (lib_id "SCH Library:ADAFRUIT_1.9_320_170") 
+        (at 86.36 58.42 0) 
+        (unit 1) 
+        (exclude_from_sim no) 
+        (in_bom yes) 
+        (on_board yes) 
+        (dnp no) 
+        (fields_autoplaced yes) 
+        (uuid "e013343c-5730-4731-9a9c-c9629fa5b996") 
+        (property "Reference" "U6" 
+            (at 91.44 58.4199 0) 
+            (effects 
+                (font 
+                    (size 1.27 1.27)) 
+                (justify left))) 
+        (property "Value" "ISL21010CFH315Z-T7A" 
+            (at 91.44 60.325 0) 
+            (effects 
+                (font 
+                    (size 1.27 1.27)) 
+                (justify left))) 
+        (property "Footprint" "Library:SOT95P237X112-3N-RENESAS" 
+            (at 86.36 58.42 0) 
+            (effects 
+                (font 
+                    (size 1.27 1.27)) 
+                (hide yes))) 
+        (property "Datasheet" "https://www.renesas.com/en-us/www/doc/datasheet/isl21010.pdf" 
+            (at 86.36 58.42 0) 
+            (effects 
+                (font 
+                    (size 1.27 1.27)) 
+                (hide yes))) 
+        (property "Description" "IC VREF SERIES 0.2% SOT23-3" 
+            (at 86.36 58.42 0) 
+            (effects 
+                (font 
+                    (size 1.27 1.27)) 
+                (hide yes))) 
+        (instances 
+            (project "" 
+                (path "/c031bbd5-e288-461b-abff-d4e8c5230266/1c67ab1b-9175-4989-8678-21c7f0211eec" 
+                    (reference "U6") 
+                    (unit 1)))) 
+        (property "Height" "1.12" 
+            (at 91.44 71.1199 0) 
+            (effects 
+                (font 
+                    (size 1.27 1.27)) 
+                (justify left) hide)) 
+        (property "Manufacturer" "Renesas Electronics" 
+            (at 91.44 73.6599 0) 
+            (effects 
+                (font 
+                    (size 1.27 1.27)) 
+                (justify left) hide)) 
+        (property "Manufacturer Part Number" "ISL21010CFH315Z-T7A" 
+            (at 91.44 78.7399 0) 
+            (effects 
+                (font 
+                    (size 1.27 1.27)) 
+                (justify left) hide))))

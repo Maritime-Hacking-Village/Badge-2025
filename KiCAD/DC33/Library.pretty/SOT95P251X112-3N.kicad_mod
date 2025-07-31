@@ -1,0 +1,304 @@
+(footprint "SOT95P251X112-3N"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "SOT23_1+")
+	(tags "MOSFET (N-Channel)")
+	(property "Reference" "REF**"
+		(at 0 2.4 180)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "0cf3fd6f-0b70-4d23-aed7-ccc0c9efcf43")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Value" "FDN359BN"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "b2d1bb27-2188-42de-88d8-29987e72d7a7")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.onsemi.com/pub/Collateral/FDN359BN-D.pdf"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f23d61cc-dc50-4648-a6f0-a26bbc2724c1")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Description" "MOSFET N-CH 30V 2.7A SUPERSOT3"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "edb8d942-d70f-4589-a527-ef9acd8527ea")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Height" "1.12"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2afd1416-8603-45c4-8368-9679df1d5c59")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer" "onsemi"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a5055a5e-3541-4614-be5c-b517afec00ee")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer Part Number" "FDN359BN"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "91e82179-752f-4b9c-ad2c-34c5ddeecbc9")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start 0.250001 -1.459999)
+		(end 0.249999 1.46)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "dc8e3d47-f703-4c84-b476-3daba80f992e")
+	)
+	(fp_line
+		(start 0.249999 1.46)
+		(end -0.250001 1.459999)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "aaa457ce-8dee-4052-8968-d738c2b25bad")
+	)
+	(fp_line
+		(start -0.249999 -1.46)
+		(end 0.250001 -1.459999)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7e6b56e4-47cc-4390-a6b4-2868380fa073")
+	)
+	(fp_line
+		(start -0.250001 1.459999)
+		(end -0.249999 -1.46)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c2f90683-702d-4da0-83af-9a55da6b5fa3")
+	)
+	(fp_line
+		(start -1.700001 -1.525001)
+		(end -0.6 -1.525)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "226f1cef-0869-4519-9929-1697fe20b10e")
+	)
+	(fp_line
+		(start 1.950001 -1.77)
+		(end 1.949999 1.77)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "f7714d16-96aa-43e4-9aff-30ead4297fc3")
+	)
+	(fp_line
+		(start 1.949999 1.77)
+		(end -1.950001 1.77)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "6ada735a-180c-4fdb-982f-4c82fee36864")
+	)
+	(fp_line
+		(start 0.680001 1.460001)
+		(end -0.68 1.460001)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "6aea805f-4783-4230-8ff4-0090b97b1205")
+	)
+	(fp_line
+		(start 0.68 -1.460001)
+		(end 0.680001 1.460001)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "f6ef7a3f-d713-44ec-a712-30fba494c2c3")
+	)
+	(fp_line
+		(start -0.68 1.460001)
+		(end -0.680001 -1.460001)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "f673e3bd-237a-4033-8665-e227aef07807")
+	)
+	(fp_line
+		(start -0.68 -0.509999)
+		(end 0.27 -1.46)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "7362380e-5192-4eba-86bd-39444eed4799")
+	)
+	(fp_line
+		(start -0.680001 -1.460001)
+		(end 0.68 -1.460001)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "d9cce71f-2f36-4f69-a102-edf0186e4b2c")
+	)
+	(fp_line
+		(start -1.949999 -1.77)
+		(end 1.950001 -1.77)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "55da423e-83fb-432c-8e81-3d2a476da0ab")
+	)
+	(fp_line
+		(start -1.950001 1.77)
+		(end -1.949999 -1.77)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "66143afa-bb4f-44bc-9d82-e1921d391749")
+	)
+	(pad "1" smd rect
+		(at -1.150001 -0.95 90)
+		(size 0.65 1.1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "ca2489d7-2261-4b75-9631-51a9668d6eff")
+	)
+	(pad "2" smd rect
+		(at -1.149999 0.95 90)
+		(size 0.65 1.1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "dca26707-9226-4808-8d50-86b0c189804c")
+	)
+	(pad "3" smd rect
+		(at 1.150001 0 90)
+		(size 0.65 1.1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(teardrops
+			(best_length_ratio 0.5)
+			(max_length 1)
+			(best_width_ratio 1)
+			(max_width 2)
+			(curved_edges no)
+			(filter_ratio 0.9)
+			(enabled yes)
+			(allow_two_segments yes)
+			(prefer_zone_connections yes)
+		)
+		(uuid "51165350-d03f-442a-abcb-1b405c468b24")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3D/FDN359BN.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

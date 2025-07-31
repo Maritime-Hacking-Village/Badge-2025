@@ -1,0 +1,258 @@
+(footprint "SHDRRA2W50P0X200_1X2_590X760X480P"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "S2B-PH-K-S(LF)(SN)")
+	(tags "Connector")
+	(property "Reference" "REF**"
+		(at -5.1 0.975 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "8b96fc89-27e8-4ccd-b31f-046f0cedf066")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Value" "S2B-PH-K-S_LF__SN_"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "6cdf3f77-81fb-4e52-b36a-9777895c7302")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/ePH.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "10e93a76-5da7-4513-9153-a8d3b9bbcf41")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Description" "CONN HEADER R/A 2POS 2MM"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "da935575-6bab-48cd-bd90-9b2b34e48f5c")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Height" "4.8"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c1e5bf1f-3610-4cca-9524-e69f8c0ac97a")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer" "JST (JAPAN SOLDERLESS TERMINALS)"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3f9ee316-b56f-46f8-925f-db0bfaee9ded")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer Part Number" "S2B-PH-K-S(LF)(SN)"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "495eb24a-d46c-42b5-a6cb-fb53c01d09b7")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -3.95 -6.25)
+		(end -3.95 1.35)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "cd9ca36a-e879-4f3c-8895-3910224810d5")
+	)
+	(fp_line
+		(start 1.95 -6.25)
+		(end -3.95 -6.25)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "51aba41b-9a2b-4dfb-befa-179ae9debef3")
+	)
+	(fp_line
+		(start 1.95 0)
+		(end 1.95 -6.25)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "468bd621-88d7-40cc-bafa-d566acb37878")
+	)
+	(fp_rect
+		(start -3 -5.25)
+		(end 1 -1.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Adhes")
+		(uuid "189d9de3-4122-441c-bbec-45ded74e15e7")
+	)
+	(fp_line
+		(start -4.2 -6.5)
+		(end 2.2 -6.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "bc58d83c-8a98-4096-8573-5b421bbc8b2b")
+	)
+	(fp_line
+		(start -4.2 1.6)
+		(end -4.2 -6.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "8690d779-7604-4ee9-9da4-676ac857643b")
+	)
+	(fp_line
+		(start 2.2 -6.5)
+		(end 2.2 1.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0709e61b-d70e-4d9e-bf93-dcf8bbe8167e")
+	)
+	(fp_line
+		(start 2.2 1.6)
+		(end -4.2 1.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e9176d26-0da0-4634-aa26-b1511c647d0b")
+	)
+	(fp_line
+		(start -3.95 -6.25)
+		(end 1.95 -6.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "83e27231-deb5-4299-9116-599d4e79be7e")
+	)
+	(fp_line
+		(start -3.95 1.35)
+		(end -3.95 -6.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "235a8082-8422-43dd-bc3e-e82fa48062da")
+	)
+	(fp_line
+		(start 1.95 -6.25)
+		(end 1.95 1.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6219387d-c4ad-45bb-920d-2f638fecfcab")
+	)
+	(fp_line
+		(start 1.95 1.35)
+		(end -3.95 1.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "228377e8-9971-4353-b65d-514392ee7db9")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "0c5bd001-fac5-4ca8-b60a-0473150dcf2e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 0 0 180)
+		(size 1.35 1.35)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "b753c7ef-ce12-4d8a-93a0-ee9d59a504c9")
+	)
+	(pad "2" thru_hole circle
+		(at -2 0 180)
+		(size 1.35 1.35)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "b9f9b386-fe90-4cda-83b4-e284e9754a5e")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3D/S2B-PH-K-S.STEP"
+		(offset
+			(xyz -1 -0.25 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 180)
+		)
+	)
+)

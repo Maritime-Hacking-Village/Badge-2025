@@ -1,0 +1,362 @@
+(footprint "SFH11-NBPC-D03-ST-BK"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0.000005 -0.500002 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "9ebe7c13-393b-4699-be05-f262e35f4da6")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Value" "SAO"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "afa5367c-d337-4611-95a5-b2bec460e1f2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://katalog.we-online.de/em/datasheet/6120xx21621.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4001ef20-ba8f-4c1a-93aa-0c2d0a0f4e34")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Description" "Wurth Elektronik PCB Header WR-BHD, 6 Way, 2.54mm Pitch, 2 Row, Straight, Through Hole"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e87da108-e45c-458d-8378-f4c6fb6248eb")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Height" "9.1"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d7e888f6-f6ee-42ee-b94a-ee4cd0de9369")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer" "Sullins Connector Solutions"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fe762c10-e87a-4e25-9521-690a8fad858e")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer Part Number" "SFH11-NBPC-D03-ST-BK"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2ce1f945-3463-4ed2-8ba3-319c1b23757d")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Mouser Part Number" "710-61200621621"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "880340cc-3c1f-42b8-871e-a79f4e0adeba")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Wurth-Elektronik/61200621621?qs=PhR8RmCirEbjX8n1RKw4Jw%3D%3D"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "432bff4b-e0ab-474f-aaa9-159d0033a0c0")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "Wurth Elektronik"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ab2b9f38-a2c6-4f61-a7d3-87e6ca42f3c6")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "61200621621"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e4038ce6-16f7-4fb7-b39f-c06193a4cf1d")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -5 3.38)
+		(end -5 -4.925)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "404e2b77-6667-4878-bafc-47b2903d9b6f")
+	)
+	(fp_line
+		(start -5 3.38)
+		(end 10.48 3.38)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "525890eb-f1e7-4b24-90dd-1d1c38bfb1a0")
+	)
+	(fp_line
+		(start 10.48 -4.925)
+		(end -5 -4.925)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a630cca6-b77a-4ea0-9f39-afdbf4d50ed1")
+	)
+	(fp_line
+		(start 10.48 3.38)
+		(end 10.48 -4.925)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "232b401b-8f4a-4591-9694-27a5115002b2")
+	)
+	(fp_rect
+		(start 0.4 -5.775)
+		(end 5.125 -4.925)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "9cb2d1ac-5ea3-4a2d-99dd-8b5b3e7204a4")
+	)
+	(fp_line
+		(start -5.25 -5.97)
+		(end 10.73 -5.97)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "faee666e-8835-4415-b140-4e3ab189b1e5")
+	)
+	(fp_line
+		(start -5.25 3.63)
+		(end -5.25 -5.97)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "242ac67e-4516-42f5-ab42-daaa0abba208")
+	)
+	(fp_line
+		(start 10.73 -5.97)
+		(end 10.73 3.63)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "2a177388-fcd8-4bd2-8880-58593e736977")
+	)
+	(fp_line
+		(start 10.73 3.63)
+		(end -5.25 3.63)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "040b51e3-499a-4f0f-aff0-0d2281b6955d")
+	)
+	(fp_line
+		(start -5 -5.72)
+		(end 10.48 -5.72)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "69930126-707f-4f8c-bdf9-224ad8146342")
+	)
+	(fp_line
+		(start -5 3.38)
+		(end -5 -5.72)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "9e33d832-3196-435c-932d-fa18e3868163")
+	)
+	(fp_line
+		(start 10.48 -5.72)
+		(end 10.48 3.38)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "58a27b56-7c73-453f-967c-a82f0b5006b7")
+	)
+	(fp_line
+		(start 10.48 3.38)
+		(end -5 3.38)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3c62dab5-2fce-4864-b928-8afd33d564c2")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "955cc3c6-81a4-4987-b773-38bc46896303")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0.100001 0.100002 0)
+		(layer "F.Fab")
+		(uuid "e0c35254-7f93-4d20-9c13-e9f646b7ce04")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 0.1 -2.44)
+		(size 1.65 1.65)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "07f0834e-34da-4802-98f1-f55748d8e76c")
+	)
+	(pad "2" thru_hole circle
+		(at 0.1 0.1)
+		(size 1.65 1.65)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9075c673-878c-4e94-9ef1-de468fa01d6f")
+	)
+	(pad "3" thru_hole circle
+		(at 2.64 -2.44)
+		(size 1.65 1.65)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "805e6999-1f96-4c85-911d-5591a10ddb2c")
+	)
+	(pad "4" thru_hole circle
+		(at 2.64 0.1)
+		(size 1.65 1.65)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "75c5dc7b-f2df-4d0d-983f-17dc11ef6fb7")
+	)
+	(pad "5" thru_hole circle
+		(at 5.18 -2.44)
+		(size 1.65 1.65)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "0bf4755e-d906-4fef-82ec-5f988a18ab1a")
+	)
+	(pad "6" thru_hole circle
+		(at 5.18 0.1)
+		(size 1.65 1.65)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9802eebd-75e7-4226-bc4e-5bd7718f235e")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3D/SFH11-NBPC-D03-ST-BK.STEP"
+		(offset
+			(xyz 2.54 1.25 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -180)
+		)
+	)
+)

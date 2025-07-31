@@ -1,0 +1,271 @@
+(footprint "RES_3540"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 1.55 3.075 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "0979d4b1-b344-4cf7-a7dc-af2e2c89d707")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Value" "13"
+		(at -0.08 0.92 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "f81c1b53-51a1-4de7-8425-4d6c5bd1a057")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.mouser.es/datasheet/2/418/9/ENG_DS_1773204_5_1-3346398.pdf"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5e91f849-d656-4c7f-b937-77c7760d41ef")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Description" "RES 3540 13R 1%"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b6072bb0-fcf1-4d6e-b99e-3cc924c509fa")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Power" "4W"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9daf7fdc-1d82-4104-8456-720c577cc009")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Package" "3540"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5fdf68ba-45e1-4c9c-bca7-6b18da75093c")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer" "TE Connectivity"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b7b7f5c9-677e-43c6-9d82-12ed85697dd5")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Tolerance" "1%"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c7585bac-a86e-4ca5-829a-d50b6e237343")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(property "Manufacturer Part Number" "354013RFT"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e4bd112a-fc94-47e9-befc-8602775ea3bb")
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.127)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -0.797369 2.21)
+		(end 0.797369 2.21)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3b6137ac-65ac-4823-b01a-4bc6e51b0006")
+	)
+	(fp_line
+		(start -0.797369 -2.21)
+		(end 0.797369 -2.21)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b99b2e7a-b434-4324-99fc-be4c2e74b4ba")
+	)
+	(fp_line
+		(start 5.1 2.48)
+		(end -5.3 2.48)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d3f67402-a64d-43b9-b982-f6f3766f77bf")
+	)
+	(fp_line
+		(start 5.1 -2.48)
+		(end 5.1 2.48)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0f111264-f371-4667-ab0d-883f28966c1c")
+	)
+	(fp_line
+		(start -5.3 2.48)
+		(end -5.3 -2.48)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "31641e3a-9505-4252-a8f7-e79f73eabb1c")
+	)
+	(fp_line
+		(start -5.3 -2.48)
+		(end 5.1 -2.48)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "6cf9dfda-33bf-4de4-a095-cdb252407a6a")
+	)
+	(fp_line
+		(start 3.7 2.2)
+		(end -3.7 2.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4b467460-55c3-4725-ac12-3056e1be9a04")
+	)
+	(fp_line
+		(start 3.7 -2.2)
+		(end 3.7 2.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "198dbd49-3ed5-41b9-8141-da1b13b46bd3")
+	)
+	(fp_line
+		(start -3.7 2.2)
+		(end -3.7 -2.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "82ee90e5-a3ce-4f7e-8cab-82ff49d1345c")
+	)
+	(fp_line
+		(start -3.7 -2.2)
+		(end 3.7 -2.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "9119978f-948d-4aaa-8056-b7c83a6c2136")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -0.08 2.42 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "0820968f-f1b0-4c0e-84bc-86dfcfbc5f63")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "9b930617-679f-42da-b74c-ed6641ae3a05")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -3.43 0 180)
+		(size 3.3 4.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.082645)
+		(uuid "321e8ae9-18fd-4116-ae85-4f46463d1238")
+	)
+	(pad "2" smd roundrect
+		(at 3.27 0 180)
+		(size 3.3 4.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.082645)
+		(uuid "9c6a10fa-176f-41a4-b84e-385e38da1e9d")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3D/RES_3540_TEC.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
