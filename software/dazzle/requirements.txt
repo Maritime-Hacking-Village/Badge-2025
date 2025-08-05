@@ -1,0 +1,6 @@
+matplotlib==3.10.1
+numpy==2.2.5
+scikit_learn==1.6.1
+Shapely==2.1.0
+svgelements==1.9.6
+tg.devtools==2.5.0
