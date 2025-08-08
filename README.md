@@ -207,6 +207,18 @@ tx::enable()
 tx::send(frame)
 ```
 
+```
+// Half-duplex mode
+trx::set_tie(true)
+// 120R termination resistor for CAN
+trx::set_term(trx::TERM_120R_0, trx::TERM_120R_1)
+rx::set_mode("can")
+rx::set_baud(250_000)
+rx::enable()
+let frame = rx::recv(5.0)
+print(frame)
+```
+
 Note that you can separate multi-line strings in the REPL with `\`.
 
 #### Differential Injector
