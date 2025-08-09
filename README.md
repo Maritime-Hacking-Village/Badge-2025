@@ -244,6 +244,28 @@ tx::enable();
 tx::send(data);
 ```
 
+```
+let flag = blob()
+// SOF
+flag.push(tx::H_1V | tx::L_1V); flag.push(tx::H_1V | tx::L_1V); flag.push(tx::H_1V | tx::L_1V);
+// M
+flag.push(tx::H_4V | tx::L_1V); flag.push(tx::H_3V5 | tx::L_2V5); flag.push(tx::H_3V | tx::L_2V); flag.push(tx::H_3V5 | tx::L_2V5); flag.push(tx::H_4V | tx::L_1V);
+// IFS
+flag.push(tx::H_1V | tx::L_1V); flag.push(tx::H_1V | tx::L_1V);
+// H
+flag.push(tx::H_4V | tx::L_1V); flag.push(tx::H_2V5 | tx::L_2V); flag.push(tx::H_2V5 | tx::L_2V); flag.push(tx::H_4V | tx::L_1V);
+// IFS
+flag.push(tx::H_1V | tx::L_1V); flag.push(tx::H_1V | tx::L_1V);
+// V
+flag.push(tx::H_4V | tx::L_1V); flag.push(tx::H_2V | tx::L_1V); flag.push(tx::H_1V | tx::L_1V); flag.push(tx::H_2V | tx::L_1V); flag.push(tx::H_4V | tx::L_1V);
+// IFS
+flag.push(tx::H_1V | tx::L_1V); flag.push(tx::H_1V | tx::L_1V); flag.push(tx::H_1V | tx::L_1V);
+tx::set_mode("inject");
+tx::set_baud(1_000_000);
+tx::enable();
+tx::send(flag);
+```
+
 #### Accelerometer
 ```
 // Shake up the board to see measurements.
