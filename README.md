@@ -62,6 +62,7 @@ The firmware contains the following:
 
 #### TODOs
 The firmware is not complete yet. We'll be updating this repository as we have time to expand firmware capability. We are currently absent an implementation for the following:
+
 - SD card FAT32 file system for packet captures and replay files
 - Button-controlled GUI
 - More/better protocol state machines
