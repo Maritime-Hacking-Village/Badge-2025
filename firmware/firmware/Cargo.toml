@@ -1,0 +1,112 @@
+[package]
+edition = "2021"
+name = "mhv-dc33-firmware"
+version = "0.1.0"
+license = "MIT OR Apache-2.0"
+
+[[bin]]
+name = "mhv_dc33_fw"
+path = "src/main.rs"
+test = false
+doctest = false
+bench = false
+
+[features]
+default = []
+heap-in-psram = []
+wifi = []
+
+[dependencies]
+assign-resources = { version = "0.5.0" }
+bitfield = "0.19.1"
+bitvec = { version = "1.0.1", features = ["alloc"], default-features = false }
+byteorder = { version = "1.5.0", default-features = false }
+# cortex-m = { version = "0.7.7", features = ["inline-asm", "critical-section-single-core"] }
+cortex-m = { version = "0.7.7", features = ["inline-asm"] }
+cortex-m-rt = "0.7.5"
+critical-section = { version = "1.2.0", default-features = false }
+# cyw43 = { version = "0.4.0", features = ["defmt", "firmware-logs"] }
+# cyw43-pio = { version = "0.5.1", features = ["defmt"] }
+defmt = { version = "0.3", features = ["alloc"] }
+defmt-rtt = "1.0.0"
+embassy-embedded-hal = { version = "0.4.0", features = ["defmt"] }
+embassy-executor = { version = "0.7.0", features = [
+    "arch-cortex-m",
+    "executor-thread",
+    "executor-interrupt",
+    "defmt",
+    "task-arena-size-16384",
+] }
+embassy-futures = { version = "0.1.1" }
+embassy-net = { version = "0.7.0", features = [
+    "defmt",
+    "tcp",
+    "udp",
+    "raw",
+    "dhcpv4",
+    "medium-ethernet",
+    "dns",
+] }
+embassy-rp = { version = "0.6.0", features = [
+    "defmt",
+    "unstable-pac",
+    "time-driver",
+    "critical-section-impl",
+    "rp235xa",
+    "binary-info",
+] }
+embassy-sync = { version = "0.7.0", features = ["defmt"] }
+embassy-time = { version = "0.4.0", features = [
+    "defmt",
+    "defmt-timestamp-uptime",
+] }
+embassy-usb = { version = "0.5.0", features = ["defmt"] }
+embassy-usb-logger = { version = "0.5.0" }
+embedded-alloc = "0.6.0"
+embedded-graphics = "0.8.1"
+embedded-graphics-transform = { path = "../embedded-graphics-transform", version = "0.1.0" }
+embedded-hal = { version = "1.0.0", features = ["defmt-03"] }
+embedded-hal-async = { version = "1.0.0", features = ["defmt-03"] }
+embedded-hal-bus = { version = "0.3.0", features = ["async"] }
+embedded-hal-legacy = { package = "embedded-hal", version = "0.2.7" }
+embedded-io-async = { version = "0.6.1", features = ["defmt-03"] }
+embedded-storage = { version = "0.3.1" }
+embedded-term = { version = "0.1.1", path = "../embedded-term" }
+fixed = "1.29.0"
+heapless = "0.8"
+itertools = { version = "0.14.0", default-features = false, features = [
+    "use_alloc",
+] }
+mbr-nostd = "0.1.0"
+mipidsi = { version = "0.9.0", git = "https://github.com/almindor/mipidsi", branch = "render-engine" }
+nb = "1.1.0"
+panic-probe = { version = "1.0.0", features = ["print-defmt"] }
+pio = { version = "0.3" }
+portable-atomic = { version = "1.11.0", features = ["critical-section"] }
+rhai = { version = "1.21.0", features = [
+    "no_std",
+    "internals",
+    "debugging",
+], default-features = false }
+smart-leds = "0.4.0"
+static_cell = "2.1.0"
+tinygif = { version = "0.0.4", features = ["defmt"] }
+usbd-hid = "0.8.2"
+utf8-parser = "0.1.1"
+void = { version = "1.0.2", default-features = false }
+
+[profile.release]
+debug = 2
+lto = 'fat'
+
+[profile.dev]
+opt-level = "z"
+# lto = true
+lto = "fat"
+no-vectorize-loops = true
+
+[patch.crates-io]
+defmt = { path = '../defmt-wrap' }
+embedded-hal = { git = "https://github.com/rust-embedded/embedded-hal.git", branch = "master" }
+embedded-hal-async = { git = "https://github.com/rust-embedded/embedded-hal.git", branch = "master" }
+embedded-hal-bus = { git = "https://github.com/rust-embedded/embedded-hal.git", branch = "master" }

@@ -1,0 +1,16 @@
+[package]
+name = "defmt"
+version = "0.3.100"
+edition = "2021"
+
+# [lib]
+# proc-macro = true
+
+[dependencies]
+defmt-orig = { package = "defmt", version = "1.0.1", features = ["ip_in_core"] }
+embedded-alloc = "0.6.0"
+
+[features]
+alloc = []
+avoid-default-panic = []
+ip_in_core = []

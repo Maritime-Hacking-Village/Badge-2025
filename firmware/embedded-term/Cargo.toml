@@ -1,0 +1,36 @@
+[package]
+name = "embedded-term"
+version = "0.1.1"
+authors = [
+    "Runji Wang <wangrunji0408@163.com>",
+    "Yuekai Jia <equation618@gmail.com>",
+    "Jiajie Chen <jiegec@qq.com>",
+]
+edition = "2021"
+description = "Terminal emulator on embedded-graphics."
+keywords = ["terminal", "no-std"]
+categories = ["embedded", "gui", "no-std"]
+homepage = "https://github.com/rcore-os/embedded-term"
+repository = "https://github.com/rcore-os/embedded-term"
+license = "MIT OR Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+embedded-graphics = "0.8.1"
+vte = "0.10"
+log = { version = "0.4", default-features = false, optional = true }
+bitflags = "1.3"
+lazy_static = { version = "1.4", features = ["spin_no_std"] }
+
+[dev-dependencies]
+embedded-graphics-simulator = "0.3"
+embedded-graphics-core = "0.3"
+env_logger = "0.9"
+libc = "0.2"
+pty = "0.2"
+mio = "0.6"
+termios = "0.3"
+
+[features]
+default = ["log"]
