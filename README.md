@@ -38,8 +38,6 @@ The hardware contains the following:
     - Digitally switched high impedance mode
 - Licensed under the CERN-OHL-W
 
-![Badge Render](/home/nick/Workspace/MHV-Badge-2025/firmware/badge.png  "Badge")
-
 #### LED Behavior
 Along with the 9 NeoPixels, we have 6 additional single-color LEDs.
 
