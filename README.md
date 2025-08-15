@@ -1,6 +1,11 @@
 # Differential Destroyer
 This document attempts to provide an overview of the MHV badge this year. We're going to go over the features of the board, walk through the board layout, and dive into the firmware interfaces and scriping engine. Please note that this documentation, along with the firmware itself, is very much a work-in-progress. As we continue to develop the board's firmware, we will be updating these docs and the scripting interface. *All voltage injection functions are experimental and may cause damage if used improperly. We assume no liability for damages caused by performing voltage injection.*
 
+## *Aug. 15 UPDATE*
+We'll be taking a short break from firmware development to decompress and catch up on some other work. In a week or so, we'll come back to this repo and start cleaning up the firmware, making optimization passes for heap usage, and improving the project documentation. Please try to be patient with us.
+
+If you notice anything missing from the repo, features you'd like added, or bugs you've found, please open an issue on the GitHub page, or reach out directly to nick@maritimehackingvillage.com.
+
 ## *Important Notice!*
 If there is a missing feature that you desperately want implemented during DEF CON, or if you run into bugs, please approach @nick-halt and I'd be happy to help get your board working as desired, time permitting.
 
