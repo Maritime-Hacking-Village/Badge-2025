@@ -6,7 +6,7 @@ use crate::{
     register_repl_fn,
 };
 use alloc::boxed::Box;
-use rhai::{Dynamic, Engine, EvalAltResult, Map, Module, NativeCallContext, INT};
+use rhai::{Dynamic, Engine, EvalAltResult, Map, Module, NativeCallContext, FLOAT, INT};
 
 pub(crate) fn repl_accel_read(
     ctx: &NativeCallContext,
@@ -155,181 +155,181 @@ pub(crate) fn repl_accel_set_motion_control(
     Ok(())
 }
 
-// pub(crate) fn repl_accel_clear_interrupts(
-//     ctx: &NativeCallContext,
-//     call_tx: RpcCallSender,
-//     result_rx: RpcResultReceiver,
-// ) -> Result<(), Box<EvalAltResult>> {
-//     // Construct the RpcCall and send it non-blocking (errors if unable to send).
-//     let call = RpcCall::AccelClearInterrupts;
-//     let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
+pub(crate) fn repl_accel_clear_interrupts(
+    ctx: &NativeCallContext,
+    call_tx: RpcCallSender,
+    result_rx: RpcResultReceiver,
+) -> Result<(), Box<EvalAltResult>> {
+    // Construct the RpcCall and send it non-blocking (errors if unable to send).
+    let call = RpcCall::AccelClearInterrupts;
+    let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
 
-//     Ok(())
-// }
+    Ok(())
+}
 
-// pub(crate) fn repl_accel_range_select(
-//     ctx: &NativeCallContext,
-//     call_tx: RpcCallSender,
-//     result_rx: RpcResultReceiver,
-//     range: INT,
-//     lpf_bw: INT,
-// ) -> Result<(), Box<EvalAltResult>> {
-//     // Construct the RpcCall and send it non-blocking (errors if unable to send).
-//     let call = RpcCall::AccelRangeSelect((range as u8).into(), (lpf_bw as u8).into());
-//     let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
+pub(crate) fn repl_accel_range_select(
+    ctx: &NativeCallContext,
+    call_tx: RpcCallSender,
+    result_rx: RpcResultReceiver,
+    range: INT,
+    lpf_bw: INT,
+) -> Result<(), Box<EvalAltResult>> {
+    // Construct the RpcCall and send it non-blocking (errors if unable to send).
+    let call = RpcCall::AccelRangeSelect((range as u8).into(), (lpf_bw as u8).into());
+    let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
 
-//     Ok(())
-// }
+    Ok(())
+}
 
-// pub(crate) fn repl_accel_set_x_offset(
-//     ctx: &NativeCallContext,
-//     call_tx: RpcCallSender,
-//     result_rx: RpcResultReceiver,
-//     offset: INT,
-// ) -> Result<(), Box<EvalAltResult>> {
-//     // Construct the RpcCall and send it non-blocking (errors if unable to send).
-//     let call = RpcCall::AccelSetXOffset(offset as i16);
-//     let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
+pub(crate) fn repl_accel_set_x_offset(
+    ctx: &NativeCallContext,
+    call_tx: RpcCallSender,
+    result_rx: RpcResultReceiver,
+    offset: INT,
+) -> Result<(), Box<EvalAltResult>> {
+    // Construct the RpcCall and send it non-blocking (errors if unable to send).
+    let call = RpcCall::AccelSetXOffset(offset as i16);
+    let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
 
-//     Ok(())
-// }
+    Ok(())
+}
 
-// pub(crate) fn repl_accel_set_y_offset(
-//     ctx: &NativeCallContext,
-//     call_tx: RpcCallSender,
-//     result_rx: RpcResultReceiver,
-//     offset: INT,
-// ) -> Result<(), Box<EvalAltResult>> {
-//     // Construct the RpcCall and send it non-blocking (errors if unable to send).
-//     let call = RpcCall::AccelSetYOffset(offset as i16);
-//     let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
+pub(crate) fn repl_accel_set_y_offset(
+    ctx: &NativeCallContext,
+    call_tx: RpcCallSender,
+    result_rx: RpcResultReceiver,
+    offset: INT,
+) -> Result<(), Box<EvalAltResult>> {
+    // Construct the RpcCall and send it non-blocking (errors if unable to send).
+    let call = RpcCall::AccelSetYOffset(offset as i16);
+    let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
 
-//     Ok(())
-// }
+    Ok(())
+}
 
-// pub(crate) fn repl_accel_set_z_offset(
-//     ctx: &NativeCallContext,
-//     call_tx: RpcCallSender,
-//     result_rx: RpcResultReceiver,
-//     offset: INT,
-// ) -> Result<(), Box<EvalAltResult>> {
-//     // Construct the RpcCall and send it non-blocking (errors if unable to send).
-//     let call = RpcCall::AccelSetZOffset(offset as i16);
-//     let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
+pub(crate) fn repl_accel_set_z_offset(
+    ctx: &NativeCallContext,
+    call_tx: RpcCallSender,
+    result_rx: RpcResultReceiver,
+    offset: INT,
+) -> Result<(), Box<EvalAltResult>> {
+    // Construct the RpcCall and send it non-blocking (errors if unable to send).
+    let call = RpcCall::AccelSetZOffset(offset as i16);
+    let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
 
-//     Ok(())
-// }
+    Ok(())
+}
 
-// pub(crate) fn repl_accel_set_fifo_control(
-//     ctx: &NativeCallContext,
-//     call_tx: RpcCallSender,
-//     result_rx: RpcResultReceiver,
-//     mode: bool,
-//     enable: bool,
-//     reset: bool,
-//     comb_int: bool,
-//     th_int: bool,
-//     full_int: bool,
-//     empty_int: bool,
-// ) -> Result<(), Box<EvalAltResult>> {
-//     // Construct the RpcCall and send it non-blocking (errors if unable to send).
-//     let call =
-//         RpcCall::AccelSetFifoControl(mode, enable, reset, comb_int, th_int, full_int, empty_int);
-//     let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
+pub(crate) fn repl_accel_set_fifo_control(
+    ctx: &NativeCallContext,
+    call_tx: RpcCallSender,
+    result_rx: RpcResultReceiver,
+    mode: bool,
+    enable: bool,
+    reset: bool,
+    comb_int: bool,
+    th_int: bool,
+    full_int: bool,
+    empty_int: bool,
+) -> Result<(), Box<EvalAltResult>> {
+    // Construct the RpcCall and send it non-blocking (errors if unable to send).
+    let call =
+        RpcCall::AccelSetFifoControl(mode, enable, reset, comb_int, th_int, full_int, empty_int);
+    let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
 
-//     Ok(())
-// }
+    Ok(())
+}
 
-// pub(crate) fn repl_accel_set_fifo_threshold(
-//     ctx: &NativeCallContext,
-//     call_tx: RpcCallSender,
-//     result_rx: RpcResultReceiver,
-//     threshold: INT,
-// ) -> Result<(), Box<EvalAltResult>> {
-//     // Construct the RpcCall and send it non-blocking (errors if unable to send).
-//     let call = RpcCall::AccelSetFifoThreshold(threshold as u8);
-//     let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
+pub(crate) fn repl_accel_set_fifo_threshold(
+    ctx: &NativeCallContext,
+    call_tx: RpcCallSender,
+    result_rx: RpcResultReceiver,
+    threshold: INT,
+) -> Result<(), Box<EvalAltResult>> {
+    // Construct the RpcCall and send it non-blocking (errors if unable to send).
+    let call = RpcCall::AccelSetFifoThreshold(threshold as u8);
+    let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
 
-//     Ok(())
-// }
+    Ok(())
+}
 
-// pub(crate) fn repl_accel_set_fifo_control2(
-//     ctx: &NativeCallContext,
-//     call_tx: RpcCallSender,
-//     result_rx: RpcResultReceiver,
-//     burst: bool,
-//     wrap_addr: bool,
-//     wrap_en: bool,
-//     dec_mode: INT,
-// ) -> Result<(), Box<EvalAltResult>> {
-//     // Construct the RpcCall and send it non-blocking (errors if unable to send).
-//     let call = RpcCall::AccelSetFifoControl2(burst, wrap_addr, wrap_en, (dec_mode as u8).into());
-//     let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
+pub(crate) fn repl_accel_set_fifo_control2(
+    ctx: &NativeCallContext,
+    call_tx: RpcCallSender,
+    result_rx: RpcResultReceiver,
+    burst: bool,
+    wrap_addr: bool,
+    wrap_en: bool,
+    dec_mode: INT,
+) -> Result<(), Box<EvalAltResult>> {
+    // Construct the RpcCall and send it non-blocking (errors if unable to send).
+    let call = RpcCall::AccelSetFifoControl2(burst, wrap_addr, wrap_en, (dec_mode as u8).into());
+    let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
 
-//     Ok(())
-// }
+    Ok(())
+}
 
-// pub(crate) fn repl_accel_set_comm_control(
-//     ctx: &NativeCallContext,
-//     call_tx: RpcCallSender,
-//     result_rx: RpcResultReceiver,
-//     indiv_int_clr: bool,
-//     spi_3wire_en: bool,
-//     int1_int2_req_swap: bool,
-// ) -> Result<(), Box<EvalAltResult>> {
-//     // Construct the RpcCall and send it non-blocking (errors if unable to send).
-//     let call = RpcCall::AccelSetCommControl(indiv_int_clr, spi_3wire_en, int1_int2_req_swap);
-//     let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
+pub(crate) fn repl_accel_set_comm_control(
+    ctx: &NativeCallContext,
+    call_tx: RpcCallSender,
+    result_rx: RpcResultReceiver,
+    indiv_int_clr: bool,
+    spi_3wire_en: bool,
+    int1_int2_req_swap: bool,
+) -> Result<(), Box<EvalAltResult>> {
+    // Construct the RpcCall and send it non-blocking (errors if unable to send).
+    let call = RpcCall::AccelSetCommControl(indiv_int_clr, spi_3wire_en, int1_int2_req_swap);
+    let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
 
-//     Ok(())
-// }
+    Ok(())
+}
 
-// pub(crate) fn repl_accel_set_gpio_control(
-//     ctx: &NativeCallContext,
-//     call_tx: RpcCallSender,
-//     result_rx: RpcResultReceiver,
-//     gpio2_intn2_ipp: bool,
-//     gpio2_intn2_iah: bool,
-//     gpio1_intn1_ipp: bool,
-//     gpio1_intn1_iah: bool,
-// ) -> Result<(), Box<EvalAltResult>> {
-//     // Construct the RpcCall and send it non-blocking (errors if unable to send).
-//     let call = RpcCall::AccelSetGpioControl(
-//         gpio2_intn2_ipp,
-//         gpio2_intn2_iah,
-//         gpio1_intn1_ipp,
-//         gpio1_intn1_iah,
-//     );
-//     let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
+pub(crate) fn repl_accel_set_gpio_control(
+    ctx: &NativeCallContext,
+    call_tx: RpcCallSender,
+    result_rx: RpcResultReceiver,
+    gpio2_intn2_ipp: bool,
+    gpio2_intn2_iah: bool,
+    gpio1_intn1_ipp: bool,
+    gpio1_intn1_iah: bool,
+) -> Result<(), Box<EvalAltResult>> {
+    // Construct the RpcCall and send it non-blocking (errors if unable to send).
+    let call = RpcCall::AccelSetGpioControl(
+        gpio2_intn2_ipp,
+        gpio2_intn2_iah,
+        gpio1_intn1_ipp,
+        gpio1_intn1_iah,
+    );
+    let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
 
-//     Ok(())
-// }
+    Ok(())
+}
 
-// pub(crate) fn repl_accel_set_tilt_flip_threshold(
-//     ctx: &NativeCallContext,
-//     call_tx: RpcCallSender,
-//     result_rx: RpcResultReceiver,
-//     threshold: INT,
-// ) -> Result<(), Box<EvalAltResult>> {
-//     // Construct the RpcCall and send it non-blocking (errors if unable to send).
-//     let call = RpcCall::AccelSetTiltFlipThreshold(threshold as u16);
-//     let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
+pub(crate) fn repl_accel_set_tilt_flip_threshold(
+    ctx: &NativeCallContext,
+    call_tx: RpcCallSender,
+    result_rx: RpcResultReceiver,
+    threshold: INT,
+) -> Result<(), Box<EvalAltResult>> {
+    // Construct the RpcCall and send it non-blocking (errors if unable to send).
+    let call = RpcCall::AccelSetTiltFlipThreshold(threshold as u16);
+    let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
 
-//     Ok(())
-// }
+    Ok(())
+}
 
-// pub(crate) fn repl_accel_set_tilt_flip_debounce(
-//     ctx: &NativeCallContext,
-//     call_tx: RpcCallSender,
-//     result_rx: RpcResultReceiver,
-//     debounce: INT,
-// ) -> Result<(), Box<EvalAltResult>> {
-//     // Construct the RpcCall and send it non-blocking (errors if unable to send).
-//     let call = RpcCall::AccelSetTiltFlipDebounce(debounce as u8);
-//     let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
+pub(crate) fn repl_accel_set_tilt_flip_debounce(
+    ctx: &NativeCallContext,
+    call_tx: RpcCallSender,
+    result_rx: RpcResultReceiver,
+    debounce: INT,
+) -> Result<(), Box<EvalAltResult>> {
+    // Construct the RpcCall and send it non-blocking (errors if unable to send).
+    let call = RpcCall::AccelSetTiltFlipDebounce(debounce as u8);
+    let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
 
-//     Ok(())
-// }
+    Ok(())
+}
 
 pub(crate) fn repl_accel_set_anym_threshold(
     ctx: &NativeCallContext,
@@ -384,33 +384,33 @@ pub(crate) fn repl_accel_set_shake_duration(
     Ok(())
 }
 
-// pub(crate) fn repl_accel_set_timer_control(
-//     ctx: &NativeCallContext,
-//     call_tx: RpcCallSender,
-//     result_rx: RpcResultReceiver,
-//     per_int_en: bool,
-//     period: INT,
-//     tilt35: FLOAT,
-// ) -> Result<(), Box<EvalAltResult>> {
-//     // Construct the RpcCall and send it non-blocking (errors if unable to send).
-//     let call = RpcCall::AccelSetTimerControl(per_int_en, (period as u16).into(), tilt35.into());
-//     let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
+pub(crate) fn repl_accel_set_timer_control(
+    ctx: &NativeCallContext,
+    call_tx: RpcCallSender,
+    result_rx: RpcResultReceiver,
+    per_int_en: bool,
+    period: INT,
+    tilt35: FLOAT,
+) -> Result<(), Box<EvalAltResult>> {
+    // Construct the RpcCall and send it non-blocking (errors if unable to send).
+    let call = RpcCall::AccelSetTimerControl(per_int_en, (period as u16).into(), tilt35.into());
+    let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
 
-//     Ok(())
-// }
+    Ok(())
+}
 
-// pub(crate) fn repl_accel_set_read_count(
-//     ctx: &NativeCallContext,
-//     call_tx: RpcCallSender,
-//     result_rx: RpcResultReceiver,
-//     count: INT,
-// ) -> Result<(), Box<EvalAltResult>> {
-//     // Construct the RpcCall and send it non-blocking (errors if unable to send).
-//     let call = RpcCall::AccelSetReadCount(count as u8);
-//     let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
+pub(crate) fn repl_accel_set_read_count(
+    ctx: &NativeCallContext,
+    call_tx: RpcCallSender,
+    result_rx: RpcResultReceiver,
+    count: INT,
+) -> Result<(), Box<EvalAltResult>> {
+    // Construct the RpcCall and send it non-blocking (errors if unable to send).
+    let call = RpcCall::AccelSetReadCount(count as u8);
+    let _result = rpc_call(&ctx, call_tx, result_rx, call)?;
 
-//     Ok(())
-// }
+    Ok(())
+}
 
 pub(crate) fn register_functions(
     engine: &mut Engine,
@@ -465,104 +465,104 @@ pub(crate) fn register_functions(
         result_rx,
         repl_accel_set_motion_control,
         "set_motion_control",
-        (reset: bool, raw_proc_stat: bool, z_axis_ort: bool, tilt35_en: bool, shake_en: bool, anym: bool, motion_latch: bool, tiltflip: bool)
+        (reset: bool, raw_proc_stat: bool, z_axis_ort: bool, tilt35_en: bool, shake_en: bool, anym: bool, motion_latch: bool, tiltflip: bool,)
     );
-    // register_repl_fn!(
-    //     module,
-    //     call_tx,
-    //     result_rx,
-    //     repl_accel_clear_interrupts,
-    //     "clear_interrupts",
-    //     ()
-    // );
-    // register_repl_fn!(
-    //     module,
-    //     call_tx,
-    //     result_rx,
-    //     repl_accel_range_select,
-    //     "range_select",
-    //     (range: INT, lpf_bw: INT)
-    // );
-    // register_repl_fn!(
-    //     module,
-    //     call_tx,
-    //     result_rx,
-    //     repl_accel_set_x_offset,
-    //     "set_x_offset",
-    //     (offset: INT)
-    // );
-    // register_repl_fn!(
-    //     module,
-    //     call_tx,
-    //     result_rx,
-    //     repl_accel_set_y_offset,
-    //     "set_y_offset",
-    //     (offset: INT)
-    // );
-    // register_repl_fn!(
-    //     module,
-    //     call_tx,
-    //     result_rx,
-    //     repl_accel_set_z_offset,
-    //     "set_z_offset",
-    //     (offset: INT)
-    // );
-    // register_repl_fn!(
-    //     module,
-    //     call_tx,
-    //     result_rx,
-    //     repl_accel_set_fifo_control,
-    //     "set_fifo_control",
-    //     (mode: bool, enable: bool, reset: bool, comb_int: bool, th_int: bool, full_int: bool, empty_int: bool)
-    // );
-    // register_repl_fn!(
-    //     module,
-    //     call_tx,
-    //     result_rx,
-    //     repl_accel_set_fifo_threshold,
-    //     "set_fifo_threshold",
-    //     (threshold: INT)
-    // );
-    // register_repl_fn!(
-    //     module,
-    //     call_tx,
-    //     result_rx,
-    //     repl_accel_set_fifo_control2,
-    //     "set_fifo_control2",
-    //     (burst: bool, wrap_addr: bool, wrap_en: bool, dec_mode: INT)
-    // );
-    // register_repl_fn!(
-    //     module,
-    //     call_tx,
-    //     result_rx,
-    //     repl_accel_set_comm_control,
-    //     "set_comm_control",
-    //     (indiv_int_clr: bool, spi_3wire_en: bool, int1_int2_req_swap: bool)
-    // );
-    // register_repl_fn!(
-    //     module,
-    //     call_tx,
-    //     result_rx,
-    //     repl_accel_set_gpio_control,
-    //     "set_gpio_control",
-    //     (gpio2_intn2_ipp: bool, gpio2_intn2_iah: bool, gpio1_intn1_ipp: bool, gpio1_intn1_iah: bool)
-    // );
-    // register_repl_fn!(
-    //     module,
-    //     call_tx,
-    //     result_rx,
-    //     repl_accel_set_tilt_flip_threshold,
-    //     "set_tilt_flip_threshold",
-    //     (threshold: INT)
-    // );
-    // register_repl_fn!(
-    //     module,
-    //     call_tx,
-    //     result_rx,
-    //     repl_accel_set_tilt_flip_debounce,
-    //     "set_tilt_flip_debounce",
-    //     (debounce: INT)
-    // );
+    register_repl_fn!(
+        module,
+        call_tx,
+        result_rx,
+        repl_accel_clear_interrupts,
+        "clear_interrupts",
+        ()
+    );
+    register_repl_fn!(
+        module,
+        call_tx,
+        result_rx,
+        repl_accel_range_select,
+        "range_select",
+        (range: INT, lpf_bw: INT)
+    );
+    register_repl_fn!(
+        module,
+        call_tx,
+        result_rx,
+        repl_accel_set_x_offset,
+        "set_x_offset",
+        (offset: INT)
+    );
+    register_repl_fn!(
+        module,
+        call_tx,
+        result_rx,
+        repl_accel_set_y_offset,
+        "set_y_offset",
+        (offset: INT)
+    );
+    register_repl_fn!(
+        module,
+        call_tx,
+        result_rx,
+        repl_accel_set_z_offset,
+        "set_z_offset",
+        (offset: INT)
+    );
+    register_repl_fn!(
+        module,
+        call_tx,
+        result_rx,
+        repl_accel_set_fifo_control,
+        "set_fifo_control",
+        (mode: bool, enable: bool, reset: bool, comb_int: bool, th_int: bool, full_int: bool, empty_int: bool)
+    );
+    register_repl_fn!(
+        module,
+        call_tx,
+        result_rx,
+        repl_accel_set_fifo_threshold,
+        "set_fifo_threshold",
+        (threshold: INT)
+    );
+    register_repl_fn!(
+        module,
+        call_tx,
+        result_rx,
+        repl_accel_set_fifo_control2,
+        "set_fifo_control2",
+        (burst: bool, wrap_addr: bool, wrap_en: bool, dec_mode: INT)
+    );
+    register_repl_fn!(
+        module,
+        call_tx,
+        result_rx,
+        repl_accel_set_comm_control,
+        "set_comm_control",
+        (indiv_int_clr: bool, spi_3wire_en: bool, int1_int2_req_swap: bool)
+    );
+    register_repl_fn!(
+        module,
+        call_tx,
+        result_rx,
+        repl_accel_set_gpio_control,
+        "set_gpio_control",
+        (gpio2_intn2_ipp: bool, gpio2_intn2_iah: bool, gpio1_intn1_ipp: bool, gpio1_intn1_iah: bool)
+    );
+    register_repl_fn!(
+        module,
+        call_tx,
+        result_rx,
+        repl_accel_set_tilt_flip_threshold,
+        "set_tilt_flip_threshold",
+        (threshold: INT)
+    );
+    register_repl_fn!(
+        module,
+        call_tx,
+        result_rx,
+        repl_accel_set_tilt_flip_debounce,
+        "set_tilt_flip_debounce",
+        (debounce: INT)
+    );
     register_repl_fn!(
         module,
         call_tx,
@@ -595,21 +595,21 @@ pub(crate) fn register_functions(
         "set_shake_duration",
         (cnt: INT, p2p: INT)
     );
-    // register_repl_fn!(
-    //     module,
-    //     call_tx,
-    //     result_rx,
-    //     repl_accel_set_timer_control,
-    //     "set_timer_control",
-    //     (per_int_en: bool, period: INT, tilt35: FLOAT)
-    // );
-    // register_repl_fn!(
-    //     module,
-    //     call_tx,
-    //     result_rx,
-    //     repl_accel_set_read_count,
-    //     "set_read_count",
-    //     (count: INT)
-    // );
+    register_repl_fn!(
+        module,
+        call_tx,
+        result_rx,
+        repl_accel_set_timer_control,
+        "set_timer_control",
+        (per_int_en: bool, period: INT, tilt35: FLOAT)
+    );
+    register_repl_fn!(
+        module,
+        call_tx,
+        result_rx,
+        repl_accel_set_read_count,
+        "set_read_count",
+        (count: INT)
+    );
     engine.register_static_module("accel", module.into());
 }

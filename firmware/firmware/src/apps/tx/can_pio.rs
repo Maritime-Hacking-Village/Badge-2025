@@ -93,7 +93,6 @@ impl<'d, PIO: Instance> PioCanTrxProgram<'d, PIO> {
 /// PIO backed Uart transmitter
 pub struct PioCanTrx<'d, PIO: Instance, const SM: usize> {
     sm: StateMachine<'d, PIO, SM>,
-    baud: u32,
 }
 
 impl<'d, PIO: Instance, const SM: usize> PioCanTrx<'d, PIO, SM> {
@@ -132,7 +131,7 @@ impl<'d, PIO: Instance, const SM: usize> PioCanTrx<'d, PIO, SM> {
         cfg.clock_divider = Self::clk_div(baud)?;
         sm.set_config(&cfg);
 
-        Ok(Self { sm, baud })
+        Ok(Self { sm })
     }
 
     pub fn clk_div(baud: u32) -> Result<FixedU32<U8>, TxError> {
@@ -156,10 +155,6 @@ impl<'d, PIO: Instance, const SM: usize> PioCanTrx<'d, PIO, SM> {
         Ok(clk_div)
     }
 
-    pub fn get_baud(&self) -> u32 {
-        self.baud
-    }
-
     /// Modify the PIO baud.
     pub fn set_baud(&mut self, baud: u32) -> Result<(), TxError> {
         let clk_div = Self::clk_div(baud)?;
@@ -177,7 +172,6 @@ impl<'d, PIO: Instance, const SM: usize> PioCanTrx<'d, PIO, SM> {
 
         self.sm.clkdiv_restart();
         self.restart();
-        self.baud = baud;
 
         Ok(())
     }

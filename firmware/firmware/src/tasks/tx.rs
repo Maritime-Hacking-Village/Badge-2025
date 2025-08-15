@@ -100,10 +100,6 @@ pub async fn tx_task(
 
     loop {
         match tx_rx.receive().await {
-            TxCommand::IsEnabled => {
-                debug!("Tx IsEnabled");
-                tx_ack.signal(Ok(RpcResult::TxIsEnabled(ctrl.is_enabled())))
-            }
             TxCommand::EnableDisable(enabled) => {
                 debug!("Tx EnableDisable {}", enabled);
 
@@ -114,10 +110,6 @@ pub async fn tx_task(
                 }
 
                 tx_ack.signal(Ok(RpcResult::TxEnableDisable));
-            }
-            TxCommand::GetBaud => {
-                debug!("Tx GetBaud");
-                tx_ack.signal(Ok(RpcResult::TxGetBaud(ctrl.get_baud())));
             }
             TxCommand::SetBaud(baud) => {
                 debug!("Tx SetBaud {}", baud);
@@ -144,7 +136,7 @@ pub async fn tx_task(
             TxCommand::SetMode(mode) => {
                 debug!("Tx SetMode {:?}", mode);
                 // TODO: Broken.
-                ctrl.set_mode(mode).await;
+                unsafe { ctrl.set_mode(mode).await };
                 tx_ack.signal(Ok(RpcResult::TxSetMode));
             }
             TxCommand::Send(words) => {

@@ -295,7 +295,7 @@ async fn main(spawner: Spawner) -> () {
 
     let pwr_injector = gpio_exp_2_pins.remove(0);
     let mut _pwr_trx = gpio_exp_2_pins.remove(0);
-    let pwr_receiver = gpio_exp_2_pins.remove(0);
+    let mut pwr_receiver = gpio_exp_2_pins.remove(0);
     let sao_gpio_2 = gpio_exp_2_pins.remove(0);
 
     // Battery charger (BQ25895)
@@ -400,11 +400,10 @@ async fn main(spawner: Spawner) -> () {
 
     warn!("BEGIN PIO");
     // Rx task
-    let (rx_channel, rx_ack, rx_buffer) = make_rx_channels!();
+    let (rx_channel, rx_ack) = make_rx_channels!();
     unwrap!(spawner.spawn(tasks::rx::rx_task(
         rx_channel.receiver(),
         rx_ack,
-        rx_buffer,
         p.UART1,
         p.PIO2,
         p.PIN_9,
@@ -450,7 +449,6 @@ async fn main(spawner: Spawner) -> () {
         tx_ack,
         rx_channel.sender(),
         rx_ack,
-        rx_buffer,
         ctrl_channel.sender(),
         ctrl_ack,
         accel_ctrl,

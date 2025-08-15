@@ -7,12 +7,11 @@ use crate::{
         i2c_io_expander::{models::pca9536::PCA9536, pin::Pin},
         repl::{
             common::AckSignal,
-            rpc::{RpcError, RpcResult},
-            rx::{RxBuffer, RxCommand, RxReceiver},
+            rpc::RpcResult,
+            rx::{RxCommand, RxReceiver},
         },
     },
 };
-use bitvec::{order::Msb0, vec::BitVec};
 use defmt::{debug, error, warn};
 use embassy_embedded_hal::shared_bus::asynch::i2c::I2cDevice;
 use embassy_futures::select::{self, Either};
@@ -27,7 +26,6 @@ use embassy_sync::blocking_mutex::raw::CriticalSectionRawMutex;
 pub async fn rx_task(
     rx_rx: RxReceiver,
     rx_ack: &'static AckSignal,
-    rx_buf: &'static RxBuffer,
     uart: Peri<'static, UART1>,
     pio: Peri<'static, PIO2>,
     rx_pin: Peri<'static, PIN_9>,
@@ -60,11 +58,6 @@ pub async fn rx_task(
                                     message.as_str(),
                                     chksum
                                 );
-                                let mut blob: BitVec<u8, Msb0> = BitVec::from_element(sof);
-                                blob.extend_from_raw_slice(message.as_bytes());
-                                blob.extend_from_raw_slice(&[(chksum >> 8) as u8]);
-                                blob.extend_from_raw_slice(&[(chksum & 0xFF) as u8]);
-                                rx_buf.signal(blob);
                             }
                             Some(Err(err)) => {
                                 error!("Error parsing NMEA-0183 message: {}", err);
@@ -78,10 +71,7 @@ pub async fn rx_task(
                         // TODO
                     }
                     RxWord::Can(word) => match can_parser.parse_word(word) {
-                        Some(Ok(msg)) => {
-                            warn!("Got CAN message!");
-                            rx_buf.signal(msg);
-                        }
+                        Some(Ok(msg)) => {}
                         Some(Err(err)) => {
                             error!("Error parsing CAN message: {}", err);
                         }
@@ -95,10 +85,6 @@ pub async fn rx_task(
                 warn!("Got None back from Rx read word!");
             }
             Either::Second(cmd) => match cmd {
-                RxCommand::IsEnabled => {
-                    debug!("Rx IsEnabled");
-                    rx_ack.signal(Ok(RpcResult::RxIsEnabled(ctrl.is_enabled())))
-                }
                 RxCommand::EnableDisable(enabled) => {
                     debug!("EnableDisable: {}", enabled);
 
@@ -108,30 +94,11 @@ pub async fn rx_task(
                         ctrl.disable().await;
                     }
 
-                    rx_buf.reset();
                     rx_ack.signal(Ok(RpcResult::RxEnableDisable));
-                }
-                RxCommand::GetBaud => {
-                    debug!("GetBaud");
-                    rx_ack.signal(Ok(RpcResult::RxGetBaud(ctrl.get_baud())))
-                }
-                RxCommand::SetBaud(baud) => {
-                    debug!("SetBaud {:?}", baud);
-                    let outcome = unsafe { ctrl.set_baud(baud) }
-                        .map_err(|err| {
-                            RpcError::ErrorArithmetic(defmt::format!(
-                                "Invalid clock divider: {}",
-                                err
-                            ))
-                        })
-                        .map(|_| RpcResult::RxSetBaud);
-                    rx_buf.reset();
-                    rx_ack.signal(outcome)
                 }
                 RxCommand::SetMode(mode) => {
                     debug!("SetMode: {:?}", mode);
                     unsafe { ctrl.set_mode(mode).await };
-                    rx_buf.reset();
                     rx_ack.signal(Ok(RpcResult::RxSetMode));
                 }
                 RxCommand::GetMode => {

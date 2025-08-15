@@ -64,6 +64,7 @@ pub async fn display_task(
     shake_signal_ready: &'static ShakeSignal,
     shake_signal_done: &'static ShakeSignal,
 ) -> ! {
+    warn!("In the display app!!!");
     let puke = tinygif::Gif::<Rgb565>::from_slice(include_bytes!("../../assets/puke.gif")).unwrap();
 
     // Draw a square:

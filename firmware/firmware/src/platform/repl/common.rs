@@ -7,10 +7,8 @@ pub type AckSignal = signal::Signal<CriticalSectionRawMutex, Result<RpcResult, R
 pub enum ControlCommand {
     SetDisplayBacklight(u8),
     ResetDisplay,
-    GetTerm,
     SetTerm(bool, bool),
-    GetTie,
-    SetTie(bool),
+    SetTxRxTie(bool),
     GetSaoGpioDir,
     SetSaoGpioDir(bool, bool),
     WriteSaoGpio(bool, bool),

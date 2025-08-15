@@ -130,19 +130,12 @@ pub async fn ctrl_task(
                 disp_reset.set_output(true).await;
                 ctrl_ack.signal(Ok(RpcResult::DisplayReset));
             }
-            ControlCommand::GetTerm => ctrl_ack.signal(Ok(RpcResult::TrxGetTerm(
-                term_sel0.is_set_high().await.unwrap_or(false),
-                term_sel1.is_set_high().await.unwrap_or(false),
-            ))),
             ControlCommand::SetTerm(term_0, term_1) => {
                 term_sel0.set_output(term_0).await;
                 term_sel1.set_output(term_1).await;
                 ctrl_ack.signal(Ok(RpcResult::TrxSetTerm));
             }
-            ControlCommand::GetTie => ctrl_ack.signal(Ok(RpcResult::TrxGetTie(
-                tx_rx_tie.is_set_high().await.unwrap_or(false),
-            ))),
-            ControlCommand::SetTie(enabled) => {
+            ControlCommand::SetTxRxTie(enabled) => {
                 tx_rx_tie.set_output(enabled).await;
                 ctrl_ack.signal(Ok(RpcResult::TrxSetTxRxTie));
             }

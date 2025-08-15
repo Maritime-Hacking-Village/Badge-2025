@@ -49,7 +49,6 @@ pub struct PioInjector<'d, PIO: Instance, const SM: usize> {
     sm: StateMachine<'d, PIO, SM>,
     dma: Peri<'d, AnyChannel>,
     led: Output<'static>,
-    baud: u32,
 }
 
 impl<'d, PIO: Instance, const SM: usize> PioInjector<'d, PIO, SM> {
@@ -104,7 +103,6 @@ impl<'d, PIO: Instance, const SM: usize> PioInjector<'d, PIO, SM> {
             sm,
             dma: dma.into(),
             led: Output::new(led, Level::Low),
-            baud,
         })
     }
 
@@ -129,10 +127,6 @@ impl<'d, PIO: Instance, const SM: usize> PioInjector<'d, PIO, SM> {
         Ok(clk_div)
     }
 
-    pub fn get_baud(&self) -> u32 {
-        self.baud
-    }
-
     /// Modify the PIO baud.
     pub fn set_baud(&mut self, baud: u32) -> Result<(), TxError> {
         let clk_div = Self::clk_div(baud)?;
@@ -151,7 +145,6 @@ impl<'d, PIO: Instance, const SM: usize> PioInjector<'d, PIO, SM> {
 
         self.sm.clkdiv_restart();
         self.restart();
-        self.baud = baud;
 
         Ok(())
     }

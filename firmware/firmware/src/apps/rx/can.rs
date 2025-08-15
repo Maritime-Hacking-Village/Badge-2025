@@ -1,5 +1,4 @@
-use crate::apps::rx::{RxError, SerialParser};
-use bitvec::{order::Msb0, vec::BitVec};
+use crate::apps::rx::SerialParser;
 use core::convert::Infallible;
 use defmt::{debug, error, warn, Format};
 use embassy_futures::{select, select::Either3};
@@ -12,7 +11,7 @@ use embassy_rp::{
     Peri,
 };
 use embedded_io_async::ErrorType;
-use fixed::{traits::ToFixed, types::extra::U8, FixedU32};
+use fixed::traits::ToFixed;
 
 // MTU as bytes
 pub const CAN_2B_MTU: usize = 22;
@@ -67,10 +66,9 @@ impl<'d, PIO: Instance> PioCanRxProgram<'d, PIO> {
 
 /// PIO backed Uart reciever
 pub struct PioCanRx<'d, PIO: Instance, const SM: usize> {
-    sm: StateMachine<'d, PIO, SM>,
+    sm_rx: StateMachine<'d, PIO, SM>,
     irq_sof: Irq<'d, PIO, 0>,
     irq_ifs: Irq<'d, PIO, 1>,
-    baud: u32,
 }
 
 impl<'d, PIO: Instance, const SM: usize> PioCanRx<'d, PIO, SM> {
@@ -99,6 +97,11 @@ impl<'d, PIO: Instance, const SM: usize> PioCanRx<'d, PIO, SM> {
 
         // TODO: Check if the clock divider is an integer.
         cfg.clock_divider = (clk_sys_freq() / (8 * baud)).to_fixed();
+        warn!(
+            "SYS CLOCK: {:?} CLOCK DIV: {:?}",
+            defmt::Debug2Format(&clk_sys_freq()),
+            defmt::Debug2Format(&cfg.clock_divider)
+        );
         cfg.shift_in.auto_fill = true;
         cfg.shift_in.direction = ShiftDirection::Left;
         cfg.shift_in.threshold = 32;
@@ -111,85 +114,32 @@ impl<'d, PIO: Instance, const SM: usize> PioCanRx<'d, PIO, SM> {
         sm_rx.restart();
 
         Self {
-            sm: sm_rx,
+            sm_rx,
             irq_sof,
             irq_ifs,
-            baud,
         }
     }
 
     pub fn enable(&mut self) {
-        if !self.sm.is_enabled() {
-            self.sm.set_enable(true);
+        if !self.sm_rx.is_enabled() {
+            self.sm_rx.set_enable(true);
         }
     }
 
     pub fn disable(&mut self) {
-        if self.sm.is_enabled() {
-            self.sm.set_enable(false);
+        if self.sm_rx.is_enabled() {
+            self.sm_rx.set_enable(false);
         }
     }
 
     pub fn is_enabled(&self) -> bool {
-        self.sm.is_enabled()
-    }
-
-    pub fn clk_div(baud: u32) -> Result<FixedU32<U8>, RxError> {
-        fn _check_clock_div(div: FixedU32<U8>) -> Result<(), RxError> {
-            if div < FixedU32::<U8>::from_num(1.0) {
-                Err(RxError::ClockDividerTooSmall)
-            } else if div > FixedU32::<U8>::from_bits(0xFFFF_FF00) {
-                Err(RxError::ClockDividerTooLarge)
-            } else {
-                Ok(())
-            }
-        }
-
-        let divisor = 8_u32
-            .checked_mul(baud)
-            .ok_or(RxError::ClockDividerTooSmall)?;
-
-        let clk_div = (clk_sys_freq() / divisor).to_fixed();
-        _check_clock_div(clk_div)?;
-
-        Ok(clk_div)
-    }
-
-    pub fn get_baud(&self) -> u32 {
-        defmt::warn!("PIO GET BAUD");
-        self.baud
-    }
-
-    /// Modify the PIO baud.
-    pub fn set_baud(&mut self, baud: u32) -> Result<(), RxError> {
-        let clk_div = Self::clk_div(baud)?;
-        let enabled = self.is_enabled();
-
-        if enabled {
-            self.disable()
-        }
-
-        self.sm.set_clock_divider(clk_div);
-
-        if enabled {
-            self.enable()
-        }
-
-        self.sm.clkdiv_restart();
-        self.restart();
-        self.baud = baud;
-
-        Ok(())
-    }
-
-    pub fn restart(&mut self) {
-        self.sm.restart();
+        self.sm_rx.is_enabled()
     }
 
     pub async fn read_word(&mut self) -> CanWord {
         match select::select3(
             self.irq_sof.wait(),
-            self.sm.rx().wait_pull(),
+            self.sm_rx.rx().wait_pull(),
             self.irq_ifs.wait(),
         )
         .await
@@ -407,7 +357,7 @@ fn remove_stuff_bits(
 
 impl SerialParser for Parser {
     type Word = CanWord;
-    type Message = BitVec<u8, Msb0>;
+    type Message = ();
     type Error = Error;
 
     fn parse_word(&mut self, word: Self::Word) -> Option<Result<Self::Message, Self::Error>> {
@@ -424,6 +374,7 @@ impl SerialParser for Parser {
             }
             CanWord::Word(word) => {
                 let has_eof = contains_eof(word);
+                warn!("GOT WORD {:08X} EOF {}", word, has_eof);
 
                 match self.state {
                     State::Sof => {
@@ -492,32 +443,17 @@ impl SerialParser for Parser {
                     State::Eof(ws, len) => {
                         self.state = State::Sof;
                         assert!(len > 0);
+                        let mut ws_unstuffed: [u32; 6] = [0; 6];
+                        let mut sbs: [usize; 6] = [0; 6];
+                        let mut sb_state: Option<(bool, usize)> = None;
 
-                        let mut blob: BitVec<u8, Msb0> = BitVec::new();
-
-                        for w in ws {
-                            blob.extend_from_raw_slice(&[
-                                (w >> 24) as u8,
-                                (w >> 16) as u8,
-                                (w >> 8) as u8,
-                                w as u8,
-                            ]);
+                        for i in 0..len {
+                            warn!("EOF {}: {:08X}", i, ws[i]);
+                            let (unstuffed, sb, sb_state_new) = remove_stuff_bits(ws[i], sb_state);
+                            sb_state = Some(sb_state_new);
+                            ws_unstuffed[i] = unstuffed;
+                            sbs[i] = sb;
                         }
-
-                        return Some(Ok(blob));
-                        // TODO
-
-                        // let mut ws_unstuffed: [u32; 6] = [0; 6];
-                        // let mut sbs: [usize; 6] = [0; 6];
-                        // let mut sb_state: Option<(bool, usize)> = None;
-
-                        // for i in 0..len {
-                        //     warn!("EOF {}: {:08X}", i, ws[i]);
-                        //     let (unstuffed, sb, sb_state_new) = remove_stuff_bits(ws[i], sb_state);
-                        //     sb_state = Some(sb_state_new);
-                        //     ws_unstuffed[i] = unstuffed;
-                        //     sbs[i] = sb;
-                        // }
 
                         // // Blow away the EOF.
                         // ws[len - 1] >>= 7;

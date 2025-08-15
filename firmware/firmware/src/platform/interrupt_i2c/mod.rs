@@ -1,6 +1,6 @@
 pub mod update_state;
 
-use defmt::warn;
+use defmt::{debug, error};
 use embassy_time::Instant;
 use embedded_hal_async::digital::Wait;
 use update_state::UpdateState;
@@ -57,7 +57,8 @@ where
             self.accel.update().await;
             let t3 = Instant::now();
 
-            warn!("{:02X}", LOG_FLAG[i]);
+            error!("IRQ Interrupt timing: {:?} {:?} {:?} {:?}", t0, t1, t2, t3);
+            debug!("{:02X}", LOG_FLAG[i]);
             i += 1;
 
             if i >= LOG_FLAG_LEN {

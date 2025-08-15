@@ -1,13 +1,21 @@
-pub mod can;
-pub mod modbus;
-pub mod nmea0183;
-
 use crate::{
-    apps::rx::can::{PioCanRx, PioCanRxProgram},
-    platform::{i2c_io_expander, i2c_io_expander::models::pca9536::PCA9536, irqs::Irqs},
+    apps::rx::{
+        can::{self, PioCanRx, PioCanRxProgram},
+        nmea0183, SerialParser,
+    },
+    platform::{
+        i2c_io_expander::{models::pca9536::PCA9536, pin::Pin},
+        irqs::Irqs,
+        repl::{
+            common::AckSignal,
+            rpc::RpcResult,
+            rx::{RxCommand, RxReceiver},
+        },
+    },
 };
-use defmt::{error, Format};
+use defmt::{debug, error, warn, Format};
 use embassy_embedded_hal::shared_bus::asynch::i2c::I2cDevice;
+use embassy_futures::select::{self, Either};
 use embassy_rp::{
     i2c,
     peripherals::{DMA_CH4, I2C0, PIN_9, PIO2, UART1},
@@ -17,25 +25,8 @@ use embassy_rp::{
 };
 use embassy_sync::blocking_mutex::raw::CriticalSectionRawMutex;
 
-pub trait SerialParser {
-    type Word;
-    type Message;
-    type Error;
-
-    /// Adds the given byte to the parser's state machine and returns the resulting message, or parsing error, or None if the message is not ready.
-    fn parse_word(&mut self, word: Self::Word) -> Option<Result<Self::Message, Self::Error>>;
-
-    /// Resets parser state.
-    fn reset(&mut self);
-
-    /// The MTU of the given protocol. To be used for specifying buffer size.
-    fn mtu() -> usize;
-
-    fn default_baud() -> u32;
-}
-
 #[derive(Debug, Format, Clone, Copy, PartialEq, Eq)]
-pub enum RxMode {
+pub(crate) enum RxMode {
     Nmea0183,
     Modbus,
     Can,
@@ -51,50 +42,36 @@ impl From<RxWord> for RxMode {
     }
 }
 
-pub enum RxState {
+pub(crate) enum RxState {
     Uart(UartRx<'static, Async>),
     Pio(PioCanRx<'static, PIO2, 0>),
 }
 
 #[derive(Debug, Format, Clone, Copy, PartialEq, Eq)]
-pub enum RxWord {
+pub(crate) enum RxWord {
     Nmea0183(<nmea0183::Parser as SerialParser>::Word),
     Modbus(u8),
     Can(<can::Parser as SerialParser>::Word),
 }
 
-pub struct RxController {
+struct RxController {
     uart: Peri<'static, UART1>,
     pio: Peri<'static, PIO2>,
     dma: Peri<'static, DMA_CH4>,
     rx_pin: Peri<'static, PIN_9>,
-    pwr_receiver: i2c_io_expander::pin::Pin<
-        CriticalSectionRawMutex,
-        I2cDevice<'static, CriticalSectionRawMutex, i2c::I2c<'static, I2C0, i2c::Async>>,
-        PCA9536,
-    >,
     mode: RxMode,
     state: RxState,
     enabled: bool,
 }
 
 impl RxController {
-    pub async unsafe fn new(
-        mode: RxMode,
+    pub unsafe fn new(
         uart: Peri<'static, UART1>,
         pio: Peri<'static, PIO2>,
         dma: Peri<'static, DMA_CH4>,
         rx_pin: Peri<'static, PIN_9>,
-        mut pwr_receiver: i2c_io_expander::pin::Pin<
-            CriticalSectionRawMutex,
-            I2cDevice<'static, CriticalSectionRawMutex, i2c::I2c<'static, I2C0, i2c::Async>>,
-            PCA9536,
-        >,
+        mode: RxMode,
     ) -> Self {
-        // Set up default disabled pin configuration.
-        pwr_receiver.set_direction(false).await;
-        pwr_receiver.set_output(true).await;
-
         let uart_cpy = uart.clone_unchecked();
         let pio_cpy = pio.clone_unchecked();
         let dma_cpy = dma.clone_unchecked();
@@ -141,11 +118,10 @@ impl RxController {
             mode,
             state: state,
             enabled: false,
-            pwr_receiver,
         }
     }
 
-    pub async fn enable(&mut self) {
+    pub fn enable(&mut self) {
         match &mut self.state {
             RxState::Uart(_) => {}
             RxState::Pio(pio_rx) => {
@@ -153,11 +129,10 @@ impl RxController {
             }
         }
 
-        self.pwr_receiver.set_output(false).await;
         self.enabled = true;
     }
 
-    pub async fn disable(&mut self) {
+    pub fn disable(&mut self) {
         match &mut self.state {
             RxState::Uart(_) => {}
             RxState::Pio(pio_rx) => {
@@ -165,7 +140,6 @@ impl RxController {
             }
         }
 
-        self.pwr_receiver.set_output(true).await;
         self.enabled = false;
     }
 
@@ -173,17 +147,7 @@ impl RxController {
         self.enabled
     }
 
-    pub async unsafe fn set_mode(&mut self, mode: RxMode) {
-        if self.mode == mode {
-            return;
-        }
-
-        let enabled = self.enabled;
-
-        if enabled {
-            self.disable().await;
-        }
-
+    pub unsafe fn set_mode(&mut self, mode: RxMode) {
         match self.mode {
             RxMode::Nmea0183 | RxMode::Modbus => {
                 match mode {
@@ -248,10 +212,6 @@ impl RxController {
         }
 
         self.mode = mode;
-
-        if enabled {
-            self.enable().await;
-        }
     }
 
     pub fn mode(&self) -> RxMode {
@@ -281,6 +241,102 @@ impl RxController {
             RxState::Pio(pio_rx) => {
                 return Some(RxWord::Can(pio_rx.read_word().await));
             }
+        }
+    }
+}
+
+#[embassy_executor::task]
+pub async fn diff_rx_task(
+    uart: Peri<'static, UART1>,
+    pio: Peri<'static, PIO2>,
+    rx_pin: Peri<'static, PIN_9>,
+    dma: Peri<'static, DMA_CH4>,
+    mut pwr_receiver: Pin<
+        CriticalSectionRawMutex,
+        I2cDevice<'static, CriticalSectionRawMutex, i2c::I2c<'static, I2C0, i2c::Async>>,
+        PCA9536,
+    >,
+    rx_rx: RxReceiver,
+    rx_ack: &'static AckSignal,
+    // TODO: Message queue back to the REPL.
+) -> ! {
+    error!("In diff Rx task!");
+
+    // TODO: Maybe move these pins into the controller.
+    // Set up default pin configuration.
+    // Enable differential receiver IC.
+    pwr_receiver.set_direction(false).await;
+    pwr_receiver.set_output(false).await;
+
+    // TODO: Maybe put parsers in the controller
+    let mut ctrl = unsafe { RxController::new(uart, pio, dma, rx_pin, RxMode::Can) };
+    let mut nmea0183_parser = nmea0183::Parser::new();
+    let mut can_parser = can::Parser::new();
+
+    loop {
+        match select::select(ctrl.read_word(), rx_rx.receive()).await {
+            Either::First(Some(word)) => {
+                assert_eq!(RxMode::from(word), ctrl.mode());
+
+                match word {
+                    RxWord::Nmea0183(word) => {
+                        match nmea0183_parser.parse_word(word) {
+                            Some(Ok((sof, message, chksum))) => {
+                                warn!(
+                                    "Got NMEA-0183 message: {}{}*{:02X}",
+                                    sof as char,
+                                    message.as_str(),
+                                    chksum
+                                );
+                            }
+                            Some(Err(err)) => {
+                                error!("Error parsing NMEA-0183 message: {}", err);
+                            }
+                            None => {
+                                // Not enough data for parsing.
+                            }
+                        }
+                    }
+                    RxWord::Modbus(word) => {
+                        todo!();
+                    }
+                    RxWord::Can(word) => match can_parser.parse_word(word) {
+                        Some(Ok(msg)) => {}
+                        Some(Err(err)) => {
+                            error!("Error parsing CAN message: {}", err);
+                        }
+                        None => {
+                            // Not enough data for parsing.
+                        }
+                    },
+                }
+            }
+            Either::First(None) => {
+                warn!("Got None back from Rx read word!");
+            }
+            Either::Second(cmd) => match cmd {
+                RxCommand::EnableDisable(enabled) => {
+                    debug!("EnableDisable: {}", enabled);
+
+                    if enabled {
+                        ctrl.enable();
+                    } else {
+                        ctrl.disable();
+                    }
+
+                    pwr_receiver.set_output(!enabled).await;
+                    rx_ack.signal(Ok(RpcResult::RxEnableDisable));
+                }
+                RxCommand::SetMode(mode) => {
+                    debug!("SetMode: {:?}", mode);
+                    unsafe { ctrl.set_mode(mode) };
+                    rx_ack.signal(Ok(RpcResult::RxSetMode));
+                }
+                RxCommand::GetMode => {
+                    debug!("GetMode");
+                    rx_ack.signal(Ok(RpcResult::RxGetMode(ctrl.mode())))
+                }
+            },
         }
     }
 }

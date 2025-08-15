@@ -220,13 +220,6 @@ where
         }
     }
 
-    pub fn get_baud(&self) -> u32 {
-        match self.mode {
-            TxMode::Inject => self.pio_inj.get_baud(),
-            TxMode::Can => self.pio_can.get_baud(),
-        }
-    }
-
     pub fn set_baud(&mut self, baud: u32) -> Result<(), TxError> {
         self.pio_inj.set_baud(baud)?;
         self.pio_can.set_baud(baud)?;

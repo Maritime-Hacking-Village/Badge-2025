@@ -9,7 +9,7 @@ use crate::{
     register_repl_fn,
 };
 use alloc::{borrow::ToOwned, boxed::Box, string::String, vec::Vec};
-use defmt::debug;
+use defmt::{debug, warn};
 use embassy_sync::{blocking_mutex::raw::CriticalSectionRawMutex, channel};
 use rhai::{Blob, Engine, EvalAltResult, ImmutableString, Module, NativeCallContext, INT};
 
@@ -38,9 +38,7 @@ pub const LOW_Z: u8 = !(H_Z0 | L_Z0);
 // TODO GetEnabled?
 #[derive(Debug, Clone)]
 pub enum TxCommand {
-    IsEnabled,
     EnableDisable(bool),
-    GetBaud,
     SetBaud(u32),
     GetMode,
     SetMode(TxMode),
@@ -90,40 +88,6 @@ pub(crate) fn repl_tx_disable(
     Ok(())
 }
 
-pub(crate) fn repl_tx_is_enabled(
-    ctx: &NativeCallContext,
-    call_tx: RpcCallSender,
-    result_rx: RpcResultReceiver,
-) -> Result<bool, Box<EvalAltResult>> {
-    // Construct the RpcCall and send it non-blocking (errors if unable to send).
-    let call = RpcCall::TxIsEnabled;
-    let result = rpc_call(&ctx, call_tx, result_rx, call)?;
-
-    match result {
-        RpcResult::TxIsEnabled(enabled) => Ok(enabled),
-        _ => {
-            unreachable!()
-        }
-    }
-}
-
-pub(crate) fn repl_tx_get_baud(
-    ctx: &NativeCallContext,
-    call_tx: RpcCallSender,
-    result_rx: RpcResultReceiver,
-) -> Result<u32, Box<EvalAltResult>> {
-    // Construct the RpcCall and send it non-blocking (errors if unable to send).
-    let call = RpcCall::TxGetBaud;
-    let result = rpc_call(&ctx, call_tx, result_rx, call)?;
-
-    match result {
-        RpcResult::TxGetBaud(baud) => Ok(baud),
-        _ => {
-            unreachable!()
-        }
-    }
-}
-
 pub(crate) fn repl_tx_set_baud(
     ctx: &NativeCallContext,
     call_tx: RpcCallSender,
@@ -148,7 +112,7 @@ pub(crate) fn repl_tx_set_mode(
     ctx: &NativeCallContext,
     call_tx: RpcCallSender,
     result_rx: RpcResultReceiver,
-    mode: &str,
+    mode: String,
 ) -> Result<(), Box<EvalAltResult>> {
     // Construct the RpcCall and send it non-blocking (errors if unable to send).
     let mode = match mode.to_lowercase().as_str() {
@@ -219,25 +183,9 @@ pub(crate) fn repl_tx_send(
     data: Blob,
 ) -> Result<(), Box<EvalAltResult>> {
     // Construct the RpcCall and send it non-blocking (errors if unable to send).
-    let call = RpcCall::TxIsEnabled;
-    let result = rpc_call(&ctx, call_tx, result_rx, call)?;
-
-    match result {
-        RpcResult::TxIsEnabled(enabled) => {
-            if !enabled {
-                return Err(Box::new(EvalAltResult::ErrorDataRace(
-                    "Tx not enabled!".to_owned(),
-                    ctx.call_position(),
-                )));
-            }
-        }
-        _ => {
-            unreachable!()
-        }
-    }
-
     let call = RpcCall::TxGetMode;
     let result = rpc_call(&ctx, call_tx, result_rx, call)?;
+    warn!("0 {:?}", result);
 
     let words = match result {
         RpcResult::TxGetMode(TxMode::Inject) => TxWords::Inject(data),
@@ -282,15 +230,6 @@ pub(crate) fn register_functions(
 
     register_repl_fn!(module, call_tx, result_rx, repl_tx_enable, "enable", ());
     register_repl_fn!(module, call_tx, result_rx, repl_tx_disable, "disable", ());
-    register_repl_fn!(
-        module,
-        call_tx,
-        result_rx,
-        repl_tx_is_enabled,
-        "is_enabled",
-        ()
-    );
-    register_repl_fn!(module, call_tx, result_rx, repl_tx_get_baud, "get_baud", ());
     register_repl_fn!(module, call_tx, result_rx, repl_tx_set_baud, "set_baud", (baud: INT));
     register_repl_fn!(module, call_tx, result_rx, repl_tx_get_mode, "get_mode", ());
     register_repl_fn!(
@@ -299,7 +238,7 @@ pub(crate) fn register_functions(
         result_rx,
         repl_tx_set_mode,
         "set_mode",
-        (mode: &str)
+        (mode: String)
     );
     register_repl_fn!(module, call_tx, result_rx, repl_tx_send, "send", (data: Blob));
 

@@ -1,4 +1,5 @@
 use crate::platform::bq25895;
+use defmt::warn;
 use embassy_rp::{i2c, peripherals::I2C0};
 use embassy_sync::blocking_mutex::raw::CriticalSectionRawMutex;
 use embassy_time::Timer;
@@ -33,36 +34,36 @@ pub async fn batt_task(
         // reg03.chg_config = true;
         // control.set_register(reg03).await.unwrap();
 
-        // let reg12 = control
-        //     .get_register::<bq25895::registers::reg12::Reg12>()
-        //     .await
-        //     .unwrap();
-        // // warn!("Got REG12! {}", reg12);
-        // let reg02 = control
-        //     .get_register::<bq25895::registers::reg02::Reg02>()
-        //     .await
-        //     .unwrap();
-        // // warn!("Got REG02! {}", reg02);
-        // let reg0b = control
-        //     .get_register::<bq25895::registers::reg0b::Reg0b>()
-        //     .await
-        //     .unwrap();
-        // // warn!("Got REG0B! {}", reg0b);
-        // let reg03 = control
-        //     .get_register::<bq25895::registers::reg03::Reg03>()
-        //     .await
-        //     .unwrap();
-        // warn!("Got REG03! {}", reg03);
+        let reg12 = control
+            .get_register::<bq25895::registers::reg12::Reg12>()
+            .await
+            .unwrap();
+        warn!("Got REG12! {}", reg12);
+        let reg02 = control
+            .get_register::<bq25895::registers::reg02::Reg02>()
+            .await
+            .unwrap();
+        warn!("Got REG02! {}", reg02);
+        let reg0b = control
+            .get_register::<bq25895::registers::reg0b::Reg0b>()
+            .await
+            .unwrap();
+        warn!("Got REG0B! {}", reg0b);
+        let reg03 = control
+            .get_register::<bq25895::registers::reg03::Reg03>()
+            .await
+            .unwrap();
+        warn!("Got REG03! {}", reg03);
         let reg0c = control
             .get_register::<bq25895::registers::reg0c::Reg0c>()
             .await
             .unwrap();
-        // warn!("Got REG0C! {}", reg0c);
+        warn!("Got REG0C! {}", reg0c);
         let mut reg07 = control
             .get_register::<bq25895::registers::reg07::Reg07>()
             .await
             .unwrap();
-        // warn!("Got REG07! {}", reg07);
+        warn!("Got REG07! {}", reg07);
 
         let mut set_reg07 = true;
 
@@ -81,6 +82,6 @@ pub async fn batt_task(
             control.set_register(reg07).await.unwrap();
         }
 
-        Timer::after_secs(10).await;
+        Timer::after_secs(100).await;
     }
 }

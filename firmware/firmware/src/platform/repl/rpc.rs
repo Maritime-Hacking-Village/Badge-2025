@@ -15,13 +15,13 @@ use crate::{
         mc3479::{
             self,
             data::Data,
-            registers::{ModeState, SampleRate},
+            registers::{DecMode, LpfBw, ModeState, Range, SampleRate, TempPeriod, Tilt35},
         },
         repl::{
             common::{AckSignal, ControlCommand, ControlSender},
             display::{DisplayCommand, DisplaySender},
             led::LedSender,
-            rx::{RxBuffer, RxCommand, RxSender},
+            rx::{RxCommand, RxSender},
             tx::{TxCommand, TxSender},
         },
     },
@@ -35,7 +35,6 @@ use embassy_rp::{
     trng::Trng,
 };
 use embassy_sync::{blocking_mutex::raw::CriticalSectionRawMutex, channel, watch};
-use embassy_time::Duration;
 use embedded_graphics::pixelcolor::Rgb565;
 use rhai::{Blob, EvalAltResult, INT};
 use smart_leds::RGB8;
@@ -234,43 +233,35 @@ pub enum RpcEndpoint {
     AccelSetMode,
     AccelSetSampleRate,
     AccelSetMotionControl,
-    // AccelClearInterrupts,
-    // AccelRangeSelect,
-    // AccelSetXOffset,
-    // AccelSetYOffset,
-    // AccelSetZOffset,
-    // AccelSetFifoControl,
-    // AccelSetFifoThreshold,
-    // AccelSetFifoControl2,
-    // AccelSetCommControl,
-    // AccelSetGpioControl,
-    // AccelSetTiltFlipThreshold,
-    // AccelSetTiltFlipDebounce,
+    AccelClearInterrupts,
+    AccelRangeSelect,
+    AccelSetXOffset,
+    AccelSetYOffset,
+    AccelSetZOffset,
+    AccelSetFifoControl,
+    AccelSetFifoThreshold,
+    AccelSetFifoControl2,
+    AccelSetCommControl,
+    AccelSetGpioControl,
+    AccelSetTiltFlipThreshold,
+    AccelSetTiltFlipDebounce,
     AccelSetAnymThreshold,
     AccelSetAnymDebounce,
     AccelSetShakeThreshold,
     AccelSetShakeDuration,
-    // AccelSetTimerControl,
-    // AccelSetReadCount,
+    AccelSetTimerControl,
+    AccelSetReadCount,
     BattStatus,
-    TrxGetTerm,
     TrxSetTerm,
-    TrxGetTie,
-    TrxSetTie,
-    TxIsEnabled,
+    TrxSetTxRxTie,
     TxEnableDisable,
-    TxGetBaud,
     TxSetBaud,
     TxGetMode,
     TxSetMode,
     TxSend,
-    RxIsEnabled,
     RxEnableDisable,
-    RxGetBaud,
-    RxSetBaud,
     RxSetMode,
     RxGetMode,
-    RxRecv,
 }
 
 pub trait AppControl {
@@ -322,43 +313,35 @@ pub enum RpcCall {
     AccelSetMode(ModeState, bool, bool),
     AccelSetSampleRate(SampleRate),
     AccelSetMotionControl(bool, bool, bool, bool, bool, bool, bool, bool),
-    // AccelClearInterrupts,
-    // AccelRangeSelect(Range, LpfBw),
-    // AccelSetXOffset(i16),
-    // AccelSetYOffset(i16),
-    // AccelSetZOffset(i16),
-    // AccelSetFifoControl(bool, bool, bool, bool, bool, bool, bool),
-    // AccelSetFifoThreshold(u8),
-    // AccelSetFifoControl2(bool, bool, bool, DecMode),
-    // AccelSetCommControl(bool, bool, bool),
-    // AccelSetGpioControl(bool, bool, bool, bool),
-    // AccelSetTiltFlipThreshold(u16),
-    // AccelSetTiltFlipDebounce(u8),
+    AccelClearInterrupts,
+    AccelRangeSelect(Range, LpfBw),
+    AccelSetXOffset(i16),
+    AccelSetYOffset(i16),
+    AccelSetZOffset(i16),
+    AccelSetFifoControl(bool, bool, bool, bool, bool, bool, bool),
+    AccelSetFifoThreshold(u8),
+    AccelSetFifoControl2(bool, bool, bool, DecMode),
+    AccelSetCommControl(bool, bool, bool),
+    AccelSetGpioControl(bool, bool, bool, bool),
+    AccelSetTiltFlipThreshold(u16),
+    AccelSetTiltFlipDebounce(u8),
     AccelSetAnymThreshold(u16),
     AccelSetAnymDebounce(u8),
     AccelSetShakeThreshold(u16),
     AccelSetShakeDuration(u8, u16),
-    // AccelSetTimerControl(bool, TempPeriod, Tilt35),
-    // AccelSetReadCount(u8),
+    AccelSetTimerControl(bool, TempPeriod, Tilt35),
+    AccelSetReadCount(u8),
     BattStatus,
-    TrxGetTerm,
     TrxSetTerm(bool, bool),
-    TrxGetTie,
-    TrxSetTie(bool),
-    TxIsEnabled,
+    TrxSetTxRxTie(bool),
     TxEnableDisable(bool),
-    TxGetBaud,
     TxSetBaud(u32),
     TxGetMode,
     TxSetMode(TxMode),
     TxSend(TxWords),
-    RxIsEnabled,
     RxEnableDisable(bool),
-    RxGetBaud,
-    RxSetBaud(u32),
     RxSetMode(RxMode),
     RxGetMode,
-    RxRecv(Duration),
 }
 
 impl Format for RpcCall {
@@ -395,43 +378,35 @@ impl ToEndpoint for RpcCall {
             RpcCall::AccelSetMotionControl(_, _, _, _, _, _, _, _) => {
                 RpcEndpoint::AccelSetMotionControl
             }
-            // RpcCall::AccelClearInterrupts => RpcEndpoint::AccelClearInterrupts,
-            // RpcCall::AccelRangeSelect(_, _) => RpcEndpoint::AccelRangeSelect,
-            // RpcCall::AccelSetXOffset(_) => RpcEndpoint::AccelSetXOffset,
-            // RpcCall::AccelSetYOffset(_) => RpcEndpoint::AccelSetYOffset,
-            // RpcCall::AccelSetZOffset(_) => RpcEndpoint::AccelSetZOffset,
-            // RpcCall::AccelSetFifoControl(_, _, _, _, _, _, _) => RpcEndpoint::AccelSetFifoControl,
-            // RpcCall::AccelSetFifoThreshold(_) => RpcEndpoint::AccelSetFifoThreshold,
-            // RpcCall::AccelSetFifoControl2(_, _, _, _) => RpcEndpoint::AccelSetFifoControl2,
-            // RpcCall::AccelSetCommControl(_, _, _) => RpcEndpoint::AccelSetCommControl,
-            // RpcCall::AccelSetGpioControl(_, _, _, _) => RpcEndpoint::AccelSetGpioControl,
-            // RpcCall::AccelSetTiltFlipThreshold(_) => RpcEndpoint::AccelSetTiltFlipThreshold,
-            // RpcCall::AccelSetTiltFlipDebounce(_) => RpcEndpoint::AccelSetTiltFlipDebounce,
+            RpcCall::AccelClearInterrupts => RpcEndpoint::AccelClearInterrupts,
+            RpcCall::AccelRangeSelect(_, _) => RpcEndpoint::AccelRangeSelect,
+            RpcCall::AccelSetXOffset(_) => RpcEndpoint::AccelSetXOffset,
+            RpcCall::AccelSetYOffset(_) => RpcEndpoint::AccelSetYOffset,
+            RpcCall::AccelSetZOffset(_) => RpcEndpoint::AccelSetZOffset,
+            RpcCall::AccelSetFifoControl(_, _, _, _, _, _, _) => RpcEndpoint::AccelSetFifoControl,
+            RpcCall::AccelSetFifoThreshold(_) => RpcEndpoint::AccelSetFifoThreshold,
+            RpcCall::AccelSetFifoControl2(_, _, _, _) => RpcEndpoint::AccelSetFifoControl2,
+            RpcCall::AccelSetCommControl(_, _, _) => RpcEndpoint::AccelSetCommControl,
+            RpcCall::AccelSetGpioControl(_, _, _, _) => RpcEndpoint::AccelSetGpioControl,
+            RpcCall::AccelSetTiltFlipThreshold(_) => RpcEndpoint::AccelSetTiltFlipThreshold,
+            RpcCall::AccelSetTiltFlipDebounce(_) => RpcEndpoint::AccelSetTiltFlipDebounce,
             RpcCall::AccelSetAnymThreshold(_) => RpcEndpoint::AccelSetAnymThreshold,
             RpcCall::AccelSetAnymDebounce(_) => RpcEndpoint::AccelSetAnymDebounce,
             RpcCall::AccelSetShakeThreshold(_) => RpcEndpoint::AccelSetShakeThreshold,
             RpcCall::AccelSetShakeDuration(_, _) => RpcEndpoint::AccelSetShakeDuration,
-            // RpcCall::AccelSetTimerControl(_, _, _) => RpcEndpoint::AccelSetTimerControl,
-            // RpcCall::AccelSetReadCount(_) => RpcEndpoint::AccelSetReadCount,
+            RpcCall::AccelSetTimerControl(_, _, _) => RpcEndpoint::AccelSetTimerControl,
+            RpcCall::AccelSetReadCount(_) => RpcEndpoint::AccelSetReadCount,
             RpcCall::BattStatus => RpcEndpoint::BattStatus,
-            RpcCall::TrxGetTerm => RpcEndpoint::TrxGetTerm,
             RpcCall::TrxSetTerm(_, _) => RpcEndpoint::TrxSetTerm,
-            RpcCall::TrxGetTie => RpcEndpoint::TrxGetTie,
-            RpcCall::TrxSetTie(_) => RpcEndpoint::TrxSetTie,
-            RpcCall::TxIsEnabled => RpcEndpoint::TxIsEnabled,
+            RpcCall::TrxSetTxRxTie(_) => RpcEndpoint::TrxSetTxRxTie,
             RpcCall::TxEnableDisable(_) => RpcEndpoint::TxEnableDisable,
-            RpcCall::TxGetBaud => RpcEndpoint::TxGetBaud,
             RpcCall::TxSetBaud(_) => RpcEndpoint::TxSetBaud,
             RpcCall::TxGetMode => RpcEndpoint::TxGetMode,
             RpcCall::TxSetMode(_) => RpcEndpoint::TxSetMode,
             RpcCall::TxSend(_) => RpcEndpoint::TxSend,
-            RpcCall::RxIsEnabled => RpcEndpoint::RxIsEnabled,
             RpcCall::RxEnableDisable(_) => RpcEndpoint::RxEnableDisable,
-            RpcCall::RxGetBaud => RpcEndpoint::RxGetBaud,
-            RpcCall::RxSetBaud(_) => RpcEndpoint::RxSetBaud,
             RpcCall::RxSetMode(_) => RpcEndpoint::RxSetMode,
             RpcCall::RxGetMode => RpcEndpoint::RxGetMode,
-            RpcCall::RxRecv(_) => RpcEndpoint::RxRecv,
         }
     }
 }
@@ -467,43 +442,35 @@ pub enum RpcResult {
     AccelSetMode,
     AccelSetSampleRate,
     AccelSetMotionControl,
-    // AccelClearInterrupts,
-    // AccelRangeSelect,
-    // AccelSetXOffset,
-    // AccelSetYOffset,
-    // AccelSetZOffset,
-    // AccelSetFifoControl,
-    // AccelSetFifoThreshold,
-    // AccelSetFifoControl2,
-    // AccelSetCommControl,
-    // AccelSetGpioControl,
-    // AccelSetTiltFlipThreshold,
-    // AccelSetTiltFlipDebounce,
+    AccelClearInterrupts,
+    AccelRangeSelect,
+    AccelSetXOffset,
+    AccelSetYOffset,
+    AccelSetZOffset,
+    AccelSetFifoControl,
+    AccelSetFifoThreshold,
+    AccelSetFifoControl2,
+    AccelSetCommControl,
+    AccelSetGpioControl,
+    AccelSetTiltFlipThreshold,
+    AccelSetTiltFlipDebounce,
     AccelSetAnymThreshold,
     AccelSetAnymDebounce,
     AccelSetShakeThreshold,
     AccelSetShakeDuration,
-    // AccelSetTimerControl,
-    // AccelSetReadCount,
+    AccelSetTimerControl,
+    AccelSetReadCount,
     BattStatus(bq25895::registers::StatusRegisters),
-    TrxGetTerm(bool, bool),
     TrxSetTerm,
-    TrxGetTie(bool),
     TrxSetTxRxTie,
-    TxIsEnabled(bool),
     TxEnableDisable,
-    TxGetBaud(u32),
     TxSetBaud,
     TxGetMode(TxMode),
     TxSetMode,
     TxSend,
-    RxIsEnabled(bool),
     RxEnableDisable,
-    RxGetBaud(u32),
-    RxSetBaud,
     RxSetMode,
     RxGetMode(RxMode),
-    RxRecv(Blob),
 }
 
 impl Format for RpcResult {
@@ -538,43 +505,35 @@ impl ToEndpoint for RpcResult {
             RpcResult::AccelSetMode => RpcEndpoint::AccelSetMode,
             RpcResult::AccelSetSampleRate => RpcEndpoint::AccelSetSampleRate,
             RpcResult::AccelSetMotionControl => RpcEndpoint::AccelSetMotionControl,
-            // RpcResult::AccelClearInterrupts => RpcEndpoint::AccelClearInterrupts,
-            // RpcResult::AccelRangeSelect => RpcEndpoint::AccelRangeSelect,
-            // RpcResult::AccelSetXOffset => RpcEndpoint::AccelSetXOffset,
-            // RpcResult::AccelSetYOffset => RpcEndpoint::AccelSetYOffset,
-            // RpcResult::AccelSetZOffset => RpcEndpoint::AccelSetZOffset,
-            // RpcResult::AccelSetFifoControl => RpcEndpoint::AccelSetFifoControl,
-            // RpcResult::AccelSetFifoThreshold => RpcEndpoint::AccelSetFifoThreshold,
-            // RpcResult::AccelSetFifoControl2 => RpcEndpoint::AccelSetFifoControl2,
-            // RpcResult::AccelSetCommControl => RpcEndpoint::AccelSetCommControl,
-            // RpcResult::AccelSetGpioControl => RpcEndpoint::AccelSetGpioControl,
-            // RpcResult::AccelSetTiltFlipThreshold => RpcEndpoint::AccelSetTiltFlipThreshold,
-            // RpcResult::AccelSetTiltFlipDebounce => RpcEndpoint::AccelSetTiltFlipDebounce,
+            RpcResult::AccelClearInterrupts => RpcEndpoint::AccelClearInterrupts,
+            RpcResult::AccelRangeSelect => RpcEndpoint::AccelRangeSelect,
+            RpcResult::AccelSetXOffset => RpcEndpoint::AccelSetXOffset,
+            RpcResult::AccelSetYOffset => RpcEndpoint::AccelSetYOffset,
+            RpcResult::AccelSetZOffset => RpcEndpoint::AccelSetZOffset,
+            RpcResult::AccelSetFifoControl => RpcEndpoint::AccelSetFifoControl,
+            RpcResult::AccelSetFifoThreshold => RpcEndpoint::AccelSetFifoThreshold,
+            RpcResult::AccelSetFifoControl2 => RpcEndpoint::AccelSetFifoControl2,
+            RpcResult::AccelSetCommControl => RpcEndpoint::AccelSetCommControl,
+            RpcResult::AccelSetGpioControl => RpcEndpoint::AccelSetGpioControl,
+            RpcResult::AccelSetTiltFlipThreshold => RpcEndpoint::AccelSetTiltFlipThreshold,
+            RpcResult::AccelSetTiltFlipDebounce => RpcEndpoint::AccelSetTiltFlipDebounce,
             RpcResult::AccelSetAnymThreshold => RpcEndpoint::AccelSetAnymThreshold,
             RpcResult::AccelSetAnymDebounce => RpcEndpoint::AccelSetAnymDebounce,
             RpcResult::AccelSetShakeThreshold => RpcEndpoint::AccelSetShakeThreshold,
             RpcResult::AccelSetShakeDuration => RpcEndpoint::AccelSetShakeDuration,
-            // RpcResult::AccelSetTimerControl => RpcEndpoint::AccelSetTimerControl,
-            // RpcResult::AccelSetReadCount => RpcEndpoint::AccelSetReadCount,
+            RpcResult::AccelSetTimerControl => RpcEndpoint::AccelSetTimerControl,
+            RpcResult::AccelSetReadCount => RpcEndpoint::AccelSetReadCount,
             RpcResult::BattStatus(_) => RpcEndpoint::BattStatus,
-            RpcResult::TrxGetTerm(_, _) => RpcEndpoint::TrxGetTerm,
             RpcResult::TrxSetTerm => RpcEndpoint::TrxSetTerm,
-            RpcResult::TrxGetTie(_) => RpcEndpoint::TrxGetTie,
-            RpcResult::TrxSetTxRxTie => RpcEndpoint::TrxSetTie,
-            RpcResult::TxIsEnabled(_) => RpcEndpoint::TxIsEnabled,
+            RpcResult::TrxSetTxRxTie => RpcEndpoint::TrxSetTxRxTie,
             RpcResult::TxEnableDisable => RpcEndpoint::TxEnableDisable,
-            RpcResult::TxGetBaud(_) => RpcEndpoint::TxGetBaud,
             RpcResult::TxSetBaud => RpcEndpoint::TxSetBaud,
             RpcResult::TxGetMode(_) => RpcEndpoint::TxGetMode,
             RpcResult::TxSetMode => RpcEndpoint::TxSetMode,
             RpcResult::TxSend => RpcEndpoint::TxSend,
-            RpcResult::RxIsEnabled(_) => RpcEndpoint::RxIsEnabled,
             RpcResult::RxEnableDisable => RpcEndpoint::RxEnableDisable,
-            RpcResult::RxGetBaud(_) => RpcEndpoint::RxGetBaud,
-            RpcResult::RxSetBaud => RpcEndpoint::RxSetBaud,
             RpcResult::RxSetMode => RpcEndpoint::RxSetMode,
             RpcResult::RxGetMode(_) => RpcEndpoint::RxGetMode,
-            RpcResult::RxRecv(_) => RpcEndpoint::RxRecv,
         }
     }
 }
@@ -672,7 +631,6 @@ pub async fn repl_rpc(
     tx_ack: &'static AckSignal,
     rx_tx: RxSender,
     rx_ack: &'static AckSignal,
-    rx_buf: &'static RxBuffer,
     ctrl_tx: ControlSender,
     ctrl_ack: &'static AckSignal,
     mut accel_ctrl: mc3479::control::Control<
@@ -947,132 +905,132 @@ pub async fn repl_rpc(
                 let result = (call_count, outcome);
                 result_tx.send(result).await;
             }
-            // RpcCall::AccelClearInterrupts => {
-            //     let outcome = accel_ctrl
-            //         .clear_interrupts()
-            //         .await
-            //         .map(|_| RpcResult::AccelClearInterrupts)
-            //         .map_err(|err| err.into());
-            //     let result = (call_count, outcome);
-            //     result_tx.send(result).await;
-            // }
-            // RpcCall::AccelRangeSelect(range, lpf_bw) => {
-            //     let outcome = accel_ctrl
-            //         .range_select(range, lpf_bw)
-            //         .await
-            //         .map(|_| RpcResult::AccelRangeSelect)
-            //         .map_err(|err| err.into());
-            //     let result = (call_count, outcome);
-            //     result_tx.send(result).await;
-            // }
-            // RpcCall::AccelSetXOffset(offset) => {
-            //     let outcome = accel_ctrl
-            //         .set_x_offset(offset)
-            //         .await
-            //         .map(|_| RpcResult::AccelSetXOffset)
-            //         .map_err(|err| err.into());
-            //     let result = (call_count, outcome);
-            //     result_tx.send(result).await;
-            // }
-            // RpcCall::AccelSetYOffset(offset) => {
-            //     let outcome = accel_ctrl
-            //         .set_y_offset(offset)
-            //         .await
-            //         .map(|_| RpcResult::AccelSetYOffset)
-            //         .map_err(|err| err.into());
-            //     let result = (call_count, outcome);
-            //     result_tx.send(result).await;
-            // }
-            // RpcCall::AccelSetZOffset(offset) => {
-            //     let outcome = accel_ctrl
-            //         .set_z_offset(offset)
-            //         .await
-            //         .map(|_| RpcResult::AccelSetZOffset)
-            //         .map_err(|err| err.into());
-            //     let result = (call_count, outcome);
-            //     result_tx.send(result).await;
-            // }
-            // RpcCall::AccelSetFifoControl(
-            //     mode,
-            //     enable,
-            //     reset,
-            //     comb_int,
-            //     th_int,
-            //     full_int,
-            //     empty_int,
-            // ) => {
-            //     let outcome = accel_ctrl
-            //         .set_fifo_control(mode, enable, reset, comb_int, th_int, full_int, empty_int)
-            //         .await
-            //         .map(|_| RpcResult::AccelSetFifoControl)
-            //         .map_err(|err| err.into());
-            //     let result = (call_count, outcome);
-            //     result_tx.send(result).await;
-            // }
-            // RpcCall::AccelSetFifoThreshold(threshold) => {
-            //     let outcome = accel_ctrl
-            //         .set_fifo_threshold(threshold)
-            //         .await
-            //         .map(|_| RpcResult::AccelSetFifoThreshold)
-            //         .map_err(|err| err.into());
-            //     let result = (call_count, outcome);
-            //     result_tx.send(result).await;
-            // }
-            // RpcCall::AccelSetFifoControl2(burst, wrap_addr, wrap_en, dec_mode) => {
-            //     let outcome = accel_ctrl
-            //         .set_fifo_control2(burst, wrap_addr, wrap_en, dec_mode)
-            //         .await
-            //         .map(|_| RpcResult::AccelSetFifoControl2)
-            //         .map_err(|err| err.into());
-            //     let result = (call_count, outcome);
-            //     result_tx.send(result).await;
-            // }
-            // RpcCall::AccelSetCommControl(indiv_int_clr, spi_3wire_en, int1_int2_req_swap) => {
-            //     let outcome = accel_ctrl
-            //         .set_comm_control(indiv_int_clr, spi_3wire_en, int1_int2_req_swap)
-            //         .await
-            //         .map(|_| RpcResult::AccelSetCommControl)
-            //         .map_err(|err| err.into());
-            //     let result = (call_count, outcome);
-            //     result_tx.send(result).await;
-            // }
-            // RpcCall::AccelSetGpioControl(
-            //     gpio2_intn2_ipp,
-            //     gpio2_intn2_iah,
-            //     gpio1_intn1_ipp,
-            //     gpio1_intn1_iah,
-            // ) => {
-            //     let outcome = accel_ctrl
-            //         .set_gpio_control(
-            //             gpio2_intn2_ipp,
-            //             gpio2_intn2_iah,
-            //             gpio1_intn1_ipp,
-            //             gpio1_intn1_iah,
-            //         )
-            //         .await
-            //         .map(|_| RpcResult::AccelSetGpioControl)
-            //         .map_err(|err| err.into());
-            //     let result = (call_count, outcome);
-            //     result_tx.send(result).await;
-            // }
-            // RpcCall::AccelSetTiltFlipThreshold(threshold) => {
-            //     let outcome = accel_ctrl
-            //         .set_tilt_flip_threshold(threshold)
-            //         .await
-            //         .map(|_| RpcResult::AccelSetTiltFlipThreshold)
-            //         .map_err(|err| err.into());
-            //     let result = (call_count, outcome);
-            //     result_tx.send(result).await;
-            // }
-            // RpcCall::AccelSetTiltFlipDebounce(debounce) => {
-            //     let outcome = accel_ctrl
-            //         .set_tilt_flip_debounce(debounce)
-            //         .await
-            //         .map(|_| RpcResult::AccelSetTiltFlipDebounce)
-            //         .map_err(|err| err.into());
-            //     let result = (call_count, outcome);
-            //     result_tx.send(result).await;
-            // }
+            RpcCall::AccelClearInterrupts => {
+                let outcome = accel_ctrl
+                    .clear_interrupts()
+                    .await
+                    .map(|_| RpcResult::AccelClearInterrupts)
+                    .map_err(|err| err.into());
+                let result = (call_count, outcome);
+                result_tx.send(result).await;
+            }
+            RpcCall::AccelRangeSelect(range, lpf_bw) => {
+                let outcome = accel_ctrl
+                    .range_select(range, lpf_bw)
+                    .await
+                    .map(|_| RpcResult::AccelRangeSelect)
+                    .map_err(|err| err.into());
+                let result = (call_count, outcome);
+                result_tx.send(result).await;
+            }
+            RpcCall::AccelSetXOffset(offset) => {
+                let outcome = accel_ctrl
+                    .set_x_offset(offset)
+                    .await
+                    .map(|_| RpcResult::AccelSetXOffset)
+                    .map_err(|err| err.into());
+                let result = (call_count, outcome);
+                result_tx.send(result).await;
+            }
+            RpcCall::AccelSetYOffset(offset) => {
+                let outcome = accel_ctrl
+                    .set_y_offset(offset)
+                    .await
+                    .map(|_| RpcResult::AccelSetYOffset)
+                    .map_err(|err| err.into());
+                let result = (call_count, outcome);
+                result_tx.send(result).await;
+            }
+            RpcCall::AccelSetZOffset(offset) => {
+                let outcome = accel_ctrl
+                    .set_z_offset(offset)
+                    .await
+                    .map(|_| RpcResult::AccelSetZOffset)
+                    .map_err(|err| err.into());
+                let result = (call_count, outcome);
+                result_tx.send(result).await;
+            }
+            RpcCall::AccelSetFifoControl(
+                mode,
+                enable,
+                reset,
+                comb_int,
+                th_int,
+                full_int,
+                empty_int,
+            ) => {
+                let outcome = accel_ctrl
+                    .set_fifo_control(mode, enable, reset, comb_int, th_int, full_int, empty_int)
+                    .await
+                    .map(|_| RpcResult::AccelSetFifoControl)
+                    .map_err(|err| err.into());
+                let result = (call_count, outcome);
+                result_tx.send(result).await;
+            }
+            RpcCall::AccelSetFifoThreshold(threshold) => {
+                let outcome = accel_ctrl
+                    .set_fifo_threshold(threshold)
+                    .await
+                    .map(|_| RpcResult::AccelSetFifoThreshold)
+                    .map_err(|err| err.into());
+                let result = (call_count, outcome);
+                result_tx.send(result).await;
+            }
+            RpcCall::AccelSetFifoControl2(burst, wrap_addr, wrap_en, dec_mode) => {
+                let outcome = accel_ctrl
+                    .set_fifo_control2(burst, wrap_addr, wrap_en, dec_mode)
+                    .await
+                    .map(|_| RpcResult::AccelSetFifoControl2)
+                    .map_err(|err| err.into());
+                let result = (call_count, outcome);
+                result_tx.send(result).await;
+            }
+            RpcCall::AccelSetCommControl(indiv_int_clr, spi_3wire_en, int1_int2_req_swap) => {
+                let outcome = accel_ctrl
+                    .set_comm_control(indiv_int_clr, spi_3wire_en, int1_int2_req_swap)
+                    .await
+                    .map(|_| RpcResult::AccelSetCommControl)
+                    .map_err(|err| err.into());
+                let result = (call_count, outcome);
+                result_tx.send(result).await;
+            }
+            RpcCall::AccelSetGpioControl(
+                gpio2_intn2_ipp,
+                gpio2_intn2_iah,
+                gpio1_intn1_ipp,
+                gpio1_intn1_iah,
+            ) => {
+                let outcome = accel_ctrl
+                    .set_gpio_control(
+                        gpio2_intn2_ipp,
+                        gpio2_intn2_iah,
+                        gpio1_intn1_ipp,
+                        gpio1_intn1_iah,
+                    )
+                    .await
+                    .map(|_| RpcResult::AccelSetGpioControl)
+                    .map_err(|err| err.into());
+                let result = (call_count, outcome);
+                result_tx.send(result).await;
+            }
+            RpcCall::AccelSetTiltFlipThreshold(threshold) => {
+                let outcome = accel_ctrl
+                    .set_tilt_flip_threshold(threshold)
+                    .await
+                    .map(|_| RpcResult::AccelSetTiltFlipThreshold)
+                    .map_err(|err| err.into());
+                let result = (call_count, outcome);
+                result_tx.send(result).await;
+            }
+            RpcCall::AccelSetTiltFlipDebounce(debounce) => {
+                let outcome = accel_ctrl
+                    .set_tilt_flip_debounce(debounce)
+                    .await
+                    .map(|_| RpcResult::AccelSetTiltFlipDebounce)
+                    .map_err(|err| err.into());
+                let result = (call_count, outcome);
+                result_tx.send(result).await;
+            }
             RpcCall::AccelSetAnymThreshold(threshold) => {
                 let outcome = accel_ctrl
                     .set_anym_threshold(threshold)
@@ -1109,32 +1067,26 @@ pub async fn repl_rpc(
                 let result = (call_count, outcome);
                 result_tx.send(result).await;
             }
-            // RpcCall::AccelSetTimerControl(per_int_en, period, tilt35) => {
-            //     let outcome = accel_ctrl
-            //         .set_timer_control(per_int_en, period, tilt35)
-            //         .await
-            //         .map(|_| RpcResult::AccelSetTimerControl)
-            //         .map_err(|err| err.into());
-            //     let result = (call_count, outcome);
-            //     result_tx.send(result).await;
-            // }
-            // RpcCall::AccelSetReadCount(count) => {
-            //     let outcome = accel_ctrl
-            //         .set_read_count(count)
-            //         .await
-            //         .map(|_| RpcResult::AccelSetReadCount)
-            //         .map_err(|err| err.into());
-            //     let result = (call_count, outcome);
-            //     result_tx.send(result).await;
-            // }
-            RpcCall::BattStatus => {
-                let outcome = Ok(RpcResult::BattStatus(batt_ctrl.status().await));
+            RpcCall::AccelSetTimerControl(per_int_en, period, tilt35) => {
+                let outcome = accel_ctrl
+                    .set_timer_control(per_int_en, period, tilt35)
+                    .await
+                    .map(|_| RpcResult::AccelSetTimerControl)
+                    .map_err(|err| err.into());
                 let result = (call_count, outcome);
                 result_tx.send(result).await;
             }
-            RpcCall::TrxGetTerm => {
-                ctrl_tx.send(ControlCommand::GetTerm).await;
-                let outcome = ctrl_ack.wait().await;
+            RpcCall::AccelSetReadCount(count) => {
+                let outcome = accel_ctrl
+                    .set_read_count(count)
+                    .await
+                    .map(|_| RpcResult::AccelSetReadCount)
+                    .map_err(|err| err.into());
+                let result = (call_count, outcome);
+                result_tx.send(result).await;
+            }
+            RpcCall::BattStatus => {
+                let outcome = Ok(RpcResult::BattStatus(batt_ctrl.status().await));
                 let result = (call_count, outcome);
                 result_tx.send(result).await;
             }
@@ -1144,32 +1096,14 @@ pub async fn repl_rpc(
                 let result = (call_count, outcome);
                 result_tx.send(result).await;
             }
-            RpcCall::TrxGetTie => {
-                ctrl_tx.send(ControlCommand::GetTie).await;
+            RpcCall::TrxSetTxRxTie(enabled) => {
+                ctrl_tx.send(ControlCommand::SetTxRxTie(enabled)).await;
                 let outcome = ctrl_ack.wait().await;
-                let result = (call_count, outcome);
-                result_tx.send(result).await;
-            }
-            RpcCall::TrxSetTie(enabled) => {
-                ctrl_tx.send(ControlCommand::SetTie(enabled)).await;
-                let outcome = ctrl_ack.wait().await;
-                let result = (call_count, outcome);
-                result_tx.send(result).await;
-            }
-            RpcCall::TxIsEnabled => {
-                tx_tx.send(TxCommand::IsEnabled).await;
-                let outcome = tx_ack.wait().await;
                 let result = (call_count, outcome);
                 result_tx.send(result).await;
             }
             RpcCall::TxEnableDisable(enabled) => {
                 tx_tx.send(TxCommand::EnableDisable(enabled)).await;
-                let outcome = tx_ack.wait().await;
-                let result = (call_count, outcome);
-                result_tx.send(result).await;
-            }
-            RpcCall::TxGetBaud => {
-                tx_tx.send(TxCommand::GetBaud).await;
                 let outcome = tx_ack.wait().await;
                 let result = (call_count, outcome);
                 result_tx.send(result).await;
@@ -1198,26 +1132,8 @@ pub async fn repl_rpc(
                 let result = (call_count, outcome);
                 result_tx.send(result).await;
             }
-            RpcCall::RxIsEnabled => {
-                rx_tx.send(RxCommand::IsEnabled).await;
-                let outcome = rx_ack.wait().await;
-                let result = (call_count, outcome);
-                result_tx.send(result).await;
-            }
             RpcCall::RxEnableDisable(enabled) => {
                 rx_tx.send(RxCommand::EnableDisable(enabled)).await;
-                let outcome = rx_ack.wait().await;
-                let result = (call_count, outcome);
-                result_tx.send(result).await;
-            }
-            RpcCall::RxGetBaud => {
-                rx_tx.send(RxCommand::GetBaud).await;
-                let outcome = rx_ack.wait().await;
-                let result = (call_count, outcome);
-                result_tx.send(result).await;
-            }
-            RpcCall::RxSetBaud(baud) => {
-                rx_tx.send(RxCommand::SetBaud(baud)).await;
                 let outcome = rx_ack.wait().await;
                 let result = (call_count, outcome);
                 result_tx.send(result).await;
@@ -1231,14 +1147,6 @@ pub async fn repl_rpc(
             RpcCall::RxSetMode(mode) => {
                 rx_tx.send(RxCommand::SetMode(mode)).await;
                 let outcome = rx_ack.wait().await;
-                let result = (call_count, outcome);
-                result_tx.send(result).await;
-            }
-            RpcCall::RxRecv(timeout) => {
-                let outcome = embassy_time::with_timeout(timeout, rx_buf.wait())
-                    .await
-                    .map_err(|_| RpcError::ErrorDataRace("Timed out".to_owned()))
-                    .map(|msg| RpcResult::RxRecv(msg.into_vec()));
                 let result = (call_count, outcome);
                 result_tx.send(result).await;
             }

@@ -1,6 +1,7 @@
 use super::data::Data;
 use crate::platform::interrupt_i2c::update_state::UpdateState;
 use alloc::sync::Arc;
+use defmt::{debug, info};
 use embassy_embedded_hal::shared_bus::asynch::i2c::I2cDevice;
 use embassy_sync::{
     blocking_mutex::raw::{CriticalSectionRawMutex, RawMutex},
@@ -94,6 +95,10 @@ impl<M: RawMutex + 'static, D: I2c + 'static> UpdateState for Runner<M, D> {
             .write_read(0x4c, &reg, &mut cleared_interrupt_status)
             .await
             .unwrap();
+        debug!(
+            "Cleared interrupt statuses: {:?} vs. {:?}",
+            statuses[1], cleared_interrupt_status
+        );
 
         let mut data_guard = self.data.lock().await;
         data_guard.x = (data[1] as i16) << 8 | (data[0] as i16);
@@ -115,5 +120,16 @@ impl<M: RawMutex + 'static, D: I2c + 'static> UpdateState for Runner<M, D> {
                 true
             });
         }
+
+        info!("Updated accel data");
+        info!(
+            "{:x}: ({:?}, {:?}. {:?}) {:?} {:?}",
+            device_status,
+            data_guard.x,
+            data_guard.y,
+            data_guard.z,
+            data_guard.status,
+            data_guard.interrupt_status
+        );
     }
 }

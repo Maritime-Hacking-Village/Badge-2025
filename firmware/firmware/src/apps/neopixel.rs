@@ -408,65 +408,6 @@ async fn human_pattern(
     }
 }
 
-async fn teal_pattern(
-    leds: &mut [RGB8; NUM_LEDS],
-    ws2812: &mut PioWs2812<'static, PIO0, 0, NUM_LEDS>,
-) {
-    let grn = RGB8::new(0x00, 0xFF, 0x00) / 2;
-    let nil = RGB8::new(0x00, 0x00, 0x00);
-    let mhv = RGB8::new(0x48, 0x4D, 0x56);
-    let mut ticker = Ticker::every(Duration::from_millis(10));
-    let mut morse_tick = 0_usize;
-    let mut morse_cnt = 1_usize;
-    let morse_spacing = 20;
-
-    loop {
-        for j in 0..(256 * 5) {
-            for mut i in 0..8 {
-                if i == 2 {
-                    i += 1;
-                }
-
-                leds[i] = wheel(
-                    ((((if i > 2 { i - 1 } else { i }) * 256) as u16 / 7 as u16 + j as u16) & 255)
-                        as u8,
-                );
-                // Dim the color a little for battery saving and blue theme.
-                leds[i].b += leds[i].g / 2;
-                leds[i].g /= 4;
-                leds[i].g += leds[i].r / 4;
-                leds[i].r /= 8;
-                leds[i] /= 3;
-
-                leds[i] /= 4;
-            }
-
-            match mhv_pattern(morse_tick) {
-                Some(mhv_on) => {
-                    if mhv_on {
-                        leds[8] = mhv;
-                    } else {
-                        leds[8] = nil;
-                    }
-
-                    if morse_cnt % morse_spacing == 0 {
-                        morse_tick += 1;
-                    }
-                }
-                None => {
-                    morse_tick = 0;
-                    leds[8] = mhv;
-                }
-            }
-
-            morse_cnt += 1;
-            leds[2] = grn;
-            ws2812.write(leds).await;
-            ticker.next().await;
-        }
-    }
-}
-
 #[embassy_executor::task]
 pub async fn neopixel_task(
     mut app_rx: AppContextReceiver,

@@ -25,10 +25,10 @@ impl<W: Write, const MTU: usize> Write for MultiWrite<W, MTU> {
         self.writer1.write_all(buf).await?;
 
         // Write to the second writer
-        self.writer2.write_all(buf).await.unwrap();
-        // if let Err(_err) = self.writer2.try_write(buf) {
-        //     // warn!("Error writing to console output buffer: {:?}", err);
-        // }
+        // self.writer2.write_all(buf).await.unwrap();
+        if let Err(_err) = self.writer2.try_write(buf) {
+            // warn!("Error writing to console output buffer: {:?}", err);
+        }
 
         Ok(buf.len())
     }
