@@ -99,7 +99,7 @@ Let's enumerate the full set:
 | `display::clear` | `()` | `()` | Clears the display | true |
 | `display::flush` | `()` | `()` | Flushes the display | true |
 | `display::reset` | `()` | `()` | Resets the display | false |
-| `console::write` | `(text: &str | Array)` | `()` | Writes to display as a console; supports ANSI escape codes | true |
+| `console::write` | `(text: &str \| Array)` | `()` | Writes to display as a console; supports ANSI escape codes | true |
 | `led::set` | `(i: INT, r: INT, g: INT, b: INT)` | `()` | Sets the given LED | true |
 | `accel::read` | `()` | `Dynamic` | Polls the accelerometer | false |
 | `accel::set_reg8` | `(reg: INT, value: INT)` | `()` | Sets an 8-bit register | true |
@@ -125,7 +125,7 @@ Let's enumerate the full set:
 | `tx::set_baud` | `(baud: INT)` | `()` | Set the operating frequency of the Tx module | true |
 | `tx::get_mode` | `()` | `ImmutableString` | Gets the current mode | false |
 | `tx::set_mode` | `(mode: &str)` | `()` | Sets the operating mode ("can" or "inject") | true |
-| `tx::send` | `(data: Blob)` | `()` | Sendings the bytestream; behavior dependent on mode | true |
+| `tx::send` | `(data: Blob)` | `()` | Sends the bytestream; behavior dependent on mode | true |
 | `rx::is_enabled` | `()` | `bool` | Is Rx enabled? | true |
 | `rx::get_baud` | `()` | `INT` | Get Rx baud | true |
 | `rx::set_baud` | `(baud: INT)` | `()` | Set Rx baud | true |
