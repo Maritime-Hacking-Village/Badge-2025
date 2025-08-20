@@ -93,7 +93,7 @@ Let's enumerate the full set:
 | `sao::set_direction` | `(dir_1: bool, dir_2: bool)` | `()` | Sets SAO GPIO pin direction | false |
 | `sao::read` | `()` | `Array` | Reads SAO GPIO | false |
 | `sao::write` | `(out_1: bool, out_2: bool)` | `()` | Writes to SAO GPIO | false |
-| `display::set_backlight` | `(percent: INT | float)` | `()` | Sets display backlight percentage | false |
+| `display::set_backlight` | `(percent: INT \| float)` | `()` | Sets display backlight percentage | false |
 | `display::set_pixel` | `(x: INT, y: INT, r: INT, g: INT, b: INT)` | `()` | Sets a pixel | true |
 | `display::fill_region` | `(sx: INT, ex: INT, sy: INT, ey: INT, r: INT, g: INT, b: INT)` | `()` | Fills in a rectangle | true |
 | `display::clear` | `()` | `()` | Clears the display | true |
