@@ -1,0 +1,17 @@
+[target.'cfg(all(target_arch = "arm", target_os = "none"))']
+runner = "probe-rs run --chip RP235x"
+#runner = "elf2uf2-rs -d"
+#runner = "picotool load -u -v -x -t elf"
+rustflags = [
+    "-Zemit-stack-sizes",
+    "-Clinker-plugin-lto",
+    "-Clink-arg=-mllvm=-lto-embed-bitcode=optimized",
+    "-Clink-arg=-mllvm=-stack-size-section",
+]
+
+[build]
+target = "thumbv8m.main-none-eabihf"
+
+[env]
+DEFMT_LOG = "debug"
+EMBASSY_USB_MAX_INTERFACE_COUNT = "6"
