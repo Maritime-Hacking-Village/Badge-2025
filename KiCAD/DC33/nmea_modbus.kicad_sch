@@ -2874,7 +2874,7 @@
 			(uuid "494a8850-47f7-4d6b-b1dc-1f089ad339d4")
 		)
 		(instances
-			(project ""
+			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/b4dfef37-8710-4ee5-89e3-bfeef1a6f199"
 					(reference "U20")
 					(unit 1)
@@ -3446,7 +3446,7 @@
 			(uuid "7241d63d-9273-42ad-9714-60a23bb5326c")
 		)
 		(instances
-			(project "Untitled"
+			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/b4dfef37-8710-4ee5-89e3-bfeef1a6f199"
 					(reference "D4")
 					(unit 1)

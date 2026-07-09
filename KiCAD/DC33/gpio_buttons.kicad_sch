@@ -5484,7 +5484,7 @@
 			(uuid "0561820a-c1ae-44a0-a602-7ce04b38dded")
 		)
 		(instances
-			(project ""
+			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/1f2b90eb-79ae-4399-8e8d-c889ea141784"
 					(reference "U10")
 					(unit 1)
@@ -8256,7 +8256,7 @@
 			(uuid "1c6d586d-5967-4266-a4a0-657f21e2e5f6")
 		)
 		(instances
-			(project ""
+			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/1f2b90eb-79ae-4399-8e8d-c889ea141784"
 					(reference "U5")
 					(unit 1)
