@@ -572,6 +572,7 @@
       "single_global_label": "ignore",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
+      "undefined_netclass": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
       "wire_dangling": "error"
@@ -832,10 +833,6 @@
     [
       "1f2b90eb-79ae-4399-8e8d-c889ea141784",
       "I2C devices"
-    ],
-    [
-      "cffdc3aa-5926-42e1-aa10-da99acccfb64",
-      "Voltage References"
     ],
     [
       "914b783c-1c1c-4a95-aa15-c53adbbb4ce1",

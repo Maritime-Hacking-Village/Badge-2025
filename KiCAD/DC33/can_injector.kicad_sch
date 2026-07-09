@@ -1266,410 +1266,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Library:TMUX1108PWR"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "IC"
-				(at 21.59 7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "TMUX1108PWR"
-				(at 21.59 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "SOP65P640X120-16N"
-				(at 21.59 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tmux1108.pdf"
-				(at 21.59 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "Analog Switch ICs 5V / +/-2.5V, 8:1, low-leakage precision multiplexer 16-TSSOP -40 to 125"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Height" "1.2"
-				(at 21.59 -394.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Mouser Part Number" "595-TMUX1108PWR"
-				(at 21.59 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TMUX1108PWR?qs=PqoDHHvF6486MXIgK4oQ5g%3D%3D"
-				(at 21.59 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer_Name" "Texas Instruments"
-				(at 21.59 -694.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer_Part_Number" "TMUX1108PWR"
-				(at 21.59 -794.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(symbol "TMUX1108PWR_1_1"
-				(rectangle
-					(start 5.08 2.54)
-					(end 20.32 -20.32)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at 0 0 0)
-					(length 5.08)
-					(name "A0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 0)
-					(length 5.08)
-					(name "EN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 0)
-					(length 5.08)
-					(name "VSS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -7.62 0)
-					(length 5.08)
-					(name "S1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -10.16 0)
-					(length 5.08)
-					(name "S2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -12.7 0)
-					(length 5.08)
-					(name "S3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -15.24 0)
-					(length 5.08)
-					(name "S4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -17.78 0)
-					(length 5.08)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 25.4 0 180)
-					(length 5.08)
-					(name "A1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 25.4 -2.54 180)
-					(length 5.08)
-					(name "A2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 25.4 -5.08 180)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 25.4 -7.62 180)
-					(length 5.08)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 25.4 -10.16 180)
-					(length 5.08)
-					(name "S5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 25.4 -12.7 180)
-					(length 5.08)
-					(name "S6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 25.4 -15.24 180)
-					(length 5.08)
-					(name "S7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 25.4 -17.78 180)
-					(length 5.08)
-					(name "S8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Library:TPS22810TDBVRQ1"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2102,22 +1698,16 @@
 		)
 	)
 	(junction
-		(at 43.18 67.31)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "02ab48e0-0e5c-4954-a7c3-55ae2a6b78bb")
-	)
-	(junction
 		(at 182.88 67.31)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "08602ce3-50c7-4609-ae5b-930b541caf0d")
 	)
 	(junction
-		(at 105.41 90.17)
+		(at 125.73 115.57)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "14ad8c27-79e5-4734-8617-70ee96c42e09")
+		(uuid "0f98d0c4-9753-4cfe-9502-f1f31556c9d4")
 	)
 	(junction
 		(at 133.35 127)
@@ -2126,34 +1716,34 @@
 		(uuid "24246498-9988-4340-b5fa-15363f08bab9")
 	)
 	(junction
+		(at 48.26 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "28ac9bc1-30c9-485e-a5ed-25b1c1330ed1")
+	)
+	(junction
+		(at 59.69 30.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2d89d082-130a-4d85-aed7-a733720e390f")
+	)
+	(junction
 		(at 166.37 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2e948c33-dbe0-4fbe-b179-43fd7a9c0292")
 	)
 	(junction
-		(at 113.03 26.67)
+		(at 59.69 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "3010ce8f-2e78-4dc4-b3d8-c7c651fe0f62")
-	)
-	(junction
-		(at 119.38 24.13)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5626e20a-0a1f-4467-9a3c-b1056c53f959")
+		(uuid "3398e57a-870d-4d01-9c69-034e508fdeb3")
 	)
 	(junction
 		(at 182.88 64.77)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5f68ec66-5a30-4c84-8450-88c24085e75a")
-	)
-	(junction
-		(at 27.94 26.67)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "63f63f7d-40ab-48bd-9c9b-a52443c0a368")
 	)
 	(junction
 		(at 173.99 72.39)
@@ -2180,6 +1770,12 @@
 		(uuid "74b637da-9408-4f61-8d5a-0870a0c77701")
 	)
 	(junction
+		(at 72.39 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7c709f89-bbee-48ec-9dc9-2eabb54f5b37")
+	)
+	(junction
 		(at 240.03 67.31)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2204,28 +1800,28 @@
 		(uuid "83d9d331-d8f2-4419-b3c0-ecf10a400ed0")
 	)
 	(junction
-		(at 27.94 90.17)
+		(at 125.73 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "83f4750c-70ef-4415-97e0-267bd0f4f3ce")
+		(uuid "ab13f618-ffbf-40c6-a47c-db7a406a915f")
 	)
 	(junction
-		(at 48.26 67.31)
+		(at 72.39 30.48)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "986597bd-f42c-4102-ab6d-d4d4d90276fe")
-	)
-	(junction
-		(at 113.03 86.36)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "bb70852d-d729-4aaa-a4c8-1ff8ac07519e")
+		(uuid "c0f1c34f-ce48-4ac8-8eca-0dc12a9e22ca")
 	)
 	(junction
 		(at 114.3 67.31)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c298cd1f-bec7-4ce5-82f3-f87619e36ab4")
+	)
+	(junction
+		(at 48.26 30.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d0da10a6-af01-46ea-a5cf-9ebdfb412ea6")
 	)
 	(junction
 		(at 82.55 157.48)
@@ -2279,16 +1875,6 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 67.31) (xy 48.26 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "01c36bf1-9d98-484a-8d12-44042693a86c")
-	)
-	(wire
-		(pts
 			(xy 182.88 64.77) (xy 185.42 64.77)
 		)
 		(stroke
@@ -2306,6 +1892,36 @@
 			(type default)
 		)
 		(uuid "08728937-c4af-4bce-b4f8-2d911b8c076d")
+	)
+	(wire
+		(pts
+			(xy 58.42 30.48) (xy 59.69 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08cde792-d5f9-4ed0-8448-3ca484daabbb")
+	)
+	(wire
+		(pts
+			(xy 36.83 30.48) (xy 48.26 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d04abaa-3ea4-40ab-ac3e-ee297703b77d")
+	)
+	(wire
+		(pts
+			(xy 36.83 83.82) (xy 36.83 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0dfd0ba5-4955-423b-a20c-5c83ac9279a0")
 	)
 	(wire
 		(pts
@@ -2349,26 +1965,6 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 90.17) (xy 27.94 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "155b8993-dc3c-42ea-863a-46a5cfae22f1")
-	)
-	(wire
-		(pts
-			(xy 78.74 34.29) (xy 97.79 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "15b5ff3b-16f1-409b-b35f-b0d2c0327667")
-	)
-	(wire
-		(pts
 			(xy 229.87 72.39) (xy 227.33 72.39)
 		)
 		(stroke
@@ -2386,16 +1982,6 @@
 			(type default)
 		)
 		(uuid "18ee23c0-1f10-483a-a057-0c1bb1cf4ccb")
-	)
-	(wire
-		(pts
-			(xy 86.36 92.71) (xy 73.66 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "196c72f5-c3a8-489b-b86f-3f6fafca6efe")
 	)
 	(wire
 		(pts
@@ -2429,26 +2015,6 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 44.45) (xy 78.74 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1fcf7938-d5a6-4393-bdc9-5decc64879cd")
-	)
-	(wire
-		(pts
-			(xy 113.03 86.36) (xy 113.03 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "227082a0-847b-4883-b349-d37e334b62a8")
-	)
-	(wire
-		(pts
 			(xy 177.8 64.77) (xy 177.8 80.01)
 		)
 		(stroke
@@ -2466,16 +2032,6 @@
 			(type default)
 		)
 		(uuid "245f4be1-5e4f-4fbe-946b-3f97e870038a")
-	)
-	(wire
-		(pts
-			(xy 81.28 29.21) (xy 78.74 29.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "24996fb8-85ba-4c33-a6f2-dc6739bbbaaf")
 	)
 	(wire
 		(pts
@@ -2499,26 +2055,6 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 26.67) (xy 113.03 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2a4eb4f1-3dc7-4fab-8c06-ce228dab523a")
-	)
-	(wire
-		(pts
-			(xy 105.41 90.17) (xy 118.11 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2ad292af-b5ab-4205-98fa-a557b4f0b8a8")
-	)
-	(wire
-		(pts
 			(xy 171.45 72.39) (xy 173.99 72.39)
 		)
 		(stroke
@@ -2529,13 +2065,13 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 105.41) (xy 48.26 105.41)
+			(xy 36.83 38.1) (xy 36.83 30.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2f9c99bd-7fe9-493e-b8dd-2c37e8776e84")
+		(uuid "2f26eec3-886b-4f6e-94ef-29b3fb95fd0a")
 	)
 	(wire
 		(pts
@@ -2549,26 +2085,6 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 26.67) (xy 128.27 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "34c9aefd-0f2f-4c87-9486-82db2897f61e")
-	)
-	(wire
-		(pts
-			(xy 43.18 67.31) (xy 43.18 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "34e83f0f-e4fc-4f3f-9821-c3ceaf2a5f95")
-	)
-	(wire
-		(pts
 			(xy 125.73 50.8) (xy 125.73 62.23)
 		)
 		(stroke
@@ -2576,16 +2092,6 @@
 			(type default)
 		)
 		(uuid "36450f16-b09f-4d78-b299-5761a5ea8cbc")
-	)
-	(wire
-		(pts
-			(xy 87.63 36.83) (xy 78.74 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3815d2a0-a458-47fa-b621-7e69c257c8a0")
 	)
 	(wire
 		(pts
@@ -2609,6 +2115,16 @@
 	)
 	(wire
 		(pts
+			(xy 72.39 38.1) (xy 72.39 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b1128e9-f59b-4900-b256-c12d2cab91e4")
+	)
+	(wire
+		(pts
 			(xy 171.45 69.85) (xy 173.99 69.85)
 		)
 		(stroke
@@ -2616,16 +2132,6 @@
 			(type default)
 		)
 		(uuid "3c7e6f37-e6c4-44c3-8144-ac5d2f879cbe")
-	)
-	(wire
-		(pts
-			(xy 86.36 90.17) (xy 105.41 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3fc79b14-252b-414c-a7c0-df8e39b46bad")
 	)
 	(wire
 		(pts
@@ -2669,36 +2175,6 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 95.25) (xy 74.93 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "48b9869c-64a2-49c3-91ca-09c224c1fbdd")
-	)
-	(wire
-		(pts
-			(xy 78.74 31.75) (xy 80.01 31.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "48d350cb-6460-4788-ab08-f5f8aabbbeef")
-	)
-	(wire
-		(pts
-			(xy 125.73 105.41) (xy 125.73 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4a1b2016-d29c-4613-a291-00e13a93d068")
-	)
-	(wire
-		(pts
 			(xy 227.33 124.46) (xy 257.81 124.46)
 		)
 		(stroke
@@ -2729,33 +2205,43 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 29.21) (xy 48.26 67.31)
+			(xy 86.36 76.2) (xy 72.39 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "505c8084-a4eb-4dc0-8b68-b5ffe9a47ad4")
+		(uuid "52d34b4f-6599-49f4-ab90-57f9d6ee1a43")
 	)
 	(wire
 		(pts
-			(xy 41.91 39.37) (xy 53.34 39.37)
+			(xy 133.35 64.77) (xy 86.36 64.77)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "56281cb9-7bcf-494b-861c-78348ca5f57d")
+		(uuid "54cd4b6b-ecd9-4c45-b0ff-462cc2933979")
 	)
 	(wire
 		(pts
-			(xy 119.38 24.13) (xy 80.01 24.13)
+			(xy 86.36 69.85) (xy 133.35 69.85)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "57ef519a-22d1-44b0-96a8-6ad6c0adb2af")
+		(uuid "562fc6b4-767f-4e4a-a5fa-e35413122d0f")
+	)
+	(wire
+		(pts
+			(xy 72.39 76.2) (xy 71.12 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57f890d3-32d5-4362-8c38-3317570c7a23")
 	)
 	(wire
 		(pts
@@ -2779,16 +2265,6 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 34.29) (xy 53.34 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5a41af7b-715c-42a4-a5c9-066fc5a48151")
-	)
-	(wire
-		(pts
 			(xy 173.99 127) (xy 133.35 127)
 		)
 		(stroke
@@ -2809,6 +2285,26 @@
 	)
 	(wire
 		(pts
+			(xy 86.36 69.85) (xy 86.36 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5df7ec1f-7993-4d66-98b4-9716b1b6b723")
+	)
+	(wire
+		(pts
+			(xy 59.69 76.2) (xy 63.5 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5fd9a754-e27e-42c2-8811-619082856993")
+	)
+	(wire
+		(pts
 			(xy 133.35 62.23) (xy 125.73 62.23)
 		)
 		(stroke
@@ -2826,56 +2322,6 @@
 			(type default)
 		)
 		(uuid "616f1eba-4e73-4a5a-ab76-90983e30efa9")
-	)
-	(wire
-		(pts
-			(xy 80.01 86.36) (xy 80.01 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "61f2595d-b479-4a37-8bdd-fcf0ff8d6975")
-	)
-	(wire
-		(pts
-			(xy 83.82 105.41) (xy 73.66 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "62d5d34f-fa27-4d6c-86eb-d280848c04e9")
-	)
-	(wire
-		(pts
-			(xy 83.82 107.95) (xy 73.66 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "63854cd1-50bf-4bd3-94f5-3602f75c569e")
-	)
-	(wire
-		(pts
-			(xy 86.36 90.17) (xy 86.36 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "642828c9-07e2-4ec0-991c-429411ad47ef")
-	)
-	(wire
-		(pts
-			(xy 87.63 39.37) (xy 78.74 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "653026c4-ac47-4c1c-8e01-0f6fe8672711")
 	)
 	(wire
 		(pts
@@ -2929,26 +2375,6 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 97.79) (xy 91.44 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "68f4d7e9-549d-46db-8663-6f6b5bc80ce6")
-	)
-	(wire
-		(pts
-			(xy 140.97 166.37) (xy 146.05 166.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6a028ca1-2359-4a30-aac8-9dc7883ca794")
-	)
-	(wire
-		(pts
 			(xy 185.42 132.08) (xy 182.88 132.08)
 		)
 		(stroke
@@ -2966,16 +2392,6 @@
 			(type default)
 		)
 		(uuid "73832de1-b1b5-44d0-aff9-49be203a006b")
-	)
-	(wire
-		(pts
-			(xy 39.37 100.33) (xy 48.26 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "74bac3f9-ca71-4053-b213-3fd490a54797")
 	)
 	(wire
 		(pts
@@ -2999,6 +2415,16 @@
 	)
 	(wire
 		(pts
+			(xy 125.73 105.41) (xy 125.73 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c298803-4cd7-4609-9cfe-b2f933d7fe1c")
+	)
+	(wire
+		(pts
 			(xy 200.66 127) (xy 200.66 91.44)
 		)
 		(stroke
@@ -3016,16 +2442,6 @@
 			(type default)
 		)
 		(uuid "7d2b6d9f-7937-4eac-8253-635e59a29ad3")
-	)
-	(wire
-		(pts
-			(xy 24.13 26.67) (xy 27.94 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7d3bf852-5f0b-4a81-a837-4163384db9f8")
 	)
 	(wire
 		(pts
@@ -3049,13 +2465,13 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 90.17) (xy 105.41 96.52)
+			(xy 86.36 30.48) (xy 72.39 30.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "83a8593a-5093-4dab-9f25-938db3248de9")
+		(uuid "8254918c-610c-45b4-8ac7-0da3de7ca17c")
 	)
 	(wire
 		(pts
@@ -3109,16 +2525,6 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 107.95) (xy 46.99 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8bfc94a6-27b9-4dac-9e5a-448aa7fd7d25")
-	)
-	(wire
-		(pts
 			(xy 195.58 74.93) (xy 193.04 74.93)
 		)
 		(stroke
@@ -3129,36 +2535,6 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 97.79) (xy 48.26 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8e4929e4-8f46-4036-9d98-adc87d160d81")
-	)
-	(wire
-		(pts
-			(xy 113.03 86.36) (xy 80.01 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8fceea8b-cc14-4c8b-ad80-3ba2e52a6c99")
-	)
-	(wire
-		(pts
-			(xy 53.34 29.21) (xy 48.26 29.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "903a0260-709c-422b-85e6-25d95aeeb0b7")
-	)
-	(wire
-		(pts
 			(xy 173.99 74.93) (xy 171.45 74.93)
 		)
 		(stroke
@@ -3166,16 +2542,6 @@
 			(type default)
 		)
 		(uuid "948d83a2-e3e8-4697-a203-2e8b56803ae2")
-	)
-	(wire
-		(pts
-			(xy 119.38 24.13) (xy 119.38 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9604b684-e757-4a0c-b422-de1c817636ee")
 	)
 	(wire
 		(pts
@@ -3199,36 +2565,6 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 41.91) (xy 78.74 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "990b07cd-0906-4e75-bff8-57a3ca7ba70d")
-	)
-	(wire
-		(pts
-			(xy 80.01 90.17) (xy 73.66 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9920de62-2775-4f66-b79c-3ca6c8d08fd9")
-	)
-	(wire
-		(pts
-			(xy 39.37 95.25) (xy 48.26 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9a4e43af-68d8-41fb-8852-f743c6a2439f")
-	)
-	(wire
-		(pts
 			(xy 173.99 72.39) (xy 173.99 74.93)
 		)
 		(stroke
@@ -3236,26 +2572,6 @@
 			(type default)
 		)
 		(uuid "9aaa2eb5-bbd4-4d27-b399-eab0acdc13b4")
-	)
-	(wire
-		(pts
-			(xy 46.99 69.85) (xy 133.35 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9c0a13ba-11d5-4c00-bf59-4923459d64f9")
-	)
-	(wire
-		(pts
-			(xy 48.26 92.71) (xy 43.18 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9cb0bb98-750e-42da-8b0b-1c4b9620f3e2")
 	)
 	(wire
 		(pts
@@ -3269,6 +2585,26 @@
 	)
 	(wire
 		(pts
+			(xy 59.69 30.48) (xy 63.5 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9db6ea56-97c6-4dbe-977c-69f0e4f998c2")
+	)
+	(wire
+		(pts
+			(xy 58.42 76.2) (xy 59.69 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f96947f-9c3c-4eee-ae74-5b29ba252a6c")
+	)
+	(wire
+		(pts
 			(xy 114.3 67.31) (xy 133.35 67.31)
 		)
 		(stroke
@@ -3276,16 +2612,6 @@
 			(type default)
 		)
 		(uuid "a18e4572-dd18-4adc-b81e-ba8e4043e997")
-	)
-	(wire
-		(pts
-			(xy 140.97 168.91) (xy 146.05 168.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a1d54f86-393f-4014-8714-e2393f3bd4b6")
 	)
 	(wire
 		(pts
@@ -3299,63 +2625,33 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 86.36) (xy 113.03 86.36)
+			(xy 59.69 30.48) (xy 59.69 38.1)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a5974856-bdca-4937-9ebc-ad079a22049e")
+		(uuid "a58529b1-c601-4141-98c1-de2f45dfea64")
 	)
 	(wire
 		(pts
-			(xy 41.91 36.83) (xy 53.34 36.83)
+			(xy 86.36 64.77) (xy 86.36 30.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a7e013b7-ad71-45cd-8c24-2f31c5bc2516")
+		(uuid "ac8c73bf-12fd-41db-aded-609f31a92d92")
 	)
 	(wire
 		(pts
-			(xy 27.94 26.67) (xy 53.34 26.67)
+			(xy 48.26 30.48) (xy 48.26 38.1)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a8591b9b-b9dd-4781-aaa1-4341d6fce623")
-	)
-	(wire
-		(pts
-			(xy 35.56 67.31) (xy 43.18 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aa32d29d-5089-4b15-8857-449a4d438858")
-	)
-	(wire
-		(pts
-			(xy 80.01 26.67) (xy 78.74 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aca9268d-aedc-4aad-998e-af1dc32fe507")
-	)
-	(wire
-		(pts
-			(xy 39.37 31.75) (xy 53.34 31.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ad85398d-1d48-42fa-afcf-ab89254786df")
+		(uuid "adc09b0c-c986-4166-9c97-917fdf3158b6")
 	)
 	(wire
 		(pts
@@ -3379,13 +2675,13 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 161.29) (xy 146.05 161.29)
+			(xy 72.39 30.48) (xy 71.12 30.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b04708e3-534b-4658-acd3-a6a02fbc14df")
+		(uuid "af655cb3-b993-4f4d-b920-819cd7b36d9a")
 	)
 	(wire
 		(pts
@@ -3406,16 +2702,6 @@
 			(type default)
 		)
 		(uuid "b4992ed5-370b-430b-b8a3-4f4a363ad657")
-	)
-	(wire
-		(pts
-			(xy 128.27 24.13) (xy 119.38 24.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b78f0ac8-8ff5-446e-85e8-6e3082407c16")
 	)
 	(wire
 		(pts
@@ -3479,26 +2765,6 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 41.91) (xy 53.34 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bf13d1ce-49ce-4710-8a70-c04212ccb3bb")
-	)
-	(wire
-		(pts
-			(xy 52.07 44.45) (xy 52.07 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bf623d2c-608c-444c-9977-66e2f872ad54")
-	)
-	(wire
-		(pts
 			(xy 229.87 127) (xy 229.87 107.95)
 		)
 		(stroke
@@ -3506,6 +2772,16 @@
 			(type default)
 		)
 		(uuid "c1d16786-bc92-4404-9e84-05ef2c7e4a09")
+	)
+	(wire
+		(pts
+			(xy 125.73 115.57) (xy 125.73 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2cd898a-5a5d-413c-b5e0-d8828a80cf1d")
 	)
 	(wire
 		(pts
@@ -3529,43 +2805,33 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 171.45) (xy 146.05 171.45)
+			(xy 48.26 76.2) (xy 48.26 83.82)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c8684cc4-8999-4ccd-b86e-7fdd441b130f")
+		(uuid "c7d30cbc-eb59-4887-9d10-ecacb69eab39")
 	)
 	(wire
 		(pts
-			(xy 83.82 102.87) (xy 73.66 102.87)
+			(xy 48.26 76.2) (xy 50.8 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c9920df1-fa6d-4191-aa85-a92a78378208")
+		(uuid "ce19dd56-2af8-487e-b70c-66362969bc5e")
 	)
 	(wire
 		(pts
-			(xy 140.97 163.83) (xy 146.05 163.83)
+			(xy 36.83 76.2) (xy 48.26 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cbd17bb8-e647-4d98-a51c-416c95a66f74")
-	)
-	(wire
-		(pts
-			(xy 80.01 24.13) (xy 80.01 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cd12ee37-bd19-4073-8475-9aea3eb08b80")
+		(uuid "d07d129e-6ef4-4400-bc51-03fdc0386cde")
 	)
 	(wire
 		(pts
@@ -3579,16 +2845,6 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 26.67) (xy 113.03 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d68ffa6d-b131-4904-8a01-009797de5f15")
-	)
-	(wire
-		(pts
 			(xy 201.93 72.39) (xy 195.58 72.39)
 		)
 		(stroke
@@ -3596,16 +2852,6 @@
 			(type default)
 		)
 		(uuid "da623c0d-1f4a-48cc-b8f4-0951807bca7d")
-	)
-	(wire
-		(pts
-			(xy 27.94 90.17) (xy 48.26 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "da9f2974-0a46-40a4-b982-fd9b2ad19735")
 	)
 	(wire
 		(pts
@@ -3619,16 +2865,6 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 107.95) (xy 46.99 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e190b647-152f-4fad-919f-2e0da8175244")
-	)
-	(wire
-		(pts
 			(xy 195.58 121.92) (xy 195.58 124.46)
 		)
 		(stroke
@@ -3639,17 +2875,7 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 44.45) (xy 53.34 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e500e0c6-197d-4e6a-9616-6d7c9a23e41e")
-	)
-	(wire
-		(pts
-			(xy 48.26 67.31) (xy 114.3 67.31)
+			(xy 35.56 67.31) (xy 114.3 67.31)
 		)
 		(stroke
 			(width 0)
@@ -3669,26 +2895,6 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 156.21) (xy 146.05 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e83f092f-ae40-4632-95c8-bf03c3c2c6df")
-	)
-	(wire
-		(pts
-			(xy 83.82 100.33) (xy 73.66 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e94a8b52-b08d-4078-8fc4-878d3b833a93")
-	)
-	(wire
-		(pts
 			(xy 200.66 69.85) (xy 201.93 69.85)
 		)
 		(stroke
@@ -3699,13 +2905,13 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 102.87) (xy 48.26 102.87)
+			(xy 48.26 30.48) (xy 50.8 30.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ec2e1c67-7b93-4e22-a1b5-b885b4a07b63")
+		(uuid "ec7dc46f-eaff-48a6-89a8-37d8a720d6c4")
 	)
 	(wire
 		(pts
@@ -3719,16 +2925,6 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 26.67) (xy 81.28 29.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ee2873d3-d64a-4e87-ba35-4581187e9fd6")
-	)
-	(wire
-		(pts
 			(xy 82.55 160.02) (xy 82.55 157.48)
 		)
 		(stroke
@@ -3736,6 +2932,16 @@
 			(type default)
 		)
 		(uuid "ef63e798-fd12-4aa7-a580-8998ec56bd33")
+	)
+	(wire
+		(pts
+			(xy 72.39 83.82) (xy 72.39 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef92a8c1-fed2-46b7-8915-7a07cc1719d2")
 	)
 	(wire
 		(pts
@@ -3759,16 +2965,6 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 158.75) (xy 146.05 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f046ef2f-5fff-423c-823c-12392986307e")
-	)
-	(wire
-		(pts
 			(xy 171.45 64.77) (xy 177.8 64.77)
 		)
 		(stroke
@@ -3786,6 +2982,16 @@
 			(type default)
 		)
 		(uuid "f76382fa-0e40-42a9-b7a0-0666fe5ce0da")
+	)
+	(wire
+		(pts
+			(xy 59.69 76.2) (xy 59.69 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc45d256-2506-4683-95c2-4a4df9a69159")
 	)
 	(wire
 		(pts
@@ -3807,15 +3013,372 @@
 		)
 		(uuid "fdf28ed7-2240-48d3-9cf2-b4ae60401a3b")
 	)
-	(wire
-		(pts
-			(xy 52.07 64.77) (xy 133.35 64.77)
+	(image
+		(at 55.88 118.11)
+		(uuid "c7b00a56-a2c7-4496-a365-1a52783a15a1")
+		(data "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"
+			"AAAAAADgn/kCNEwhar5KU1gAAAAASUVORK5CYII="
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ff03dd22-a989-4182-a054-71a4bd5423bd")
 	)
 	(label "+5V_SW"
 		(at 212.09 34.29 180)
@@ -3827,96 +3390,6 @@
 		)
 		(uuid "028b051e-77be-4f1e-81bd-abf7b68d948d")
 	)
-	(label "1V5"
-		(at 146.05 158.75 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "04166285-b22d-40b7-950f-4bae5c503d35")
-	)
-	(label "3V5"
-		(at 146.05 168.91 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "073f95ed-a0da-4dff-85f7-8b7301f1f349")
-	)
-	(label "1V"
-		(at 146.05 156.21 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "088db753-1922-41b5-aa7a-7684788be7e9")
-	)
-	(label "1V"
-		(at 41.91 36.83 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "0f032b50-2f26-4213-8e14-d40e943a55cc")
-	)
-	(label "1V5"
-		(at 41.91 39.37 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "20cd02dc-aab7-43f3-957b-7bd048f1e332")
-	)
-	(label "3V"
-		(at 83.82 102.87 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "3392df18-24a0-4b52-bfde-374c37bbff7a")
-	)
-	(label "3V5"
-		(at 83.82 105.41 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "433710e1-b46b-4304-a8a6-b279b7812f85")
-	)
-	(label "3V5"
-		(at 87.63 41.91 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "45835059-da4b-4b2e-9257-270d817c88b6")
-	)
-	(label "+5V_SW"
-		(at 97.79 34.29 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "47ab386b-cc0c-40d9-9ad1-e7cf92c8821d")
-	)
 	(label "+5V_SW"
 		(at 241.3 50.8 180)
 		(effects
@@ -3926,96 +3399,6 @@
 			(justify right bottom)
 		)
 		(uuid "5a1c2698-1a85-4d5d-9ad0-cf98e0cc287d")
-	)
-	(label "2V5"
-		(at 146.05 163.83 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "5b3995ef-0358-43ce-bfbd-27ca6d7021da")
-	)
-	(label "+5V_SW"
-		(at 91.44 97.79 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "5f10d9a0-7c21-43b1-9d7a-06c59d169942")
-	)
-	(label "2V"
-		(at 41.91 41.91 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "6d19d40a-b55e-4c43-a713-668855625703")
-	)
-	(label "4V"
-		(at 87.63 44.45 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "730c2c52-c486-4d3c-abf5-5f913b17c3db")
-	)
-	(label "0V"
-		(at 39.37 97.79 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "75134eab-027e-47ef-8f68-7b1770049722")
-	)
-	(label "1V"
-		(at 39.37 100.33 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7bb1b26e-0985-4cc1-bc18-6f6a6cd06983")
-	)
-	(label "4V"
-		(at 83.82 107.95 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "9486a67d-95b2-4d7c-808f-5c9a290bfd27")
-	)
-	(label "1V5"
-		(at 39.37 102.87 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9d8e9306-d404-4bd0-84ec-d17bbc78ff0e")
-	)
-	(label "2V5"
-		(at 83.82 100.33 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "9face406-f6dd-425c-b546-67528dde89f3")
 	)
 	(label "+5V_SW"
 		(at 107.95 157.48 180)
@@ -4027,36 +3410,6 @@
 		)
 		(uuid "adfe7fb4-99e3-4d9b-bfe9-e2f5a1ba6718")
 	)
-	(label "2V"
-		(at 39.37 105.41 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "afb2a17e-56dc-4db0-97f1-592e731cd40c")
-	)
-	(label "0V"
-		(at 41.91 34.29 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "cae0f448-193d-4950-b62c-8c431bc7fbdf")
-	)
-	(label "3V"
-		(at 87.63 39.37 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "cc9b175b-7d97-4adb-b390-1e6ff56876ad")
-	)
 	(label "+5V_SW"
 		(at 240.03 107.95 180)
 		(effects
@@ -4066,46 +3419,6 @@
 			(justify right bottom)
 		)
 		(uuid "d35f6f57-ad76-48e8-a80e-87e9e8fcdf0d")
-	)
-	(label "4V"
-		(at 146.05 171.45 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "d4b90182-a0f0-4d72-8588-fe34c1435e13")
-	)
-	(label "2V"
-		(at 146.05 161.29 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "d84dcbfc-07b8-492d-9fab-257c2acea08a")
-	)
-	(label "2V5"
-		(at 87.63 36.83 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "dfbd6a8d-3250-4b8b-b088-8e8c68b21627")
-	)
-	(label "3V"
-		(at 146.05 166.37 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "ea89bf0f-c8c1-4fe7-aec5-3c2b6751f1fa")
 	)
 	(hierarchical_label "TX_H"
 		(shape output)
@@ -4118,17 +3431,6 @@
 		)
 		(uuid "10670001-4bac-4000-89db-d5357ffca9d0")
 	)
-	(hierarchical_label "L_V0"
-		(shape input)
-		(at 22.86 90.17 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "13f5c705-cfe0-484c-ba4a-5c55f23132e0")
-	)
 	(hierarchical_label "L_Z0"
 		(shape input)
 		(at 267.97 124.46 0)
@@ -4140,25 +3442,14 @@
 		)
 		(uuid "15bc73a8-4c4d-499a-92c9-3ced9d4ce1a0")
 	)
-	(hierarchical_label "H_V1"
-		(shape input)
-		(at 128.27 24.13 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "252420ea-9559-4e7c-9db4-dc3e7835f884")
-	)
 	(hierarchical_label "L_V2"
 		(shape input)
-		(at 118.11 90.17 0)
+		(at 72.39 91.44 270)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "465f4870-a719-4f87-831a-87df42dc28ed")
 	)
@@ -4172,6 +3463,17 @@
 			(justify right)
 		)
 		(uuid "6eb5a7d1-9968-4b80-8c62-938862c967a4")
+	)
+	(hierarchical_label "H_V0"
+		(shape input)
+		(at 48.26 45.72 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "80f1a8de-2549-4723-977e-cec1725523d0")
 	)
 	(hierarchical_label "H_Z0"
 		(shape input)
@@ -4195,17 +3497,6 @@
 		)
 		(uuid "9079b37c-fdef-4f20-8003-b694f3ada00c")
 	)
-	(hierarchical_label "H_V2"
-		(shape input)
-		(at 128.27 26.67 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "98883c76-fe67-4d36-a13f-9b030e145252")
-	)
 	(hierarchical_label "~{DISABLE}"
 		(shape tri_state)
 		(at 35.56 67.31 180)
@@ -4219,25 +3510,36 @@
 	)
 	(hierarchical_label "L_V1"
 		(shape input)
-		(at 118.11 86.36 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ba1eb7c0-f48b-4665-8881-bda12e3a898f")
-	)
-	(hierarchical_label "H_V0"
-		(shape input)
-		(at 24.13 26.67 180)
+		(at 59.69 91.44 270)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "bd0bc3f3-2193-4ad5-bac4-d5aacb627d78")
+		(uuid "ba1eb7c0-f48b-4665-8881-bda12e3a898f")
+	)
+	(hierarchical_label "H_V2"
+		(shape input)
+		(at 72.39 45.72 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c2b78122-2b83-49fd-971f-5e25b01028b3")
+	)
+	(hierarchical_label "L_V0"
+		(shape input)
+		(at 48.26 91.44 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "cd676315-20d0-409b-9fb7-bc5409dd2ac6")
 	)
 	(hierarchical_label "TX_L"
 		(shape output)
@@ -4250,71 +3552,16 @@
 		)
 		(uuid "d40a4e5d-dbfe-4304-8510-a29d74ff704c")
 	)
-	(symbol
-		(lib_id "power:GND")
-		(at 105.41 106.68 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "01e62683-6034-4fc0-86af-32360872e01a")
-		(property "Reference" "#PWR0207"
-			(at 105.41 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
+	(hierarchical_label "H_V1"
+		(shape input)
+		(at 59.69 45.72 270)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify right)
 		)
-		(property "Value" "GND"
-			(at 105.41 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 105.41 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 105.41 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 105.41 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "84556e40-b4fd-4892-8006-2c2006567289")
-		)
-		(instances
-			(project "DC33"
-				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "#PWR0207")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "d63a0eeb-07e5-4fb1-abef-b950b37a96b7")
 	)
 	(symbol
 		(lib_id "Library:C")
@@ -4724,73 +3971,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 74.93 95.25 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "090845f4-6112-492f-a009-6012bb85c19c")
-		(property "Reference" "#PWR073"
-			(at 81.28 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 78.74 95.2499 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 74.93 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 74.93 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 74.93 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "449840e7-c727-4482-abba-992cebfec7b5")
-		)
-		(instances
-			(project "DC33"
-				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "#PWR073")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Library:R")
 		(at 44.45 181.61 180)
 		(unit 1)
@@ -4883,342 +4063,6 @@
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
 					(reference "R51")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Library:R")
-		(at 125.73 101.6 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "12d18f99-a93b-4c8e-9506-0001d73634be")
-		(property "Reference" "R43"
-			(at 120.904 100.076 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0"
-			(at 122.682 102.616 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 127.508 101.6 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C301.pdf"
-			(at 125.73 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "RES SMD 0 OHM JUMPER 1/10W 0603"
-			(at 125.73 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Tolerance" "1%"
-			(at 125.73 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 123.19 87.6301 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "ERJ-3GEY0R00V"
-			(at 123.19 85.0901 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "df3b774a-f7b4-4b65-81f9-0bb20000481e")
-		)
-		(pin "1"
-			(uuid "3532ac24-2a1f-4ce5-afcd-57dcf33d14f0")
-		)
-		(instances
-			(project "DC33"
-				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "R43")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Library:C")
-		(at 91.44 101.6 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "17108ae6-9614-49a5-8974-369c50ad8182")
-		(property "Reference" "C50"
-			(at 95.25 100.3299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0.1uF"
-			(at 95.25 102.8699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 92.4052 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://datasheets.kyocera-avx.com/KGM_X7R.pdf"
-			(at 91.44 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "CAP CER 0.1UF 25V X7R 0603"
-			(at 91.44 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "KYOCERA AVX"
-			(at 95.25 113.0299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Package" "0603"
-			(at 95.25 118.1099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "KGM15BR71E104KT"
-			(at 91.44 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "808e65bf-ef33-4fd5-90c3-4b0ea60df1b8")
-		)
-		(pin "2"
-			(uuid "1b67db22-142e-45bc-9319-a2e9284bf1b1")
-		)
-		(instances
-			(project "DC33"
-				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "C50")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Library:TMUX1108PWR")
-		(at 48.26 90.17 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "171ebdc3-177f-4bde-8ac1-373f493ec8cd")
-		(property "Reference" "U24"
-			(at 60.96 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TMUX1108PWR"
-			(at 60.96 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Library:SOP65P640X120-16N"
-			(at 69.85 185.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tmux1108.pdf"
-			(at 69.85 285.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" "IC MUX 8:1 4OHM 16TSSOP"
-			(at 48.26 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Height" "1.2"
-			(at 69.85 485.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 60.96 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "TMUX1108PWR"
-			(at 48.26 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "05b7821f-d38a-466e-8922-b395736138bc")
-		)
-		(pin "1"
-			(uuid "83b73d03-6b44-4a37-85e0-a18b5c82cffa")
-		)
-		(pin "5"
-			(uuid "a0bc4044-bf97-444a-82c0-c2c547b4e054")
-		)
-		(pin "4"
-			(uuid "9026272a-5852-4d1b-b345-e7c07358a489")
-		)
-		(pin "13"
-			(uuid "335e4f6b-9077-4bd2-9c7b-6636601cb961")
-		)
-		(pin "15"
-			(uuid "c32c7f36-0570-4113-9a20-1962da848e9f")
-		)
-		(pin "6"
-			(uuid "b58acc92-2708-40d6-8a41-834e5628fcdb")
-		)
-		(pin "16"
-			(uuid "7663da50-9cd4-424c-ab7d-e2cae541395a")
-		)
-		(pin "8"
-			(uuid "af3bab88-7c61-4582-bd90-34c6d2d1e17e")
-		)
-		(pin "7"
-			(uuid "ed7b7454-601a-42da-886d-aecb7c6487da")
-		)
-		(pin "14"
-			(uuid "68f01add-604d-4ae6-bfb6-9c4c32be1953")
-		)
-		(pin "10"
-			(uuid "1aac76ff-d17d-4884-98a3-9d4f3627a5fe")
-		)
-		(pin "9"
-			(uuid "535d3476-83fd-4954-a6a7-6d358d18813c")
-		)
-		(pin "12"
-			(uuid "e2d825e4-2cc9-4455-9fec-be8e7386bb8e")
-		)
-		(pin "11"
-			(uuid "5f008d5f-d6e2-4d01-98ea-b063bcd35a88")
-		)
-		(pin "3"
-			(uuid "1888fec3-bd8a-4c88-afd9-8860ad32b7a4")
-		)
-		(instances
-			(project "DC33"
-				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "U24")
 					(unit 1)
 				)
 			)
@@ -5471,17 +4315,34 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 119.38 38.1 0)
+		(lib_id "Library:R")
+		(at 54.61 30.48 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2b9cc056-c8f5-4c0c-8d6a-e7f67aed85a0")
-		(property "Reference" "#PWR0212"
-			(at 119.38 44.45 0)
+		(uuid "26742db1-72a2-4fd4-8bee-fd9b0fd19c9a")
+		(property "Reference" "R52"
+			(at 53.3399 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k"
+			(at 55.8799 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 54.61 32.258 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5489,16 +4350,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 119.38 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 119.38 38.1 0)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 54.61 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5506,8 +4359,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 119.38 38.1 0)
+		(property "Description" "RES SMD 1K OHM 0.1% 1/10W 0603"
+			(at 54.61 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5515,8 +4368,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 119.38 38.1 0)
+		(property "Tolerance" "0.1%"
+			(at 51.308 25.654 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic Industry"
+			(at 54.61 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "ERA-3AEB102V"
+			(at 54.61 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5525,12 +4395,81 @@
 			)
 		)
 		(pin "1"
-			(uuid "a2158162-6468-401b-a071-b53b7758129b")
+			(uuid "b910c648-f18f-4587-9970-e0d933f04f8b")
+		)
+		(pin "2"
+			(uuid "bf78694e-35ad-49af-bc6e-72a78c50c917")
 		)
 		(instances
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "#PWR0212")
+					(reference "R52")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 36.83 45.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2b4f70a2-17f3-4c72-8438-7f60142f0929")
+		(property "Reference" "#PWR071"
+			(at 36.83 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 36.83 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 36.83 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 36.83 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 36.83 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "86b5a889-bb23-4e64-99f5-5368a4422826")
+		)
+		(instances
+			(project "DC33"
+				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
+					(reference "#PWR071")
 					(unit 1)
 				)
 			)
@@ -5635,17 +4574,34 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 27.94 100.33 0)
+		(lib_id "Library:R")
+		(at 67.31 30.48 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "326799c7-c3a4-4b95-90e0-f1702a835bc7")
-		(property "Reference" "#PWR0202"
-			(at 27.94 106.68 0)
+		(uuid "2fff5570-541c-4f5e-9af9-45e7ac2892d7")
+		(property "Reference" "R54"
+			(at 66.0399 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k"
+			(at 68.5799 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 67.31 32.258 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5653,16 +4609,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 27.94 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 27.94 100.33 0)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 67.31 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5670,8 +4618,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 27.94 100.33 0)
+		(property "Description" "RES SMD 1K OHM 0.1% 1/10W 0603"
+			(at 67.31 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5679,8 +4627,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 27.94 100.33 0)
+		(property "Tolerance" "0.1%"
+			(at 64.008 25.654 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic Industry"
+			(at 67.31 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "ERA-3AEB102V"
+			(at 67.31 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5689,12 +4654,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "c7a310a1-5ae3-4786-9974-e23e1794118a")
+			(uuid "6d745c13-2ffb-4c59-ba9d-aab6ca4557e3")
+		)
+		(pin "2"
+			(uuid "8339dc7d-981e-4224-b611-5eeabeada561")
 		)
 		(instances
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "#PWR0202")
+					(reference "R54")
 					(unit 1)
 				)
 			)
@@ -5794,6 +4762,101 @@
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
 					(reference "C57")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Library:R")
+		(at 72.39 87.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "38e08105-1a68-4875-ab77-925bc1322d2a")
+		(property "Reference" "R46"
+			(at 74.93 86.3599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2k"
+			(at 74.93 88.8999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 70.612 87.63 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 72.39 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "RES SMD 2K OHM 0.1% 1/10W 0603"
+			(at 72.39 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 77.216 84.328 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic Industry"
+			(at 72.39 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "ERA-3AEB202V"
+			(at 72.39 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e1574f23-beda-403b-9e40-03553c98491c")
+		)
+		(pin "2"
+			(uuid "7eb88f8a-4535-4a24-b230-5eb9416c40fc")
+		)
+		(instances
+			(project "DC33"
+				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
+					(reference "R46")
 					(unit 1)
 				)
 			)
@@ -6031,17 +5094,34 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 80.01 31.75 90)
+		(lib_id "Library:R")
+		(at 125.73 46.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4a7b120a-f639-4dfa-a7b1-83af93ea7280")
-		(property "Reference" "#PWR072"
-			(at 86.36 31.75 0)
+		(uuid "489796d3-471a-4fe4-a53e-dbe414fcc5bf")
+		(property "Reference" "R57"
+			(at 128.27 45.7199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2k"
+			(at 128.27 48.2599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 123.952 46.99 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6049,17 +5129,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 83.82 31.7499 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 80.01 31.75 0)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C328.pdf"
+			(at 125.73 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6067,8 +5138,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 80.01 31.75 0)
+		(property "Description" "RES SMD 2.2K OHM 0.1% 1/5W 0603"
+			(at 125.73 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6076,8 +5147,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 80.01 31.75 0)
+		(property "Tolerance" "0.1%"
+			(at 130.556 43.688 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic Industry"
+			(at 125.73 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "ERA-3AEB102V"
+			(at 125.73 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6086,12 +5174,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "731b572c-7ae0-462e-8cdb-039e4c8d0172")
+			(uuid "66871982-5251-4184-9ea0-847fa96685f2")
+		)
+		(pin "2"
+			(uuid "0b6bb155-754e-4eb5-a6fa-063de3fa0f38")
 		)
 		(instances
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "#PWR072")
+					(reference "R57")
 					(unit 1)
 				)
 			)
@@ -6362,104 +5453,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Library:R")
-		(at 140.97 50.8 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4f9fa561-5ac6-4a8f-b0fd-c11d0eea94af")
-		(property "Reference" "R44"
-			(at 142.494 45.974 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0"
-			(at 139.954 47.752 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 140.97 52.578 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C301.pdf"
-			(at 140.97 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "RES SMD 0 OHM JUMPER 1/10W 0603"
-			(at 140.97 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Tolerance" "1%"
-			(at 140.97 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 154.9399 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "ERJ-3GEY0R00V"
-			(at 157.4799 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "b8af079c-1324-403a-a081-f11404d64448")
-		)
-		(pin "1"
-			(uuid "ee8ac311-9ac2-4cfe-a398-f337d488388a")
-		)
-		(instances
-			(project "DC33"
-				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "R44")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 241.3 58.42 0)
 		(unit 1)
@@ -6526,17 +5519,34 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 113.03 38.1 0)
+		(lib_id "Library:R")
+		(at 140.97 50.8 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "54da9e55-12e1-41ba-a50b-b422a3d64446")
-		(property "Reference" "#PWR0211"
-			(at 113.03 44.45 0)
+		(uuid "57364a1b-c7a1-424b-8ccf-421a7edabc54")
+		(property "Reference" "R64"
+			(at 139.6999 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k"
+			(at 142.2399 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 140.97 52.578 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6544,16 +5554,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 113.03 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 113.03 38.1 0)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 140.97 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6561,8 +5563,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 113.03 38.1 0)
+		(property "Description" "RES SMD 1K OHM 0.1% 1/10W 0603"
+			(at 140.97 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6570,8 +5572,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 113.03 38.1 0)
+		(property "Tolerance" "0.1%"
+			(at 137.668 45.974 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic Industry"
+			(at 140.97 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "ERA-3AEB102V"
+			(at 140.97 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6580,12 +5599,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "24ecb1dc-ef9c-421a-bd7e-fd49d522f2d8")
+			(uuid "933adf27-0d46-48be-b521-92fb3fd1d7e7")
+		)
+		(pin "2"
+			(uuid "df469553-c20b-4734-9e84-eb49655c82aa")
 		)
 		(instances
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "#PWR0211")
+					(reference "R64")
 					(unit 1)
 				)
 			)
@@ -6659,16 +5681,16 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 91.44 105.41 0)
+		(at 125.73 43.18 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "5b29b451-6cd4-482b-b0eb-c43dafbfebf0")
-		(property "Reference" "#PWR075"
-			(at 91.44 111.76 0)
+		(uuid "5d5c1c0a-0685-4adf-bd0f-da89c0c1646d")
+		(property "Reference" "#PWR073"
+			(at 125.73 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6677,7 +5699,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 91.44 110.49 0)
+			(at 125.73 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6685,7 +5707,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 91.44 105.41 0)
+			(at 125.73 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6694,7 +5716,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 91.44 105.41 0)
+			(at 125.73 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6703,7 +5725,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 91.44 105.41 0)
+			(at 125.73 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6712,194 +5734,13 @@
 			)
 		)
 		(pin "1"
-			(uuid "ab590c4f-e1d6-43a2-8604-96a67d88d16f")
+			(uuid "b5d8dcac-70e0-4f39-b8e1-180462b17e59")
 		)
 		(instances
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "#PWR075")
+					(reference "#PWR073")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 39.37 95.25 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5b3a7c3f-42c3-4736-9aea-ea15eb9c646e")
-		(property "Reference" "#PWR071"
-			(at 33.02 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 35.56 95.2499 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 39.37 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 39.37 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 39.37 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "52837cce-c850-4b0e-95cb-6b4da452ad36")
-		)
-		(instances
-			(project "DC33"
-				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "#PWR071")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Library:RESISTOR_4PACK")
-		(at 113.03 101.6 90)
-		(unit 3)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5c0a3fd8-cb38-403f-aef6-d5d976bac879")
-		(property "Reference" "R23"
-			(at 110.49 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 113.03 101.6 0)
-			(effects
-				(font
-					(size 1.016 1.016)
-					(thickness 0.2032)
-					(bold yes)
-				)
-			)
-		)
-		(property "Footprint" "Library:RESPACK_4X0603"
-			(at 113.03 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/AOC0000/AOC0000C14.pdf"
-			(at 113.03 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "RES ARRAY 4 RES 10K OHM 1206"
-			(at 113.03 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 110.49 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Tolerance" "1%"
-			(at 110.49 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "EXB-38V103JV"
-			(at 113.03 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c6c95f3c-f200-456c-b7a3-a08e2d057d6b")
-		)
-		(pin "8"
-			(uuid "5b3c881e-1084-40da-99b3-16b710fe4fd7")
-		)
-		(pin "2"
-			(uuid "9497f857-d0d4-43b8-a747-cacdb03467c1")
-		)
-		(pin "7"
-			(uuid "f6036d36-5215-478c-bf79-647a3263e522")
-		)
-		(pin "3"
-			(uuid "f72d0ee6-7270-45e0-b836-bf506abf11f8")
-		)
-		(pin "6"
-			(uuid "d93939cb-7021-4072-87dd-3ee73090b09f")
-		)
-		(pin "4"
-			(uuid "21e75f16-d7bc-448c-a9b0-601fda063b54")
-		)
-		(pin "5"
-			(uuid "fe742459-86ca-4c74-86bb-8d7ea7ff0f91")
-		)
-		(instances
-			(project "DC33"
-				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "R23")
-					(unit 3)
 				)
 			)
 		)
@@ -7032,120 +5873,6 @@
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
 					(reference "#PWR0118")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Library:RESISTOR_4PACK")
-		(at 105.41 101.6 90)
-		(unit 2)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "683975f1-8789-4129-a8f7-63e1b4ce90e2")
-		(property "Reference" "R23"
-			(at 102.87 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 105.41 101.6 0)
-			(effects
-				(font
-					(size 1.016 1.016)
-					(thickness 0.2032)
-					(bold yes)
-				)
-			)
-		)
-		(property "Footprint" "Library:RESPACK_4X0603"
-			(at 105.41 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/AOC0000/AOC0000C14.pdf"
-			(at 105.41 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "RES ARRAY 4 RES 10K OHM 1206"
-			(at 105.41 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 102.87 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Tolerance" "1%"
-			(at 102.87 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "EXB-38V103JV"
-			(at 105.41 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c6c95f3c-f200-456c-b7a3-a08e2d057d6d")
-		)
-		(pin "8"
-			(uuid "5b3c881e-1084-40da-99b3-16b710fe4fd9")
-		)
-		(pin "2"
-			(uuid "2348433c-0fd4-40df-87b7-381c14825792")
-		)
-		(pin "7"
-			(uuid "0ccd3d10-6463-40b8-993c-7edf3eb75967")
-		)
-		(pin "3"
-			(uuid "bb393aff-7350-4200-9b46-41dad9ece625")
-		)
-		(pin "6"
-			(uuid "b16c3931-4f01-43fe-a6cd-60ba85a9424f")
-		)
-		(pin "4"
-			(uuid "5d1b51c4-b2d7-4385-8c9b-42c3a35f2c26")
-		)
-		(pin "5"
-			(uuid "5c55da21-0b3a-4060-83f6-58240addaa4f")
-		)
-		(instances
-			(project "DC33"
-				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "R23")
-					(unit 2)
 				)
 			)
 		)
@@ -7378,17 +6105,34 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 97.79 41.91 0)
+		(lib_id "Library:R")
+		(at 48.26 41.91 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7441872e-8db5-4c7e-b3bb-00683f49ce67")
-		(property "Reference" "#PWR077"
-			(at 97.79 48.26 0)
+		(uuid "7ef983e0-b875-4486-b819-702192b329e7")
+		(property "Reference" "R50"
+			(at 50.8 40.6399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2k"
+			(at 50.8 43.1799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 46.482 41.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7396,16 +6140,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 97.79 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 97.79 41.91 0)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 48.26 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7413,8 +6149,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 97.79 41.91 0)
+		(property "Description" "RES SMD 2K OHM 0.1% 1/10W 0603"
+			(at 48.26 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7422,8 +6158,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 97.79 41.91 0)
+		(property "Tolerance" "0.1%"
+			(at 53.086 38.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic Industry"
+			(at 48.26 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7431,92 +6175,8 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "016e0970-2ff9-422e-839d-7b279e5e69ed")
-		)
-		(instances
-			(project "DC33"
-				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "#PWR077")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Library:RESISTOR_4PACK")
-		(at 119.38 33.02 90)
-		(unit 3)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "74539f87-23fb-4685-b25b-1450e34bf2cb")
-		(property "Reference" "R18"
-			(at 116.84 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 119.38 33.02 0)
-			(effects
-				(font
-					(size 1.016 1.016)
-					(thickness 0.2032)
-					(bold yes)
-				)
-			)
-		)
-		(property "Footprint" "Library:RESPACK_4X0603"
-			(at 119.38 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/AOC0000/AOC0000C14.pdf"
-			(at 119.38 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "RES ARRAY 4 RES 10K OHM 1206"
-			(at 119.38 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 116.84 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Tolerance" "1%"
-			(at 116.84 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "EXB-38V103JV"
-			(at 119.38 33.02 0)
+		(property "Manufacturer Part Number" "ERA-3AEB202V"
+			(at 48.26 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7525,306 +6185,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "32a98668-10f5-4c1c-a533-ad856f9dc9ce")
-		)
-		(pin "8"
-			(uuid "2b915850-fbe0-4930-bd24-4d49cd4fe8d1")
+			(uuid "8daae8e5-f64c-4a69-8c9b-bda696140e43")
 		)
 		(pin "2"
-			(uuid "e730f31a-4028-4834-b634-826a29519468")
-		)
-		(pin "7"
-			(uuid "0c8c7025-3428-484e-b8ce-7f14f8af4637")
-		)
-		(pin "3"
-			(uuid "f72d0ee6-7270-45e0-b836-bf506abf11fd")
-		)
-		(pin "6"
-			(uuid "d93939cb-7021-4072-87dd-3ee73090b0a4")
-		)
-		(pin "4"
-			(uuid "5d1b51c4-b2d7-4385-8c9b-42c3a35f2c29")
-		)
-		(pin "5"
-			(uuid "5c55da21-0b3a-4060-83f6-58240addaa52")
+			(uuid "9a29dacf-8d53-4655-a43a-1fc4cbb90d4d")
 		)
 		(instances
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "R18")
-					(unit 3)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Library:TMUX1108PWR")
-		(at 53.34 26.67 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "78440764-69b2-4dd8-bb75-027018d38e8e")
-		(property "Reference" "U22"
-			(at 66.04 19.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TMUX1108PWR"
-			(at 66.04 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Library:SOP65P640X120-16N"
-			(at 74.93 121.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tmux1108.pdf"
-			(at 74.93 221.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" "IC MUX 8:1 4OHM 16TSSOP"
-			(at 53.34 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Height" "1.2"
-			(at 74.93 421.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 66.04 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "TMUX1108PWR"
-			(at 53.34 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "0b0dc703-22fb-472b-93ff-55425ca17ebf")
-		)
-		(pin "1"
-			(uuid "434cc8ba-8b0c-4f1a-80f8-2f395a0882eb")
-		)
-		(pin "5"
-			(uuid "3f198b97-ff66-4b5f-9a67-b903fbbee321")
-		)
-		(pin "4"
-			(uuid "3ea56449-adcd-4a92-a3cf-0ce7b6e22b29")
-		)
-		(pin "13"
-			(uuid "7c96dff9-172b-4a0d-b153-ff890685bbc1")
-		)
-		(pin "15"
-			(uuid "03c39436-2a7d-4e71-a7e6-e1a17099da6c")
-		)
-		(pin "6"
-			(uuid "6684e984-c94a-47d1-ae16-55049397a50c")
-		)
-		(pin "16"
-			(uuid "05eff621-a87b-42e0-8726-7211cc63678b")
-		)
-		(pin "8"
-			(uuid "83763382-5564-415b-8bb3-ecae48612aa9")
-		)
-		(pin "7"
-			(uuid "8cbf310d-8c4d-4e40-9a84-5665a81061ca")
-		)
-		(pin "14"
-			(uuid "efbafb7b-10a2-45b8-ae77-1618e86d74f1")
-		)
-		(pin "10"
-			(uuid "e69f683f-3c5c-4759-8ad0-1f72a3fe9d3b")
-		)
-		(pin "9"
-			(uuid "322202ed-896d-4d36-a824-64e188cf4542")
-		)
-		(pin "12"
-			(uuid "fc638a82-c740-4f41-83a5-4d305c629ab4")
-		)
-		(pin "11"
-			(uuid "a28d14ae-cec6-4a0c-aadf-5b10ec38ee6a")
-		)
-		(pin "3"
-			(uuid "43fde355-7705-4c73-b9b3-53eee5a98344")
-		)
-		(instances
-			(project "DC33"
-				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "U22")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 39.37 31.75 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7f7a8b4d-51b2-4a03-87d5-6e9ff88ab2f2")
-		(property "Reference" "#PWR070"
-			(at 33.02 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 35.56 31.7499 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 39.37 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 39.37 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 39.37 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "dce64036-133e-43e9-a714-afcb619fe317")
-		)
-		(instances
-			(project "DC33"
-				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "#PWR070")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 27.94 36.83 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "879409ee-21cc-485e-9333-e49a38ca0585")
-		(property "Reference" "#PWR0193"
-			(at 27.94 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 27.94 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 27.94 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 27.94 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 27.94 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c47b6888-b271-4ae3-afa8-aad12280d086")
-		)
-		(instances
-			(project "DC33"
-				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "#PWR0193")
+					(reference "R50")
 					(unit 1)
 				)
 			)
@@ -7963,6 +6332,101 @@
 		)
 	)
 	(symbol
+		(lib_id "Library:R")
+		(at 48.26 87.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9277d055-e0c4-4563-97fa-58e1825eef48")
+		(property "Reference" "R22"
+			(at 50.8 86.3599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2k"
+			(at 50.8 88.8999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 46.482 87.63 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 48.26 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "RES SMD 2K OHM 0.1% 1/10W 0603"
+			(at 48.26 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 53.086 84.328 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic Industry"
+			(at 48.26 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "ERA-3AEB202V"
+			(at 48.26 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f6613c5f-f708-4475-ac30-ee74fedff0e1")
+		)
+		(pin "2"
+			(uuid "d88b042b-d75d-43a0-8869-b61b9f49793c")
+		)
+		(instances
+			(project "DC33"
+				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
+					(reference "R22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 199.39 41.91 0)
 		(unit 1)
@@ -8023,6 +6487,101 @@
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
 					(reference "#PWR085")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Library:R")
+		(at 59.69 87.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9deaa007-da87-4dde-95f8-38b47c12d754")
+		(property "Reference" "R45"
+			(at 62.23 86.3599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2k"
+			(at 62.23 88.8999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 57.912 87.63 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 59.69 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "RES SMD 2K OHM 0.1% 1/10W 0603"
+			(at 59.69 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 64.516 84.328 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic Industry"
+			(at 59.69 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "ERA-3AEB202V"
+			(at 59.69 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5e9da174-3bb8-4843-9c08-a578a0d11022")
+		)
+		(pin "2"
+			(uuid "1eef5ad4-422f-4059-ac4b-598af555db4a")
+		)
+		(instances
+			(project "DC33"
+				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
+					(reference "R45")
 					(unit 1)
 				)
 			)
@@ -8305,34 +6864,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Library:RESISTOR_4PACK")
-		(at 27.94 31.75 90)
-		(unit 4)
+		(lib_id "power:GND")
+		(at 36.83 91.44 0)
+		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a76a7a32-fe3e-4890-8599-09a71cfa6df3")
-		(property "Reference" "R18"
-			(at 25.4 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 27.94 31.75 0)
-			(effects
-				(font
-					(size 1.016 1.016)
-					(thickness 0.2032)
-					(bold yes)
-				)
-			)
-		)
-		(property "Footprint" "Library:RESPACK_4X0603"
-			(at 27.94 31.75 0)
+		(fields_autoplaced yes)
+		(uuid "a89d3228-78cc-46d0-b9a9-5b1bf21a4230")
+		(property "Reference" "#PWR070"
+			(at 36.83 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8340,8 +6882,16 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/AOC0000/AOC0000C14.pdf"
-			(at 27.94 31.75 0)
+		(property "Value" "GND"
+			(at 36.83 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 36.83 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8349,8 +6899,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES ARRAY 4 RES 10K OHM 1206"
-			(at 27.94 31.75 0)
+		(property "Datasheet" ""
+			(at 36.83 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8358,26 +6908,8 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 25.4 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Tolerance" "1%"
-			(at 25.4 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "EXB-38V103JV"
-			(at 27.94 31.75 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 36.83 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8386,34 +6918,203 @@
 			)
 		)
 		(pin "1"
-			(uuid "c6c95f3c-f200-456c-b7a3-a08e2d057d6e")
-		)
-		(pin "8"
-			(uuid "5b3c881e-1084-40da-99b3-16b710fe4fda")
-		)
-		(pin "2"
-			(uuid "2348433c-0fd4-40df-87b7-381c14825793")
-		)
-		(pin "7"
-			(uuid "0ccd3d10-6463-40b8-993c-7edf3eb75968")
-		)
-		(pin "3"
-			(uuid "f9e21e59-3fea-489b-84c0-b66997589755")
-		)
-		(pin "6"
-			(uuid "e6a49849-9d68-4f17-b3bb-d30b5c8508da")
-		)
-		(pin "4"
-			(uuid "5d1b51c4-b2d7-4385-8c9b-42c3a35f2c27")
-		)
-		(pin "5"
-			(uuid "5c55da21-0b3a-4060-83f6-58240addaa50")
+			(uuid "d4182869-f0b3-415d-a2c2-d4e1aaedbbab")
 		)
 		(instances
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "R18")
-					(unit 4)
+					(reference "#PWR070")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Library:R")
+		(at 36.83 87.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ae9a1844-294b-4636-9ad1-bcbdb73b4ff9")
+		(property "Reference" "R19"
+			(at 39.37 86.3599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2k"
+			(at 39.37 88.8999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 35.052 87.63 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 36.83 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "RES SMD 2K OHM 0.1% 1/10W 0603"
+			(at 36.83 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 41.656 84.328 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic Industry"
+			(at 36.83 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "ERA-3AEB202V"
+			(at 36.83 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "826f8bbe-cbd5-4f4f-88b9-285cda2c10d9")
+		)
+		(pin "2"
+			(uuid "1db75ca0-14b7-41bd-8f7d-c7cebf1a7266")
+		)
+		(instances
+			(project "DC33"
+				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
+					(reference "R19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Library:R")
+		(at 54.61 76.2 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "af29f55a-13c4-4cab-baba-57e77208b591")
+		(property "Reference" "R47"
+			(at 53.3399 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k"
+			(at 55.8799 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 54.61 77.978 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 54.61 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "RES SMD 1K OHM 0.1% 1/10W 0603"
+			(at 54.61 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 51.308 71.374 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic Industry"
+			(at 54.61 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "ERA-3AEB102V"
+			(at 54.61 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9379b59f-fd63-4915-9b81-108cb1a10e3c")
+		)
+		(pin "2"
+			(uuid "6cf8eff9-edfa-458f-a35e-f5a2faab1616")
+		)
+		(instances
+			(project "DC33"
+				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
+					(reference "R47")
+					(unit 1)
 				)
 			)
 		)
@@ -8479,6 +7180,196 @@
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
 					(reference "#PWR0197")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Library:R")
+		(at 59.69 41.91 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b1db969e-7b59-44a5-ba50-a726d6fe2237")
+		(property "Reference" "R53"
+			(at 62.23 40.6399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2k"
+			(at 62.23 43.1799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 57.912 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 59.69 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "RES SMD 2K OHM 0.1% 1/10W 0603"
+			(at 59.69 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 64.516 38.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic Industry"
+			(at 59.69 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "ERA-3AEB202V"
+			(at 59.69 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a5696cbe-dd00-425e-953c-33d9f003972d")
+		)
+		(pin "2"
+			(uuid "1e41e95c-48fe-470b-a25f-24da58bf8253")
+		)
+		(instances
+			(project "DC33"
+				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
+					(reference "R53")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Library:R")
+		(at 121.92 115.57 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bc463122-befd-4d95-831d-dc46547469e9")
+		(property "Reference" "R56"
+			(at 120.6499 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2k"
+			(at 123.1899 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 121.92 117.348 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C328.pdf"
+			(at 121.92 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "RES SMD 2.2K OHM 0.1% 1/5W 0603"
+			(at 121.92 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 118.618 110.744 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic Industry"
+			(at 121.92 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "ERA-3AEB102V"
+			(at 121.92 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "636b1d51-0bd6-4f02-91da-682837f80c68")
+		)
+		(pin "2"
+			(uuid "fee94ccf-3c41-47b4-b5cc-12d655d62c80")
+		)
+		(instances
+			(project "DC33"
+				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
+					(reference "R56")
 					(unit 1)
 				)
 			)
@@ -8593,72 +7484,6 @@
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
 					(reference "R40")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 113.03 106.68 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c368a725-9dd1-450c-8fea-c6132a227a9f")
-		(property "Reference" "#PWR0208"
-			(at 113.03 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 113.03 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 113.03 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 113.03 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 113.03 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7c769717-5f97-43cc-bbbb-74efd77ad7a6")
-		)
-		(instances
-			(project "DC33"
-				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "#PWR0208")
 					(unit 1)
 				)
 			)
@@ -8859,6 +7684,101 @@
 		)
 	)
 	(symbol
+		(lib_id "Library:R")
+		(at 125.73 101.6 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d5557651-f72d-4262-93f4-6cdea5582bc8")
+		(property "Reference" "R44"
+			(at 123.19 102.8701 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k"
+			(at 123.19 100.3301 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 127.508 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 125.73 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "RES SMD 1K OHM 0.1% 1/10W 0603"
+			(at 125.73 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 120.904 104.902 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic Industry"
+			(at 125.73 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "ERA-3AEB102V"
+			(at 125.73 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "15fff967-a527-4aee-81e4-db7a4677e525")
+		)
+		(pin "2"
+			(uuid "9ea3a491-af35-45d2-be22-0f4e952d1f26")
+		)
+		(instances
+			(project "DC33"
+				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
+					(reference "R44")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Library:TPS22810TDBVRQ1")
 		(at 46.99 157.48 0)
 		(unit 1)
@@ -8963,6 +7883,73 @@
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
 					(reference "U27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 118.11 115.57 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d66f1529-4fb5-480b-89c9-4e4cdfba06a4")
+		(property "Reference" "#PWR072"
+			(at 111.76 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 114.3 115.5699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 118.11 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "50334cdc-53e8-4ce3-ab07-ae4eb4eb6be2")
+		)
+		(instances
+			(project "DC33"
+				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
+					(reference "#PWR072")
 					(unit 1)
 				)
 			)
@@ -9083,43 +8070,34 @@
 		)
 	)
 	(symbol
-		(lib_id "Library:RESISTOR_4PACK")
-		(at 113.03 33.02 90)
-		(unit 2)
+		(lib_id "Library:R")
+		(at 67.31 76.2 90)
+		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e431e66d-7b74-4ce9-bb34-bb6c3dbdf13e")
-		(property "Reference" "R18"
-			(at 110.49 33.02 0)
+		(uuid "df32e6cb-d5f1-4098-9d4b-551b289b4828")
+		(property "Reference" "R48"
+			(at 66.0399 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "10k"
-			(at 113.03 33.02 0)
-			(effects
-				(font
-					(size 1.016 1.016)
-					(thickness 0.2032)
-					(bold yes)
-				)
-			)
-		)
-		(property "Footprint" "Library:RESPACK_4X0603"
-			(at 113.03 33.02 0)
+		(property "Value" "1k"
+			(at 68.5799 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+				(justify left)
 			)
 		)
-		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/AOC0000/AOC0000C14.pdf"
-			(at 113.03 33.02 0)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 67.31 77.978 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9127,8 +8105,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES ARRAY 4 RES 10K OHM 1206"
-			(at 113.03 33.02 0)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 67.31 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9136,8 +8114,8 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 110.49 45.72 0)
+		(property "Description" "RES SMD 1K OHM 0.1% 1/10W 0603"
+			(at 67.31 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9145,8 +8123,16 @@
 				(hide yes)
 			)
 		)
-		(property "Tolerance" "1%"
-			(at 110.49 50.8 0)
+		(property "Tolerance" "0.1%"
+			(at 64.008 71.374 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic Industry"
+			(at 67.31 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9154,8 +8140,8 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part Number" "EXB-38V103JV"
-			(at 113.03 33.02 0)
+		(property "Manufacturer Part Number" "ERA-3AEB102V"
+			(at 67.31 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9164,34 +8150,111 @@
 			)
 		)
 		(pin "1"
-			(uuid "c6c95f3c-f200-456c-b7a3-a08e2d057d70")
-		)
-		(pin "8"
-			(uuid "5b3c881e-1084-40da-99b3-16b710fe4fdc")
+			(uuid "7bbfa793-5bdb-427f-8ab5-78839ba99761")
 		)
 		(pin "2"
-			(uuid "1d11aae7-5f15-487d-9c22-ae8180925cb8")
-		)
-		(pin "7"
-			(uuid "a77d9978-eb8b-4c4a-bf41-3d8709464bf3")
-		)
-		(pin "3"
-			(uuid "f72d0ee6-7270-45e0-b836-bf506abf11fc")
-		)
-		(pin "6"
-			(uuid "d93939cb-7021-4072-87dd-3ee73090b0a3")
-		)
-		(pin "4"
-			(uuid "5d1b51c4-b2d7-4385-8c9b-42c3a35f2c28")
-		)
-		(pin "5"
-			(uuid "5c55da21-0b3a-4060-83f6-58240addaa51")
+			(uuid "75ec16d5-a225-4509-bd10-24de3b05605f")
 		)
 		(instances
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "R18")
-					(unit 2)
+					(reference "R48")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Library:R")
+		(at 36.83 41.91 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e2b3bb7c-e887-4e61-8e39-ff1e46d9c0be")
+		(property "Reference" "R49"
+			(at 39.37 40.6399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2k"
+			(at 39.37 43.1799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 35.052 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 36.83 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "RES SMD 2K OHM 0.1% 1/10W 0603"
+			(at 36.83 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 41.656 38.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Panasonic Industry"
+			(at 36.83 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "ERA-3AEB202V"
+			(at 36.83 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "60bcc3ad-6cd6-4b86-8a21-30590216f2c8")
+		)
+		(pin "2"
+			(uuid "f7eb0884-01fc-4bd1-91cc-84bf6458db9e")
+		)
+		(instances
+			(project "DC33"
+				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
+					(reference "R49")
+					(unit 1)
 				)
 			)
 		)
@@ -9428,131 +8491,16 @@
 		)
 	)
 	(symbol
-		(lib_id "Library:RESISTOR_4PACK")
-		(at 27.94 95.25 90)
-		(unit 4)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ea623701-9a90-4374-a1aa-afed866aa50c")
-		(property "Reference" "R23"
-			(at 25.4 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 27.94 95.25 0)
-			(effects
-				(font
-					(size 1.016 1.016)
-					(thickness 0.2032)
-					(bold yes)
-				)
-			)
-		)
-		(property "Footprint" "Library:RESPACK_4X0603"
-			(at 27.94 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/AOC0000/AOC0000C14.pdf"
-			(at 27.94 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "RES ARRAY 4 RES 10K OHM 1206"
-			(at 27.94 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Panasonic Electronic Components"
-			(at 25.4 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Tolerance" "1%"
-			(at 25.4 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "EXB-38V103JV"
-			(at 27.94 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fafdbfe6-75f4-444f-ae06-0b34c3700cee")
-		)
-		(pin "8"
-			(uuid "da32c734-0dc0-4641-9c0f-767d198e7f43")
-		)
-		(pin "2"
-			(uuid "e730f31a-4028-4834-b634-826a29519469")
-		)
-		(pin "7"
-			(uuid "0c8c7025-3428-484e-b8ce-7f14f8af4638")
-		)
-		(pin "3"
-			(uuid "f72d0ee6-7270-45e0-b836-bf506abf11fe")
-		)
-		(pin "6"
-			(uuid "d93939cb-7021-4072-87dd-3ee73090b0a5")
-		)
-		(pin "4"
-			(uuid "5d1b51c4-b2d7-4385-8c9b-42c3a35f2c2a")
-		)
-		(pin "5"
-			(uuid "5c55da21-0b3a-4060-83f6-58240addaa53")
-		)
-		(instances
-			(project "DC33"
-				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "R23")
-					(unit 4)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Library:C")
-		(at 97.79 38.1 0)
+		(lib_id "Library:R")
+		(at 72.39 41.91 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ed5be86f-2cda-4e79-8b67-dca3d1eb4593")
-		(property "Reference" "C52"
-			(at 101.6 36.8299 0)
+		(uuid "e95be562-3595-4eeb-b7e4-6012747cbec1")
+		(property "Reference" "R55"
+			(at 74.93 40.6399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9560,8 +8508,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.1uF"
-			(at 101.6 39.3699 0)
+		(property "Value" "2k"
+			(at 74.93 43.1799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9569,8 +8517,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 98.7552 41.91 0)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 70.612 41.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9578,8 +8526,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://datasheets.kyocera-avx.com/KGM_X7R.pdf"
-			(at 97.79 38.1 0)
+		(property "Datasheet" "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C307.pdf"
+			(at 72.39 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9587,8 +8535,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CAP CER 0.1UF 25V X7R 0603"
-			(at 97.79 38.1 0)
+		(property "Description" "RES SMD 2K OHM 0.1% 1/10W 0603"
+			(at 72.39 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9596,28 +8544,25 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "KYOCERA AVX"
-			(at 101.6 49.5299 0)
+		(property "Tolerance" "0.1%"
+			(at 77.216 38.608 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
-				(hide yes)
 			)
 		)
-		(property "Package" "0603"
-			(at 101.6 54.6099 0)
+		(property "Manufacturer" "Panasonic Industry"
+			(at 72.39 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part Number" "KGM15BR71E104KT"
-			(at 97.79 38.1 0)
+		(property "Manufacturer Part Number" "ERA-3AEB202V"
+			(at 72.39 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9626,15 +8571,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "49452b1e-02d0-405b-be0d-c298073fbced")
+			(uuid "101f56fe-b3bc-45f7-8b9b-82e6d5f1ade0")
 		)
 		(pin "2"
-			(uuid "2c168948-31f8-40b7-a3aa-cc3a27cd1ecd")
+			(uuid "3673ae47-5675-4376-b072-f00e19574f1f")
 		)
 		(instances
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "C52")
+					(reference "R55")
 					(unit 1)
 				)
 			)
@@ -9957,128 +8902,6 @@
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
 					(page "13")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 118.11 153.67)
-		(size 22.86 20.32)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "cffdc3aa-5926-42e1-aa10-da99acccfb64")
-		(property "Sheetname" "Voltage References"
-			(at 118.11 152.9584 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "voltage_refs.kicad_sch"
-			(at 118.11 174.5746 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "+1V" output
-			(at 140.97 156.21 0)
-			(uuid "380d411d-4f60-4b16-9e1f-15d6825db448")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "+1V5" output
-			(at 140.97 158.75 0)
-			(uuid "1e97845b-f7bb-4477-a8c0-aa1a3c3b1177")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "+2V" output
-			(at 140.97 161.29 0)
-			(uuid "3a6e9420-fdc7-42ed-b8fb-af7199e92f6e")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "+2V5" output
-			(at 140.97 163.83 0)
-			(uuid "8187b3b2-0813-4b95-9a56-6b91ab4c6384")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "+3V" output
-			(at 140.97 166.37 0)
-			(uuid "d7f4c742-ad4c-4f6f-b759-9e8a09fcca9a")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "+3V5" output
-			(at 140.97 168.91 0)
-			(uuid "7345d10f-68ff-4b73-b058-5a6d4f6ec2ea")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "+4V" output
-			(at 140.97 171.45 0)
-			(uuid "93c7d0b9-6581-4ea9-8013-3d1648dab850")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "VIN" input
-			(at 118.11 157.48 180)
-			(uuid "70225c16-3e2b-4b5c-96f0-a3743a1b7f9f")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(instances
-			(project "DC33"
-				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(page "10")
 				)
 			)
 		)
