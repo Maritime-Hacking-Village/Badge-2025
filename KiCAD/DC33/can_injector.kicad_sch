@@ -4228,7 +4228,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "07401442-e5cc-4001-91d2-014e96668836")
-		(property "Reference" "R?"
+		(property "Reference" "R56"
 			(at 128.27 102.8701 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4325,7 +4325,7 @@
 		(instances
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "R?")
+					(reference "R56")
 					(unit 1)
 				)
 			)
@@ -4702,7 +4702,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "11cd8f99-de95-4f65-9027-734da0024761")
-		(property "Reference" "R?"
+		(property "Reference" "R43"
 			(at 44.45 40.6401 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4799,7 +4799,7 @@
 		(instances
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "R?")
+					(reference "R43")
 					(unit 1)
 				)
 			)
@@ -6391,7 +6391,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "563dd46e-9a1e-45ed-88e9-88fa660956ab")
-		(property "Reference" "R?"
+		(property "Reference" "R55"
 			(at 128.27 41.9101 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6488,7 +6488,7 @@
 		(instances
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "R?")
+					(reference "R55")
 					(unit 1)
 				)
 			)
@@ -7395,7 +7395,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9372c00b-9164-488d-ae12-073f139e5dc1")
-		(property "Reference" "R?"
+		(property "Reference" "R44"
 			(at 58.4199 30.48 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7492,7 +7492,7 @@
 		(instances
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "R?")
+					(reference "R44")
 					(unit 1)
 				)
 			)
@@ -7703,7 +7703,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9bc75712-5e7f-42bb-8014-69d5c016a3b0")
-		(property "Reference" "R?"
+		(property "Reference" "R54"
 			(at 123.1901 113.03 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7800,7 +7800,7 @@
 		(instances
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "R?")
+					(reference "R54")
 					(unit 1)
 				)
 			)
@@ -9108,7 +9108,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d911bc58-9be9-41db-9f3e-e4a38d27a7ee")
-		(property "Reference" "R?"
+		(property "Reference" "R57"
 			(at 139.6999 49.53 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9205,7 +9205,7 @@
 		(instances
 			(project "DC33"
 				(path "/c031bbd5-e288-461b-abff-d4e8c5230266/e1398a93-5b5e-4ef8-b70c-1732cdecb585"
-					(reference "R?")
+					(reference "R57")
 					(unit 1)
 				)
 			)
