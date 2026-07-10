@@ -3,6 +3,8 @@
     "3dviewports": [],
     "design_settings": {
       "defaults": {
+        "apply_defaults_to_fp_barcodes": false,
+        "apply_defaults_to_fp_dimensions": false,
         "apply_defaults_to_fp_fields": false,
         "apply_defaults_to_fp_shapes": false,
         "apply_defaults_to_fp_text": false,
@@ -48,7 +50,23 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.2
+          "border_display_style": 2,
+          "border_hatch_pitch": 0.5,
+          "corner_radius": 0.0,
+          "corner_smoothing": 0,
+          "fill_mode": 0,
+          "hatch_gap": 1.5,
+          "hatch_orientation": 0.0,
+          "hatch_smoothing_level": 0,
+          "hatch_smoothing_value": 0.1,
+          "hatch_thickness": 1.0,
+          "min_clearance": 0.2,
+          "min_island_area": 10.0,
+          "min_thickness": 0.2,
+          "pad_connection": 1,
+          "remove_islands": 0,
+          "thermal_relief_gap": 0.2,
+          "thermal_relief_spoke_width": 0.254
         }
       },
       "diff_pair_dimensions": [
@@ -59,106 +77,6 @@
         }
       ],
       "drc_exclusions": [
-        [
-          "silk_over_copper|104655090|110673895|bb68cc4f-fa4c-4b1f-9a19-b49501a788b8|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|126934975|136268709|79ea6a58-6a1d-4957-abde-2c8b1e6c8ac1|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|134627383|140785340|8fe82da4-0d84-444b-a4d6-ce8475039390|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|160602486|142204661|5e253106-4a39-4492-8d3e-73271e1deddc|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|168039607|146609309|71cc6add-f106-4df1-aab4-fe0522e68444|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|169388647|143597816|9cc4393a-6e62-4a38-b181-e72f126a223d|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|193112352|109446374|3d8a236e-b3f8-4273-8afe-ca6240c6cb62|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|195634974|148368709|91e8a6c5-ee7b-452b-9396-97cc429efb99|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|197596093|151834952|1b99b25c-389b-46f9-a596-faba64fa4aba|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|203674057|150946421|8002ab66-e056-4442-a22e-c024b70d703b|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|208652015|141669897|5e156a0b-ced6-4daa-89ae-6d2de92c02e3|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|211977367|108118374|098c0264-585e-413a-bfdd-1caa100cc523|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|215540896|135063252|cb2da62c-8b29-48f9-adf6-b6f4db11dd38|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|229424287|107311441|015f6e98-093e-439d-8c49-a33cfb3feebc|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|234621789|110740376|32f95499-8861-402f-8708-3e0c1a93ad7d|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|238057353|106246376|2c3868d6-a5d4-4f5f-9d41-546208b0c7a0|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|239014847|110690554|7af4fef9-91a6-4240-aaf0-e8979c239357|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|53557353|106246375|8dda430a-1839-41f5-84cc-e62a0eeb754b|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|58277353|106246375|419eba1e-0a45-4593-baa1-18a7143bebba|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|59608577|109455682|757978d8-1f91-4a99-a95a-e4504ee65d70|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|66088716|128084819|15d47112-1a19-4347-bad8-b7c4e679e2d3|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|67721252|128003546|05f0778b-a5c9-47bb-affa-0d5908c165ee|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|84264238|130768205|7b2db95b-3a05-4e3b-a43e-3b7d19a9179f|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|84581070|118029699|1786854f-7cc9-49a5-be77-1d6dde36f0de|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "silk_over_copper|98613489|134381647|b3ee3b04-cd65-48b5-ba43-346ec24b3acd|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
         [
           "starved_thermal|106914930|112084221|fe3f94f9-5edb-43cb-ab5a-58be16e1a8b3|161db13d-3877-4dae-99a5-0a063ff791e9|B.Cu",
           ""
@@ -194,6 +112,7 @@
         "extra_footprint": "warning",
         "footprint": "error",
         "footprint_filters_mismatch": "ignore",
+        "footprint_symbol_field_mismatch": "warning",
         "footprint_symbol_mismatch": "warning",
         "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
@@ -212,6 +131,7 @@
         "mirrored_text_on_front_layer": "warning",
         "missing_courtyard": "ignore",
         "missing_footprint": "warning",
+        "missing_tuning_profile": "warning",
         "net_conflict": "warning",
         "nonmirrored_text_on_back_layer": "warning",
         "npth_inside_courtyard": "ignore",
@@ -231,9 +151,12 @@
         "too_many_vias": "error",
         "track_angle": "error",
         "track_dangling": "error",
+        "track_not_centered_on_via": "ignore",
+        "track_on_post_machined_layer": "error",
         "track_segment_length": "error",
         "track_width": "error",
         "tracks_crossing": "error",
+        "tuning_profile_track_geometries": "ignore",
         "unconnected_items": "error",
         "unresolved_variable": "error",
         "via_dangling": "error",
@@ -342,17 +265,28 @@
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
+      "bom_rev": "",
       "dist": "",
       "distpn": "",
       "internal_id": "",
       "mfg": "MANUFACTURER",
-      "mpn": "Value"
+      "mpn": "Value",
+      "sch_revision": ""
     },
     "layer_pairs": [],
     "layer_presets": [],
     "viewports": []
   },
   "boards": [],
+  "component_class_settings": {
+    "assignments": [],
+    "meta": {
+      "version": 0
+    },
+    "sheet_component_classes": {
+      "enabled": false
+    }
+  },
   "cvpcb": {
     "equivalence_files": []
   },
@@ -602,13 +536,14 @@
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.2,
+        "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
       }
     ],
     "meta": {
-      "version": 4
+      "version": 5
     },
     "net_colors": null,
     "netclass_assignments": null,
@@ -749,6 +684,7 @@
       "sort_asc": true,
       "sort_field": "Reference"
     },
+    "bus_aliases": {},
     "connection_grid_size": 50.0,
     "drawing": {
       "dashed_lines_dash_length_ratio": 12.0,
@@ -795,7 +731,14 @@
     "spice_save_all_dissipations": false,
     "spice_save_all_voltages": false,
     "subpart_first_id": 65,
-    "subpart_id_separator": 0
+    "subpart_id_separator": 0,
+    "top_level_sheets": [
+      {
+        "filename": "DC33.kicad_sch",
+        "name": "DC33",
+        "uuid": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
   },
   "sheets": [
     [
@@ -851,5 +794,11 @@
       "Display SD"
     ]
   ],
-  "text_variables": {}
+  "text_variables": {},
+  "tuning_profiles": {
+    "meta": {
+      "version": 0
+    },
+    "tuning_profiles_impedance_geometric": []
+  }
 }
